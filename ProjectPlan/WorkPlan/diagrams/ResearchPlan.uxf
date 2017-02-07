@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.2">
-  <zoom_level>10</zoom_level>
+  <zoom_level>8</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>140</x>
-      <y>160</y>
-      <w>140</w>
-      <h>60</h>
+      <x>88</x>
+      <y>280</y>
+      <w>112</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>Research 
 Logistics Processes &amp; Wearables
@@ -18,10 +18,10 @@ group=1</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>280</x>
-      <y>150</y>
-      <w>190</w>
-      <h>70</h>
+      <x>200</x>
+      <y>272</y>
+      <w>152</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>*Decision Document which Process and Wearable to use for Demo Facility
 style=wordwrap
@@ -31,10 +31,10 @@ group=1</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>140</x>
-      <y>280</y>
-      <w>140</w>
-      <h>40</h>
+      <x>200</x>
+      <y>368</y>
+      <w>112</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>Design Reference Architecture
 style=wordwrap
@@ -44,10 +44,10 @@ group=2</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>280</x>
-      <y>270</y>
-      <w>150</w>
-      <h>50</h>
+      <x>312</x>
+      <y>360</y>
+      <w>120</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>*Class Diagram &amp; Sequence Diagrams
 style=wordwrap
@@ -57,10 +57,10 @@ group=2</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>300</x>
-      <y>360</y>
-      <w>230</w>
-      <h>40</h>
+      <x>440</x>
+      <y>432</y>
+      <w>184</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>*Documentation, Implementation &amp; Tests for Reference Architecture
 style=wordwrap
@@ -70,10 +70,10 @@ group=3</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>140</x>
-      <y>370</y>
-      <w>160</w>
-      <h>40</h>
+      <x>312</x>
+      <y>440</y>
+      <w>128</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>Implementation Reference Architecture
 style=wordwrap
@@ -83,10 +83,10 @@ group=3</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>300</x>
-      <y>530</y>
-      <w>230</w>
-      <h>40</h>
+      <x>696</x>
+      <y>576</y>
+      <w>184</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>*Domain Model, Class Diagram &amp; Sequence Diagrams
 style=wordwrap
@@ -96,10 +96,10 @@ group=4</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>140</x>
-      <y>540</y>
-      <w>160</w>
-      <h>40</h>
+      <x>568</x>
+      <y>584</y>
+      <w>128</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>Design Demo Facility Application
 style=wordwrap
@@ -109,10 +109,10 @@ group=4</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>140</x>
-      <y>450</y>
-      <w>160</w>
-      <h>40</h>
+      <x>440</x>
+      <y>512</y>
+      <w>128</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>Research Demo Facility
 style=wordwrap
@@ -122,10 +122,10 @@ group=5</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>300</x>
-      <y>440</y>
-      <w>330</w>
-      <h>60</h>
+      <x>568</x>
+      <y>504</y>
+      <w>264</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>*List of Materials needed to create Demo Facilty &amp;
 Documented Approach on what the Demo Facility exactly shows
@@ -136,10 +136,10 @@ group=5</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>140</x>
-      <y>630</y>
-      <w>160</w>
-      <h>40</h>
+      <x>704</x>
+      <y>656</y>
+      <w>128</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>Implementation Demo Facility Application
 style=wordwrap
@@ -149,10 +149,10 @@ group=6</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>300</x>
-      <y>620</y>
-      <w>240</w>
-      <h>40</h>
+      <x>832</x>
+      <y>648</y>
+      <w>192</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>*Documentation, Implementation &amp; Tests for Demo Facility Application
 style=wordwrap
@@ -162,12 +162,12 @@ group=6</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>300</x>
-      <y>700</y>
-      <w>240</w>
-      <h>40</h>
+      <x>920</x>
+      <y>720</y>
+      <w>224</w>
+      <h>32</h>
     </coordinates>
-    <panel_attributes>*Documentation, Implementation &amp; Tests for Demo Facility Application
+    <panel_attributes>*Demo Facility able to showcase a logistics process improved by a wearable
 style=wordwrap
 group=7</panel_attributes>
     <additional_attributes/>
@@ -175,14 +175,200 @@ group=7</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>140</x>
-      <y>710</y>
-      <w>160</w>
-      <h>30</h>
+      <x>832</x>
+      <y>728</y>
+      <w>88</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>Creation Demo Facility
 style=wordwrap
 group=7</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>128</x>
+      <y>320</y>
+      <w>88</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>90.0;80.0;10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>240</x>
+      <y>392</y>
+      <w>88</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>90.0;80.0;10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>368</x>
+      <y>464</y>
+      <w>88</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>90.0;80.0;10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>496</x>
+      <y>536</y>
+      <w>88</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>90.0;80.0;10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>632</x>
+      <y>608</y>
+      <w>88</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>90.0;80.0;10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>760</x>
+      <y>680</y>
+      <w>88</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>90.0;80.0;10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>80</x>
+      <y>800</y>
+      <w>904</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+m1=30.June</panel_attributes>
+    <additional_attributes>1110.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>200</x>
+      <y>360</y>
+      <w>424</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>halign=right
+Scrum-like</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>568</x>
+      <y>576</y>
+      <w>448</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>halign=right
+Scrum-like</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>80</x>
+      <y>784</y>
+      <w>80</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m2=01.February</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>192</x>
+      <y>784</y>
+      <w>80</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m2=10.February</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>304</x>
+      <y>784</y>
+      <w>80</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m2=23.February</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>432</x>
+      <y>784</y>
+      <w>64</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m2=3.March</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>560</x>
+      <y>784</y>
+      <w>72</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m2=24.March</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>696</x>
+      <y>784</y>
+      <w>56</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m2=08.May</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>824</x>
+      <y>784</y>
+      <w>56</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m2=9.June</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;30.0</additional_attributes>
   </element>
 </diagram>
