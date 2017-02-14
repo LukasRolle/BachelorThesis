@@ -1,11 +1,32 @@
-\documentclass{report}
+\documentclass[draft]{report}
 \usepackage[utf8]{inputenc}
 \usepackage[a4paper]{geometry}
 \usepackage{parskip}
 \usepackage[acronym,nonumberlist]{glossaries}
 \usepackage{tikz}
 \usepackage{pgfplots}
-\definecolor{lightblue}{RGB}{153,217,234}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{arydshln} %Allow dotted lines in tables
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\pgfplotsset{compat=1.14}
+
+%Changing the Title Format
+\titleformat{\chapter}[hang] 
+{\normalfont\huge\bfseries}{\thechapter}{1em}{} 
+\titlespacing*{\chapter}{0pt}{-50pt}{30pt}
+
+%Adding thick lines for a table
+\makeatletter
+\newcommand{\thickhline}{%
+    \noalign {\ifnum 0=`}\fi \hrule height 1pt
+    \futurelet \reserved@a \@xhline
+}
+\newcolumntype{"}{@{\hskip\tabcolsep\vrule width 1pt\hskip\tabcolsep}}
+\makeatother
+
 
 \input{01-acronyms}
 
@@ -13,7 +34,7 @@
 \author{Lukas Rolle - 2310309}
 \title{Project Plan}
 \date{\today, Blerick}
-
+\pagenumbering{roman}
 \begin{document}
 \maketitle
 \tableofcontents

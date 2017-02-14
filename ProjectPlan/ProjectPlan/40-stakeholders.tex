@@ -1,36 +1,46 @@
 \chapter{Stakeholders}\label{cha:stakeholders}
-
+Stakeholder Management involves identifying parties that are involved in the project. This ranges from people that are actively part of the development of the project or companies that might be interested in the end result. In the table \ref{tab:stakeholder} the most important stakeholders can be found. The stakeholders will themselves will be further explained in sections \ref{sec:internalStakeholders}, which will explain the internal stakeholders, and \ref{sec:externalStakeholders} will explain the external stakeholders involved in the project.
 \begin{table}[htbp]
 \centering
-\begin{tabular}{|p{.03\linewidth}|p{.22\linewidth}|p{.12\linewidth}|p{.13\linewidth}|p{.1\linewidth}|p{.1\linewidth}|p{.19\linewidth}|}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{|p{.04\textwidth}|p{.22\textwidth}|p{.115\textwidth}|p{.118\textwidth}|p{.1\textwidth}|p{.085\textwidth}|p{.16\textwidth}|}
 \hline
-\textbf{Nr} & \textbf{Stakeholder} & \textbf{Company / Institution} & \textbf{Internal / External} & \textbf{Level of Interest} & \textbf{Level of Influence} & \textbf{Potential mgmt strategies} \\ \hline
+\textbf{Nr} & \textbf{Stakeholder} & \textbf{Company / Institution} & \textbf{Internal / External} & \textbf{Level of Interest} & \textbf{Level of Influence} & \textbf{Potential management strategies} \\ \hline
 1  & Employer             & \gls{fhtenl}        & Internal            & Medium            & High               & Keep Satisfied            \\ \hline
 2  & Student Workers      & \gls{fhtenl}        & Internal            & Medium            & Low                & Keep Informed             \\ \hline
-3  & Pilot Company        & KLG                   & External            & High              & High               & Key Player                \\ \hline
-4  & Examiner             & \gls{fhtenl}        & External            & Low               & High               & Keep Satisfied            \\ \hline
-5  & Supervising Lecturer & \gls{fhtenl}        & External            & Medium            & Low                & Keep Informed             \\ \hline
-6  & Graduation Student   & \gls{fhtenl}        & Internal            & High              & High               & Key Player                \\ \hline
-7  & Project Manager      & \gls{fhtenl}        & Internal            & High              & High               & Key Player                \\ \hline
-8  & Company Supervisor   & \gls{fhtenl}        & Internal            & High              & High               & Key Player                \\ \hline
-9  & Project Team         & \gls{fhtenl}        & Internal            & High              & High               & Key Player                \\ \hline
-10 & Partner University   & \gls{hsnr}          & External            & High              & Low                & Keep Informed             \\ \hline
+3  & Graduation Student   & \gls{fhtenl}        & Internal            & High              & High               & Key Player                \\ \hline
+4  & Project Manager      & \gls{fhtenl}        & Internal            & High              & High               & Key Player                \\ \hline
+5  & Company Supervisor   & \gls{fhtenl}        & Internal            & High              & High               & Key Player                \\ \hline
+6  & Project Team         & \gls{fhtenl}        & Internal            & High              & High               & Key Player                \\ \hline
+7 & Partner University   & \gls{hsnr}          & External            & Medium              & Low                & Keep Informed             \\ \hline
+8  & Pilot Company        & KLG                   & External            & High              & High               & Key Player                \\ \hline
+9  & Examiner             & \gls{fhtenl}        & External            & Low               & High               & Keep Satisfied            \\ \hline
+10  & Supervising Lecturer & \gls{fhtenl}        & External            & Medium            & Low                & Keep Informed             \\ \hline
 \end{tabular}
+}
 \caption{Stakeholder Register}
 \label{tab:stakeholder}
 \end{table}
+
+Figure \ref{fig:stakeholder} can be used to visualize the importance of the stakeholders. The color is used to emphasize the importance that this stakeholder is properly managed.
 
 \begin{figure}[htbp]
 	\centering
 	\begin{tikzpicture}
 		\begin{axis}[
-			scale=1.5,
+			scale=1.2,
 			xmin=1,
 			xmax=10,
 			ymin=1,
 			ymax=10,
 			xtick,
 			ytick,
+			extra x ticks={2,9},
+  			extra x tick labels={low, high},
+  			xtick style={draw = none},
+  			extra y ticks={2,9},
+  			extra y tick labels={low, high},
+			ytick style={draw = none},
 			xlabel=\textbf{Level of Interest},
 			ylabel=\textbf{Level of Influence},
 			x
@@ -44,16 +54,16 @@
 			] table[x=x, y=y]
 			{
 			x	y	color	myvalue
-			6	8	3	Employer
+			5	7.5	2	Employer
 			7	2	2	Student Workers
-			8	9	4	Pilot Company 
+			7	8	3	Pilot Company 
 			3	7	1	Examiner
 			6	3	2	Supervising Lecturer
-			10	8.5	5	Graduation Student 
-			8	8	3	Project Manager 
-			9	8	4	Company Supervisor 
-			8	7	3	Project Team 
-			8	1	2	Partner University
+			9.8	8.7	5	Graduation Student 
+			8	8.4	4	ProjectMa 
+			9	8	4	CompanySu 
+			8	7	3	ProjectTe 
+			6	1.5	1	PartnerU
 			};
 			\addplot[gray,thick, no markers] coordinates {(1,5.5) (10,5.5)};
 			\addplot[gray,thick, no markers] coordinates {(5.5,1) (5.5,10)};
@@ -62,5 +72,44 @@
 	\caption{Stakeholder Graph}
 	\label{fig:stakeholder}
 \end{figure}
-\section{Internal Stakeholders}
-\section{External Stakeholders}
+\section{Internal Stakeholders}\label{sec:internalStakeholders}
+Internal Stakeholders are parties that are a part of the team that is working directly on the project in one way or the other. In this section, the internal stakeholders mentioned in table \ref{tab:stakeholder} will be listed again and explained.
+
+\begin{description}
+	\item[Employer] \hfill
+	
+	The employer in this project is an institution and not a single person. This does not change the fact, that the employer is interested in the project, as he is financing the project. Also the employer could change the outcome, if he is not accepting the proposed plans. It is important, that this party is kept satisfied as more work could be created when the plan has to change.
+	\item[Student Workers] \hfill
+	
+	Student Workers are employed to help in the LOGwear project in general. While they currently are not involved with the process of the creation of the demo facility that might change in the future, therefore they should be kept informed.
+	\item[Graduation Student] \hfill
+	
+	The graduation student is the person mainly responsible for the development of the demo facility and therefore has a lot of responsibility and interest towards the project.
+	\item[Project Manager] \hfill
+	
+	The project manager is responsible for the general planning of the project. Planning meetings with the different parties and coordinating them.
+	\item[Company Supervisor] \hfill
+	
+	The company supervisor is looking over the progress of the graduation student and is giving advice if needed. 
+	\item[Project Team] \hfill
+	
+	The project team are the members of the team actively developing the application prototype and are involved in building the demo facility afterwards.
+\end{description}
+
+\section{External Stakeholders}\label{sec:externalStakeholders}
+External Stakeholders are parties that are involved in the project, but are not a part of the team actively developing the project. In this section, the external stakeholders mentioned in table \ref{tab:stakeholder} will be listed again and explained.
+
+\begin{description}
+	\item[Partner University] \hfill
+	
+	The partner university is also working on the LOGwear project, but on a different aspect. They might be interested in project of creating a demo facility, but probably will not interfere with it.
+	\item[Pilot Company] \hfill
+	
+	The pilot company involved is the logistics company KLG. They bring in the highest amount of domain knowledge and are interested in the project to improve their own processes. They could influence the project easily by not approving the planned demo facility due to problems with how the logistics process is modelled.
+	\item[Examiner] \hfill
+	
+	While the examiner is not involved in the project itself, the examiner will finally assesses the performance of the graduation student.
+	\item[Supervising Lecturer] \hfill
+	
+	The supervising lecturer is there to answer questions and support the student from a software engineering standpoint. While not having a lot of influence on the project itself, the supervising lecturer is interested in what the student is doing and especially how he is doing it.
+\end{description}
