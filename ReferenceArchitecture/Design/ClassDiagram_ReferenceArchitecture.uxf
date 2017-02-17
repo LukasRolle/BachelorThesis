@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>6</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>522</x>
+      <y>126</y>
+      <w>126</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>OrderLine
+--
+StorageLocation storageLocation
+ArticleNumber string
+Quanitity int
+Acknowledgement bool
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>666</x>
+      <y>126</y>
+      <w>126</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>StorageLocation
+--
+SortedList&lt;String&gt; Descriptor
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>810</x>
+      <y>126</y>
+      <w>126</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>LocationRules
+--
+Walls / Paths
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>372</x>
+      <y>414</y>
+      <w>126</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>DataConnector
+--
+
+--
++getOrderDocument():Order
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>564</x>
+      <y>414</y>
+      <w>126</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>Configuration
+--
+
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>468</x>
+      <y>582</y>
+      <w>126</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>WMSDataConnector
+--
+
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>282</x>
+      <y>582</y>
+      <w>126</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>SAPDataConnector
+--
+
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>372</x>
+      <y>126</y>
+      <w>126</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>Order
+--
+OrderLines List&lt;OrderLine&gt;
+OrderNumber int 
+*Customer int / string ?*
+
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
