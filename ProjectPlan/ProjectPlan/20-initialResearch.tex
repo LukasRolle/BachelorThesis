@@ -1,11 +1,75 @@
+\documentclass{report}
+\usepackage{parskip}
+
+\begin{document}
+
+\chapter{•}
+\begin{verbatim}
+ http://www.dhl.com/en/press/releases/releases_2015/logistics/dhl_successfully_tests_augmented_reality_application_in_warehouse.html
+DHL's Pilot project has increased productivity by about 25\%.
+
+Show the differences in order picking types
+http://www.guoanhong.com/papers/Computer15-OrderPicking.pdf
+http://campar.in.tum.de/twiki/pub/Main/BjoernSchwerdtfeger/BjoernsDiss.pdf
+
+\end{verbatim}
+
 \chapter{Initial Analysis}
 The process that has been decided on is the Order Picking W3-5. The available Processes were:
+
 \begin{itemize}
 	\item Order Picking High Rack
 	\item Order Picking W3-5
 	\item Goods Receipt and Put away
 \end{itemize}
 
-The other two processes were discarded. Order Picking High Rack has been discarded due to the nature of what should be created. A simulation that should model a real environment. Modelling a High Rack and usage of that would be too hard and would take too much time. 
+The other two processes were discarded. Order Picking High Rack has been discarded due to the nature of what should be created. A simulation that should model a real environment. Modelling a High Rack and usage of that would be too hard and would take too much time.
 
-Goods Receipt and Put away
+Goods Receipt and Put away was another process to be considered, but was discarded. The modelling of it would be problematic due to the time delays in the tasks. Furthermore the process showed less potential for improvements with wearables.
+
+The process has been decided together with the company supervisor.
+\chapter{Wearables}
+Requirements for Wearables: (from the Order Picking W3-5 process - communications made to the WMS)
+\begin{itemize}
+	\item (Optionally) Display Order Document
+	\item Scan ID
+	\item Display Location IDs (Information in General)
+	\item Send Confirmations
+	\item Confirmation with Signature(?)
+\end{itemize}
+
+
+The goal is to at least fully replace the existing Hand scanner:
+Nice to have Features: (Talk with Sobek about these)
+\begin{itemize}
+	\item Hands-Free (Gesture free ?)
+	\item Indoor Navigation
+	\item Show exact Location (Display Sector / exact object)
+	\item quantity confirmation (?)
+	\begin{itemize}
+		\item let wearable be a part of the confirmation of the quantity of objects.
+		\item an item is picked up
+		\item wearable "sees" that
+		\item counts on / off screen
+		\item if the wrong quantity was counted by the wearable notify the user
+	\end{itemize}
+	\item Gamification (?) \begin{verbatim} https://youtu.be/9Wv9k_ssLcI?t=173 \end{verbatim}
+	\item Route Optimization (?)
+\end{itemize}
+
+Wearables:
+\begin{itemize}
+	\item Daqri Smart Helmet \& Glasses
+	\item Epson Moverio
+	\item Microsoft HoloLens - available
+	\item Wuzix (whichever one is available at fontys)
+	\item Motorola RS507 - Paired with Motorola WT400 for example?
+\end{itemize}
+
+\chapter{Reference Architecture}
+Should the reference architecture be something that is modelled that it could be used by companies without changing a lot of the given code in the reference architecture. 
+
+Or should it be something that is designed and implemented in a way that should fit \textbf{EVERY POSSIBLE} data structure that a company might have with their orders?
+
+
+\end{document}
