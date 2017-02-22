@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>522</x>
-      <y>126</y>
+      <x>552</x>
+      <y>150</y>
       <w>126</w>
       <h>114</h>
     </coordinates>
@@ -22,8 +22,8 @@ Acknowledgement bool
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>666</x>
-      <y>126</y>
+      <x>744</x>
+      <y>150</y>
       <w>126</w>
       <h>114</h>
     </coordinates>
@@ -37,8 +37,8 @@ SortedList&lt;String&gt; Descriptor
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>810</x>
-      <y>126</y>
+      <x>876</x>
+      <y>774</y>
       <w>126</w>
       <h>114</h>
     </coordinates>
@@ -52,24 +52,25 @@ Walls / Paths
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>372</x>
-      <y>414</y>
+      <x>360</x>
+      <y>534</y>
       <w>126</w>
       <h>114</h>
     </coordinates>
-    <panel_attributes>DataConnector
+    <panel_attributes>&lt;&lt;Abstract&gt;&gt;
+AbstractDataConnector
 --
 
 --
-+getOrderDocument():Order
-</panel_attributes>
++getOrderDocument(orderId int):Order
++getNextOrderDocument(employeeId int):Order</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>564</x>
-      <y>414</y>
+      <x>876</x>
+      <y>648</y>
       <w>126</w>
       <h>114</h>
     </coordinates>
@@ -83,8 +84,8 @@ Walls / Paths
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>468</x>
-      <y>582</y>
+      <x>456</x>
+      <y>702</y>
       <w>126</w>
       <h>114</h>
     </coordinates>
@@ -98,8 +99,8 @@ Walls / Paths
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>282</x>
-      <y>582</y>
+      <x>270</x>
+      <y>702</y>
       <w>126</w>
       <h>114</h>
     </coordinates>
@@ -113,16 +114,75 @@ Walls / Paths
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>372</x>
-      <y>126</y>
+      <x>360</x>
+      <y>150</y>
       <w>126</w>
       <h>114</h>
     </coordinates>
     <panel_attributes>Order
 --
-OrderLines List&lt;OrderLine&gt;
+OrderLines Queue&lt;OrderLine&gt;
 OrderNumber int 
 *Customer int / string ?*
+
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>198</y>
+      <w>84</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>444</x>
+      <y>642</y>
+      <w>90</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0;130.0;50.0;130.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>318</x>
+      <y>642</y>
+      <w>90</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>130.0;10.0;130.0;50.0;10.0;50.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>672</x>
+      <y>198</y>
+      <w>84</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>120.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>144</x>
+      <y>300</y>
+      <w>126</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>
+--
 
 --
 </panel_attributes>
