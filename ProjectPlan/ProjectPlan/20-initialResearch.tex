@@ -28,6 +28,7 @@ The other two processes were discarded. Order Picking High Rack has been discard
 Goods Receipt and Put away was another process to be considered, but was discarded. The modelling of it would be problematic due to the time delays in the tasks. Furthermore the process showed less potential for improvements with wearables.
 
 The process has been decided together with the company supervisor.
+
 \chapter{Wearables}
 Requirements for Wearables: (from the Order Picking W3-5 process - communications made to the WMS)
 \begin{itemize}
@@ -62,7 +63,7 @@ Wearables:
 	\item Daqri Smart Helmet \& Glasses - Only available on contact (Helmet) or as preorder for june (Glasses)
 	\item Epson Moverio
 	\item Microsoft HoloLens - available
-	\item Wuzix (whichever one is available at fontys)
+	\item Vuzix (whichever one is available at fontys)
 	\item Motorola RS507 - Paired with Motorola WT400 for example? No longer available?
 \end{itemize}
 
@@ -72,7 +73,11 @@ When the HoloLens is getting too hot it closes applications running on the devic
 \chapter{Reference Architecture}
 Should the reference architecture be something that is modelled that it could be used by companies without changing a lot of the given code in the reference architecture. 
 
-Or should it be something that is designed and implemented in a way that should fit \textbf{EVERY POSSIBLE} data structure that a company might have with their orders?
+MessageConverter is there since that might be needed for cases where the wearable is sending its messages via a radio frequency.
+Is the Reference Architecture actually fully possible when trying to make it (mostly) generic.
+The Communication to the WMS is not changeable depending on the implementation. The Communication between the Wearable and the Communication Layer depends heavily on the wearable. A radio based connection from the wearable would create a whole new package. If some wearables do not support REST for example another communication path has to be chosen, changing implementation details in the communication layer again.
+
+First activity diagrams before Package / Box diagram.
 
 
 \end{document}
