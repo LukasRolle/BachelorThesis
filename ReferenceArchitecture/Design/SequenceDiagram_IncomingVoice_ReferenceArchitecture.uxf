@@ -1,26 +1,67 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.2">
-  <zoom_level>10</zoom_level>
+  <zoom_level>6</zoom_level>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>150</x>
-      <y>110</y>
-      <w>100</w>
-      <h>30</h>
+      <x>78</x>
+      <y>336</y>
+      <w>84</w>
+      <h>18</h>
     </coordinates>
-    <panel_attributes>_:Instance_</panel_attributes>
+    <panel_attributes>_VoiceInput:voiceInput_</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>190</x>
-      <y>130</y>
-      <w>30</w>
-      <h>70</h>
+      <x>114</x>
+      <y>348</y>
+      <w>18</w>
+      <h>42</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSequenceAllInOne</id>
+    <coordinates>
+      <x>54</x>
+      <y>402</y>
+      <w>966</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>title=Voice Command: Get Order Document
+autoTick=false
+obj=:InputVoice~a 
+obj=:VoiceInterpreter~b
+obj=:InputSystem~d
+obj=:OutputDisplay~e
+obj=:OutputSystem~c
+obj=:CommunicationLayer~f
+gate-&gt;a	:Incoming Voice Command
+on=a
+tick=
+a.a2-&gt;b.b1	:InterpretCommand()
+off=a
+on=b
+tick=
+b.b2-&gt;c.c1	:RequestOrder()
+off=b
+on=c
+tick=
+off=c
+c.c2-&gt;f	:RequestOrder()
+on=f
+tick=
+f-&gt;d.d1	:ReceiveOrder()
+off=f
+on=d
+tick=
+d-&gt;&gt;&gt;e		:DisplayOrder()
+off=d
+on=e
+tick=</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>
