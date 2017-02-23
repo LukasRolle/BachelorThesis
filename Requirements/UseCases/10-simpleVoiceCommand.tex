@@ -1,0 +1,33 @@
+\chapter{Use Cases}
+
+\begin{UseCase}{UC-W1}{Get Order (Voice)}{Wearable}{1.0}{LUR}
+\Actors{Picking Worker}
+\Description{A picking worker equipped with a wearable is using a voice command to get the next order displayed.}
+\Preconditions{The wearable has to be equipped with an Input Interface accepting voice and and an Output Interface that is able to return information to the user.}
+\Scenario{
+	\vspace{0.1\baselineskip}
+    \begin{enumerate*}
+    	\item The Picking worker gives the voice command "Next Order".
+    	\item The Wearable asks the WMS for the next order for the specific worker.
+    	\item The WMS sends the Data to the Wearable
+    	\item The Wearable displays the Data to the order picker.
+	\end{enumerate*}
+}
+\Extensions{
+	\vspace{0.1\baselineskip}
+	\begin{enumerate*}
+		\item[-]
+	\end{enumerate*}
+}
+\Exceptions{
+	\vspace{0.1\baselineskip}
+	\begin{enumerate*}
+		\item[1.1] The Voice command could not be properly understood. The Wearable does nothing.
+		\item[1.2] The Order Picker is already on an Order and that one is unfinished, the command is ignored.
+		\item[1.3] Another Voice command is understood, that one is executed.
+		\item[3.1] The WMS did not find a next order. The order picker is informed about that.
+		\item[4.1] There is an error in the format that was received. The data that could be understood is still displayed and the order picker is informed, that there might be an error with the order.
+	\end{enumerate*}
+}
+\Result{The Order Picker has received the next order.}
+\end{UseCase}
