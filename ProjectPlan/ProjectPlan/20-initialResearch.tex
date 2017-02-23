@@ -1,6 +1,5 @@
 \documentclass{report}
 \usepackage{parskip}
-
 \begin{document}
 
 \chapter{•}
@@ -78,6 +77,10 @@ Is the Reference Architecture actually fully possible when trying to make it (mo
 The Communication to the WMS is not changeable depending on the implementation. The Communication between the Wearable and the Communication Layer depends heavily on the wearable. A radio based connection from the wearable would create a whole new package. If some wearables do not support REST for example another communication path has to be chosen, changing implementation details in the communication layer again.
 
 First activity diagrams before Package / Box diagram.
+
+Conventionally, all InputInterfaces will start with the word Input and all OutputInterfaces will start with the word Output. Also conventional is, that an Output interface is not able to get any input from any source outside of the wearable itself, at the same time an input is unable to output information to sources outside of the wearable.
+
+Next Package in HoloLens (Test when another person says it).
 
 
 \end{document}
