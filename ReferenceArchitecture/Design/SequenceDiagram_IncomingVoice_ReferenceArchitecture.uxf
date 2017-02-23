@@ -2,33 +2,11 @@
 <diagram program="umlet" version="14.2">
   <zoom_level>6</zoom_level>
   <element>
-    <id>UMLGeneric</id>
-    <coordinates>
-      <x>78</x>
-      <y>336</y>
-      <w>84</w>
-      <h>18</h>
-    </coordinates>
-    <panel_attributes>_VoiceInput:voiceInput_</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>114</x>
-      <y>348</y>
-      <w>18</w>
-      <h>42</h>
-    </coordinates>
-    <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
-  </element>
-  <element>
     <id>UMLSequenceAllInOne</id>
     <coordinates>
-      <x>54</x>
-      <y>402</y>
-      <w>966</w>
+      <x>84</x>
+      <y>384</y>
+      <w>894</w>
       <h>240</h>
     </coordinates>
     <panel_attributes>title=Voice Command: Get Order Document
@@ -40,10 +18,8 @@ obj=:OutputDisplay~e
 obj=:OutputSystem~c
 obj=:CommunicationLayer~f
 gate-&gt;a	:Incoming Voice Command
-on=a
 tick=
 a.a2-&gt;b.b1	:InterpretCommand()
-off=a
 on=b
 tick=
 b.b2-&gt;c.c1	:RequestOrder()
