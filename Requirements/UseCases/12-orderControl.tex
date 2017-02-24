@@ -1,0 +1,33 @@
+\begin{UseCase}{UC-W3}{Order Control}{Wearable}{1.0}{LUR}
+\Actors{Picking Worker}
+\Description{A picking worker is in the process of picking his order.}
+\Preconditions{The wearable has a vision interface or is in another way able to control what the order picker is doing.}
+\Scenario{
+	\vspace{0.1\baselineskip}
+    \begin{enumerate*}
+    	\item The order picker scans an item.
+    	\item The wearable checks what is being packed.
+    	\item The order picker is putting the item on his hand pallet truck.
+    	\item The wearable is counting the amount of items put onto the hand pallet truck.
+    	\item The order picker scans a new item.
+    	\item The wearable detects a new item and ends the counting process for the last item.
+    	\item The wearable informs the order picker that everything went correctly with the last item.
+    \end{enumerate*}
+}
+\Extensions{
+	\vspace{0.1\baselineskip}
+	\begin{enumerate*}
+		\item[-]
+	\end{enumerate*}
+}
+\Exceptions{
+	\vspace{0.1\baselineskip}
+	\begin{enumerate*}
+		\item[7.1] The order picker could have counted wrongly and the wearable is informing him about it. After the order picker has checked the quantity on the Truck, go back to 1. with the item started with.
+		\item[7.2] The wearable could have counted wrongly and the wearable is informing the order picker as if he counted wrong. The order picker can check the hand pallet truck for the item and confirm the right quantity.
+		\item[7.3] The order picker could have picked the wrong quantity and the wearable could have counted wrong, resulting in the wearable saying the order picker has picked the right amount. An error is made.
+	\end{enumerate*}
+}
+\Result{The Order Picker has received the next order.}
+\end{UseCase}
+
