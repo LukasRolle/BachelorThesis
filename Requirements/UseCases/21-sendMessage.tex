@@ -1,0 +1,30 @@
+\begin{UseCase}{UC-C2}{Send Message to Wearable}{Communication Layer}{1.0}{LUR}
+\Actors{Server}
+\Description{The communication layer on the server is receiving an answer from the WMS for the wearable.}
+\Preconditions{The wearable has send a message to the communication layer that is received by the WMS. Furthermore the WMS sends an answer to the received message.}
+\Scenario{
+	\vspace{0.1\baselineskip}
+    \begin{enumerate*}
+    	\item Receive an answer from the WMS.
+    	\item Establish a connection to the Wearable.
+    	\item Send answer to wearable.
+    \end{enumerate*}
+}
+\Extensions{
+	\vspace{0.1\baselineskip}
+	\begin{enumerate*}
+		\item[1.1] After receiving a message, the message might have to be converted to be properly understood by the wearable, that should be done here.
+		\item[1.2] When the enterprise wants to do something with the data, it should be done here.
+		\item[1.3] When data send has to be validated, it should be done here.
+	\end{enumerate*}
+}
+\Exceptions{
+	\vspace{0.1\baselineskip}
+	\begin{enumerate*}
+		\item[1.1] Connection could not be established.
+		\item[2.1] Connection could not be established.
+	\end{enumerate*}
+}
+\Result{A message from the wearable has been send to the WMS.}
+\end{UseCase}
+

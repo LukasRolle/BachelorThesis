@@ -28,4 +28,9 @@
 \input{11-sendConfirmation}
 \input{12-orderControl}
 
+\chapter{Communication Layer}
+The communication Layer exists due to the possibilities it gives and the need for it depending on the wearable. This means that some enterprises might have the need to do something with the data before entering that into the WMS or something similar, therefore a communication layer allows to add something like a transformation of data at that point and not add more load to the wearable application. On the other hand some wearables might not have the possibilities to directly connect to the API of the WMS. For example some wearable are only able to use radio frequencies to send data and this layer can be used to catch that data, transform that to usable data and send that to the WMS.
+
+\input{20-receiveMessage}
+\input{21-sendMessage}
 \end{document}
