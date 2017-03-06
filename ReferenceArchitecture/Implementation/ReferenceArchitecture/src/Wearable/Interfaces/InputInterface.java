@@ -3,15 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Wearable;
+package Wearable.Interfaces;
 
 /**
  *
  * @author Lukas Rolle(LukasRolleSE@gmail.com)
  * @param <T>
  */
-public interface OutputInterface<T> {
+public interface InputInterface<T> {
     
-    public void outputData(T data);
-    
+    public T InputData();
 }

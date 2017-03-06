@@ -3,17 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Wearable;
+package Wearable.Interfaces;
 
 /**
  *
  * @author Lukas Rolle(LukasRolleSE@gmail.com)
  */
-public class OutputText implements OutputInterface<String> {
-
+public class OutputRest implements OutputInterface {
     @Override
-    public void outputData(String data) {
-        System.out.println(data);
+    public void outputData(Object data) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

@@ -3,18 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Wearable;
+package Wearable.Interfaces;
 
 /**
  *
  * @author Lukas Rolle(LukasRolleSE@gmail.com)
  */
-public class InputText implements InputInterface<String>{
+public class OutputText implements OutputInterface<String> {
 
     @Override
-    public String InputData() {
-        String input = System.console().readLine();
-        return input;
+    public void outputData(String data) {
+        System.out.println(data);
     }
     
 }
