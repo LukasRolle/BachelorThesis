@@ -12,6 +12,6 @@ package Wearable;
  */
 public interface OutputInterface<T> {
     
-    public T outputData();
+    public void outputData(T data);
     
 }

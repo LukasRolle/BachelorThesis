@@ -8,7 +8,9 @@ package Wearable;
 /**
  *
  * @author Lukas Rolle(LukasRolleSE@gmail.com)
+ * @param <T>
  */
-public interface InputInterface {
+public interface InputInterface<T> {
     
+    public void InputData(T data);
 }
