@@ -8,7 +8,10 @@ package Wearable;
 /**
  *
  * @author Lukas Rolle(LukasRolleSE@gmail.com)
+ * @param <T>
  */
-public interface OutputInterface {
+public interface OutputInterface<T> {
+    
+    public T outputData();
     
 }
