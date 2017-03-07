@@ -18,7 +18,7 @@ import java.util.logging.Logger;
 public class InputText implements InputInterface<String>{
 
     @Override
-    public String InputData() {
+    public String inputData() {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String result = "";
         try {

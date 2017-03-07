@@ -3,14 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Wearable.Interfaces;
+package Communication;
 
 /**
  *
  * @author Lukas Rolle(LukasRolleSE@gmail.com)
- * @param <T>
  */
-public interface InputInterface<T> {
+public class MockConnector implements DataConnector {
     
-    public T inputData();
+    /**
+     *
+     * @return
+     */
+    public static String GetNextOrder(String testData) {
+        return (testData + " <- has been received");
+    }
 }

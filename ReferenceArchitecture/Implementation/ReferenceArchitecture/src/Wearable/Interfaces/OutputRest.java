@@ -5,14 +5,24 @@
  */
 package Wearable.Interfaces;
 
+import Communication.MockConnector;
+
 /**
  *
  * @author Lukas Rolle(LukasRolleSE@gmail.com)
  */
-public class OutputRest implements OutputInterface {
-    @Override
-    public void outputData(Object data) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+public class OutputRest implements OutputInterface<String> {
+
+    OutputText outputText;
+
+    public OutputRest(OutputText outputText) {
+        this.outputText = outputText;
     }
-    
+
+    @Override
+    public void outputData(String data) {
+        String testData = MockConnector.GetNextOrder(data);
+        outputText.outputData(testData);
+    }
+
 }

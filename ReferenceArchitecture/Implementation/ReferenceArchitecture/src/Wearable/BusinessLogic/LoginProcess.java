@@ -28,7 +28,7 @@ public class LoginProcess implements Process {
     public void run() {
         output.outputData("Validate your identity, input your name here:");
         String inputData;
-        inputData = input.InputData();
+        inputData = input.inputData();
         output.outputData(inputData + " is your name.");
     }
     

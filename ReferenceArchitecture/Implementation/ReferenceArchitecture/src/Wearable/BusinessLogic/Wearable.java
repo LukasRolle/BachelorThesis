@@ -31,14 +31,23 @@ public class Wearable {
         
         OutputText outputText = new OutputText();
         outputInterfaces.add(outputText);
+        
         InputText inputText = new InputText();
         inputInterfaces.add(inputText);
+        
         LoginProcess loginProcess = new LoginProcess(outputText,inputText);
         processes.add(loginProcess);
+        
+        processes.add(new IdleProcess());
+        
+        outputInterfaces.add(new OutputRest(outputText));
+        
         initialize();
     }
     
     private void initialize() {
         processes.get(0).run();
+        outputInterfaces.get(1).outputData("New Order and things");
+        processes.get(1).run();
     }
 }
