@@ -85,4 +85,23 @@ Responsibilities:
 	- Transform Data to a usable format, possibly from the wearable or the WMS</panel_attributes>
     <additional_attributes/>
   </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>140</x>
+      <y>63</y>
+      <w>252</w>
+      <h>266</h>
+    </coordinates>
+    <panel_attributes>style=wordwrap
+QueryPreperation
+--
+
+--
+
+--
+Responsibilities:
+	- Helper Class that creates Queries that can then be passed to the WMS if needed</panel_attributes>
+    <additional_attributes/>
+  </element>
 </diagram>
