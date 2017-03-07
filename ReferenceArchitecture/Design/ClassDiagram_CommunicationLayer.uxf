@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>140</x>
+      <y>350</y>
+      <w>252</w>
+      <h>266</h>
+    </coordinates>
+    <panel_attributes>style=wordwrap
+DataReceiver
+--
+
+--
+
+--
+Responsibilities:
+	- Receive Data from Wearable
+	- If Data needs to be transformed send to part that should do that Otherwise then send to the object that connects to the WMS</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>406</x>
+      <y>350</y>
+      <w>252</w>
+      <h>266</h>
+    </coordinates>
+    <panel_attributes>style=wordwrap
+DataConnector
+--
+
+--
+
+--
+Responsibilities:
+	- Send prepared data to the WMS
+	- Give method signatures that can be reused
+	- concrete implementations per WMS will not be given
+	- If there are answers, pass that through to the appropriate object (Transformer, then Sender or just Sender)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>672</x>
+      <y>350</y>
+      <w>252</w>
+      <h>266</h>
+    </coordinates>
+    <panel_attributes>style=wordwrap
+DataSender
+--
+
+--
+
+--
+Responsibilities:
+	- Send data back to the wearable
+	- Data received will already be in proper format</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>406</x>
+      <y>637</y>
+      <w>252</w>
+      <h>266</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Optional&gt;&gt;
+style=wordwrap
+DataTransformer
+--
+
+--
+
+--
+
+--
+Responsibilities:
+	- Transform Data to a usable format, possibly from the wearable or the WMS</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
