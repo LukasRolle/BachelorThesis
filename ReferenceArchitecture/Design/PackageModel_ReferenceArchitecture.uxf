@@ -4,10 +4,10 @@
   <element>
     <id>UMLDeployment</id>
     <coordinates>
-      <x>720</x>
-      <y>440</y>
-      <w>272</w>
-      <h>192</h>
+      <x>712</x>
+      <y>472</y>
+      <w>288</w>
+      <h>272</h>
     </coordinates>
     <panel_attributes>Wearable
 --
@@ -18,7 +18,7 @@
   <element>
     <id>UMLDeployment</id>
     <coordinates>
-      <x>400</x>
+      <x>320</x>
       <y>216</y>
       <w>280</w>
       <h>192</h>
@@ -31,7 +31,7 @@
   <element>
     <id>UMLDeployment</id>
     <coordinates>
-      <x>80</x>
+      <x>0</x>
       <y>216</y>
       <w>272</w>
       <h>192</h>
@@ -44,7 +44,7 @@
   <element>
     <id>UMLDeployment</id>
     <coordinates>
-      <x>240</x>
+      <x>160</x>
       <y>352</y>
       <w>88</w>
       <h>40</h>
@@ -55,7 +55,7 @@
   <element>
     <id>UMLDeployment</id>
     <coordinates>
-      <x>112</x>
+      <x>32</x>
       <y>352</y>
       <w>88</w>
       <h>40</h>
@@ -66,7 +66,7 @@
   <element>
     <id>Text</id>
     <coordinates>
-      <x>136</x>
+      <x>56</x>
       <y>256</y>
       <w>48</w>
       <h>64</h>
@@ -87,7 +87,7 @@ drawArc(0,height*3/5,width,height*2/5,180,180,true) fg=black //Parameters (x, y,
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>152</x>
+      <x>72</x>
       <y>312</y>
       <w>24</w>
       <h>56</h>
@@ -98,7 +98,7 @@ drawArc(0,height*3/5,width,height*2/5,180,180,true) fg=black //Parameters (x, y,
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>192</x>
+      <x>112</x>
       <y>368</y>
       <w>64</w>
       <h>24</h>
@@ -109,7 +109,7 @@ drawArc(0,height*3/5,width,height*2/5,180,180,true) fg=black //Parameters (x, y,
   <element>
     <id>UMLDeployment</id>
     <coordinates>
-      <x>552</x>
+      <x>472</x>
       <y>352</y>
       <w>112</w>
       <h>40</h>
@@ -120,7 +120,7 @@ drawArc(0,height*3/5,width,height*2/5,180,180,true) fg=black //Parameters (x, y,
   <element>
     <id>UMLDeployment</id>
     <coordinates>
-      <x>416</x>
+      <x>336</x>
       <y>352</y>
       <w>112</w>
       <h>40</h>
@@ -131,7 +131,7 @@ drawArc(0,height*3/5,width,height*2/5,180,180,true) fg=black //Parameters (x, y,
   <element>
     <id>UMLDeployment</id>
     <coordinates>
-      <x>80</x>
+      <x>0</x>
       <y>0</y>
       <w>272</w>
       <h>192</h>
@@ -144,7 +144,7 @@ drawArc(0,height*3/5,width,height*2/5,180,180,true) fg=black //Parameters (x, y,
   <element>
     <id>UMLDeployment</id>
     <coordinates>
-      <x>248</x>
+      <x>168</x>
       <y>88</y>
       <w>88</w>
       <h>40</h>
@@ -155,7 +155,7 @@ drawArc(0,height*3/5,width,height*2/5,180,180,true) fg=black //Parameters (x, y,
   <element>
     <id>UMLDeployment</id>
     <coordinates>
-      <x>96</x>
+      <x>16</x>
       <y>40</y>
       <w>120</w>
       <h>136</h>
@@ -168,7 +168,7 @@ group=4</panel_attributes>
   <element>
     <id>UMLDeployment</id>
     <coordinates>
-      <x>96</x>
+      <x>16</x>
       <y>40</y>
       <w>120</w>
       <h>136</h>
@@ -181,7 +181,7 @@ group=4</panel_attributes>
   <element>
     <id>UMLDeployment</id>
     <coordinates>
-      <x>96</x>
+      <x>16</x>
       <y>40</y>
       <w>120</w>
       <h>136</h>
@@ -194,7 +194,7 @@ group=4</panel_attributes>
   <element>
     <id>UMLDeployment</id>
     <coordinates>
-      <x>96</x>
+      <x>16</x>
       <y>40</y>
       <w>120</w>
       <h>136</h>
@@ -207,7 +207,7 @@ group=4</panel_attributes>
   <element>
     <id>UMLDeployment</id>
     <coordinates>
-      <x>96</x>
+      <x>16</x>
       <y>40</y>
       <w>120</w>
       <h>136</h>
@@ -220,7 +220,7 @@ group=4</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>208</x>
+      <x>128</x>
       <y>104</y>
       <w>56</w>
       <h>24</h>
@@ -231,7 +231,7 @@ group=4</panel_attributes>
   <element>
     <id>UMLDeployment</id>
     <coordinates>
-      <x>400</x>
+      <x>320</x>
       <y>0</y>
       <w>280</w>
       <h>192</h>
@@ -244,7 +244,7 @@ group=4</panel_attributes>
   <element>
     <id>UMLDeployment</id>
     <coordinates>
-      <x>552</x>
+      <x>472</x>
       <y>136</y>
       <w>112</w>
       <h>40</h>
@@ -255,18 +255,7 @@ group=4</panel_attributes>
   <element>
     <id>UMLDeployment</id>
     <coordinates>
-      <x>480</x>
-      <y>56</y>
-      <w>128</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>MessageConverter</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLDeployment</id>
-    <coordinates>
-      <x>416</x>
+      <x>336</x>
       <y>136</y>
       <w>112</w>
       <h>40</h>
@@ -277,12 +266,12 @@ group=4</panel_attributes>
   <element>
     <id>UMLDeployment</id>
     <coordinates>
-      <x>80</x>
-      <y>440</y>
+      <x>56</x>
+      <y>552</y>
       <w>272</w>
       <h>192</h>
     </coordinates>
-    <panel_attributes>Warehouse Management System
+    <panel_attributes>System
 --
 </panel_attributes>
     <additional_attributes/>
@@ -290,9 +279,9 @@ group=4</panel_attributes>
   <element>
     <id>UMLDeployment</id>
     <coordinates>
-      <x>400</x>
-      <y>440</y>
-      <w>280</w>
+      <x>376</x>
+      <y>552</y>
+      <w>288</w>
       <h>192</h>
     </coordinates>
     <panel_attributes>Communication
@@ -303,41 +292,31 @@ group=4</panel_attributes>
   <element>
     <id>UMLDeployment</id>
     <coordinates>
-      <x>552</x>
-      <y>576</y>
+      <x>528</x>
+      <y>688</y>
       <w>112</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>DataReceiver</panel_attributes>
+    <panel_attributes>Wearable
+Communicator</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLDeployment</id>
     <coordinates>
-      <x>552</x>
-      <y>496</y>
+      <x>392</x>
+      <y>688</y>
       <w>112</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>DataSender</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLDeployment</id>
-    <coordinates>
-      <x>416</x>
-      <y>576</y>
-      <w>112</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>DataConnector</panel_attributes>
+    <panel_attributes>SystemConnector</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>312</x>
-      <y>592</y>
+      <x>288</x>
+      <y>704</y>
       <w>120</w>
       <h>24</h>
     </coordinates>
@@ -347,7 +326,7 @@ group=4</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>328</x>
+      <x>248</x>
       <y>96</y>
       <w>104</w>
       <h>80</h>
@@ -358,7 +337,7 @@ group=4</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>320</x>
+      <x>240</x>
       <y>368</y>
       <w>112</w>
       <h>24</h>
@@ -369,8 +348,8 @@ group=4</panel_attributes>
   <element>
     <id>UMLDeployment</id>
     <coordinates>
-      <x>232</x>
-      <y>576</y>
+      <x>208</x>
+      <y>688</y>
       <w>88</w>
       <h>40</h>
     </coordinates>
@@ -380,7 +359,7 @@ group=4</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>520</x>
+      <x>440</x>
       <y>368</y>
       <w>48</w>
       <h>24</h>
@@ -391,7 +370,7 @@ group=4</panel_attributes>
   <element>
     <id>UMLDeployment</id>
     <coordinates>
-      <x>480</x>
+      <x>400</x>
       <y>272</y>
       <w>128</w>
       <h>40</h>
@@ -402,7 +381,7 @@ group=4</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>528</x>
+      <x>448</x>
       <y>304</y>
       <w>104</w>
       <h>64</h>
@@ -414,7 +393,7 @@ group=4</panel_attributes>
     <id>UMLDeployment</id>
     <coordinates>
       <x>736</x>
-      <y>576</y>
+      <y>608</y>
       <w>96</w>
       <h>40</h>
     </coordinates>
@@ -425,7 +404,7 @@ group=4</panel_attributes>
     <id>UMLDeployment</id>
     <coordinates>
       <x>736</x>
-      <y>496</y>
+      <y>528</y>
       <w>96</w>
       <h>40</h>
     </coordinates>
@@ -435,30 +414,8 @@ group=4</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>656</x>
-      <y>584</y>
-      <w>96</w>
-      <h>24</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>656</x>
-      <y>512</y>
-      <w>96</w>
-      <h>24</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>100.0;10.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>520</x>
-      <y>584</y>
+      <x>496</x>
+      <y>704</y>
       <w>48</w>
       <h>24</h>
     </coordinates>
@@ -468,19 +425,8 @@ group=4</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>456</x>
-      <y>512</y>
-      <w>112</w>
-      <h>80</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>120.0;10.0;10.0;10.0;10.0;80.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
       <x>824</x>
-      <y>512</y>
+      <y>544</y>
       <w>64</w>
       <h>24</h>
     </coordinates>
@@ -491,7 +437,7 @@ group=4</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>824</x>
-      <y>528</y>
+      <y>560</y>
       <w>120</w>
       <h>80</h>
     </coordinates>
@@ -501,8 +447,8 @@ group=4</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>184</x>
-      <y>592</y>
+      <x>160</x>
+      <y>704</y>
       <w>64</w>
       <h>24</h>
     </coordinates>
@@ -512,8 +458,8 @@ group=4</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>144</x>
-      <y>536</y>
+      <x>120</x>
+      <y>648</y>
       <w>24</w>
       <h>56</h>
     </coordinates>
@@ -523,8 +469,8 @@ group=4</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>128</x>
-      <y>480</y>
+      <x>104</x>
+      <y>592</y>
       <w>48</w>
       <h>64</h>
     </coordinates>
@@ -544,8 +490,8 @@ drawArc(0,height*3/5,width,height*2/5,180,180,true) fg=black //Parameters (x, y,
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>104</x>
-      <y>576</y>
+      <x>80</x>
+      <y>688</y>
       <w>88</w>
       <h>40</h>
     </coordinates>
@@ -555,8 +501,8 @@ drawArc(0,height*3/5,width,height*2/5,180,180,true) fg=black //Parameters (x, y,
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>104</x>
-      <y>576</y>
+      <x>80</x>
+      <y>688</y>
       <w>88</w>
       <h>40</h>
     </coordinates>
@@ -566,8 +512,8 @@ drawArc(0,height*3/5,width,height*2/5,180,180,true) fg=black //Parameters (x, y,
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>104</x>
-      <y>576</y>
+      <x>80</x>
+      <y>688</y>
       <w>88</w>
       <h>40</h>
     </coordinates>
@@ -577,8 +523,8 @@ drawArc(0,height*3/5,width,height*2/5,180,180,true) fg=black //Parameters (x, y,
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>104</x>
-      <y>576</y>
+      <x>80</x>
+      <y>688</y>
       <w>88</w>
       <h>40</h>
     </coordinates>
@@ -588,8 +534,8 @@ drawArc(0,height*3/5,width,height*2/5,180,180,true) fg=black //Parameters (x, y,
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>104</x>
-      <y>576</y>
+      <x>80</x>
+      <y>688</y>
       <w>88</w>
       <h>40</h>
     </coordinates>
@@ -599,8 +545,8 @@ drawArc(0,height*3/5,width,height*2/5,180,180,true) fg=black //Parameters (x, y,
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>104</x>
-      <y>576</y>
+      <x>80</x>
+      <y>688</y>
       <w>88</w>
       <h>40</h>
     </coordinates>
@@ -611,11 +557,307 @@ drawArc(0,height*3/5,width,height*2/5,180,180,true) fg=black //Parameters (x, y,
     <id>UMLDeployment</id>
     <coordinates>
       <x>872</x>
-      <y>496</y>
+      <y>528</y>
       <w>96</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>BusinessLogic</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLDeployment</id>
+    <coordinates>
+      <x>736</x>
+      <y>680</y>
+      <w>96</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Communication
+Interface</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>824</x>
+      <y>560</y>
+      <w>136</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;180.0;150.0;180.0;150.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>632</x>
+      <y>704</y>
+      <w>120</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLDeployment</id>
+    <coordinates>
+      <x>376</x>
+      <y>768</y>
+      <w>288</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>Communication
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLDeployment</id>
+    <coordinates>
+      <x>528</x>
+      <y>904</y>
+      <w>112</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>DataReceiver</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLDeployment</id>
+    <coordinates>
+      <x>392</x>
+      <y>904</y>
+      <w>112</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>SystemConnector</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>496</x>
+      <y>920</y>
+      <w>48</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;40.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLDeployment</id>
+    <coordinates>
+      <x>528</x>
+      <y>824</y>
+      <w>112</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>DataSender</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLDeployment</id>
+    <coordinates>
+      <x>712</x>
+      <y>768</y>
+      <w>288</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>Wearable
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLDeployment</id>
+    <coordinates>
+      <x>736</x>
+      <y>904</y>
+      <w>96</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>OutputInterfaces</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLDeployment</id>
+    <coordinates>
+      <x>736</x>
+      <y>824</y>
+      <w>96</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>InputInterfaces</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>824</x>
+      <y>840</y>
+      <w>64</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>60.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>824</x>
+      <y>856</y>
+      <w>120</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;80.0;130.0;80.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLDeployment</id>
+    <coordinates>
+      <x>872</x>
+      <y>824</y>
+      <w>96</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>BusinessLogic</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>632</x>
+      <y>920</y>
+      <w>120</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>632</x>
+      <y>840</y>
+      <w>120</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>130.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>440</x>
+      <y>840</y>
+      <w>104</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>110.0;10.0;10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLDeployment</id>
+    <coordinates>
+      <x>712</x>
+      <y>176</y>
+      <w>288</w>
+      <h>272</h>
+    </coordinates>
+    <panel_attributes>Wearable
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLDeployment</id>
+    <coordinates>
+      <x>736</x>
+      <y>312</y>
+      <w>96</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>OutputInterfaces</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLDeployment</id>
+    <coordinates>
+      <x>736</x>
+      <y>232</y>
+      <w>96</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>InputInterfaces</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>824</x>
+      <y>248</y>
+      <w>64</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>60.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>824</x>
+      <y>264</y>
+      <w>120</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;80.0;130.0;80.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLDeployment</id>
+    <coordinates>
+      <x>872</x>
+      <y>232</y>
+      <w>96</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>BusinessLogic</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLDeployment</id>
+    <coordinates>
+      <x>736</x>
+      <y>384</y>
+      <w>96</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Communication
+Interface</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>824</x>
+      <y>320</y>
+      <w>120</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;110.0;130.0;110.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>712</x>
+      <y>320</y>
+      <w>40</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>30.0;10.0;10.0;10.0;10.0;110.0;30.0;110.0</additional_attributes>
   </element>
 </diagram>

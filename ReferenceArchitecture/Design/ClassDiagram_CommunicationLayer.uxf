@@ -4,7 +4,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>140</x>
+      <x>672</x>
       <y>350</y>
       <w>252</w>
       <h>266</h>
@@ -47,7 +47,7 @@ Responsibilities:
     <id>UMLClass</id>
     <coordinates>
       <x>672</x>
-      <y>350</y>
+      <y>63</y>
       <w>252</w>
       <h>266</h>
     </coordinates>
@@ -88,12 +88,13 @@ Responsibilities:
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>140</x>
+      <x>406</x>
       <y>63</y>
       <w>252</w>
       <h>266</h>
     </coordinates>
     <panel_attributes>style=wordwrap
+&lt;&lt;Optional&gt;&gt;
 QueryPreperation
 --
 

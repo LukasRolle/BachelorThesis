@@ -77,10 +77,44 @@ Is the Reference Architecture actually fully possible when trying to make it (mo
 The Communication to the WMS is not changeable depending on the implementation. The Communication between the Wearable and the Communication Layer depends heavily on the wearable. A radio based connection from the wearable would create a whole new package. If some wearables do not support REST for example another communication path has to be chosen, changing implementation details in the communication layer again.
 
 First activity diagrams before Package / Box diagram.
+The Reference Architecture is split up into three parts.
+\section{Wearable}
+The wearable does represent the actual physical device. This means it tries to model the possibilities that a wearable has. The wearable is constructed of four different parts.
+\begin{description}
+	\item[OutputInterfaces] \hfill \\
+	OutputInterfaces consist of all the interfaces a wearable has to output information to the world. This could be directly displaying information on a display or giving a voice message to the user.
+	\item[InputInterfaces] \hfill \\
+	The InputInterfaces consist of the interfaces a wearable has to accept information from the world. This can consist of input received by voice or gesture for example.
+	\item[CommunicationInterface] \hfill \\
+	The CommunicationInterface is the interface for the wearable to the communication layer or another system. This can be a connection via REST or radio frequencies.
+	\item[BusinessLogic] \hfill \\
+	The BusinessLogic is displaying all the actions the wearable is doing by itself. This can be calculations, interpretations or something similar.
+\end{description}
 
-Conventionally, all InputInterfaces will start with the word Input and all OutputInterfaces will start with the word Output. Also conventional is, that an Output interface is not able to get any input from any source outside of the wearable itself, at the same time an input is unable to output information to sources outside of the wearable.
+%Conventionally, all InputInterfaces will start with the word Input and all OutputInterfaces will start with the word Output. 
+Also conventional is, that an OutputInterface is not able to get any input from any source outside of the wearable itself, at the same time an InputInterface is unable to output information to sources outside of the wearable.
 
-Next Package in HoloLens (Test when another person says it).
+\section{Communication}
+\begin{description}
+	\item[WearableCommunicator] \hfill \\
+	The WearableCommunicator is responsible for receiving messages from the wearable and if needed send responses to the received requests. This part of the application can be adjusted to work with Bluetooth, REST, radio frequences or other ways of communication from the wearable to the communication layer.	
+	\item[SystemConnector] \hfill \\
+	The SystemConnector is responsible to create and maintain a connection to any underlying system that might exist. This does not means that an implementation is given that fits every underlying system, but that this component should be configured for each system with the functionality needed for that system.
+\end{description}
+\section{System}
+\begin{description}
+	\item[API] \hfill \\
+	The API of a system is the interface that a programmer is able to connect to in a programmatic way. This will be different for every existing system and is, in general, not controllable by the person that is using such a system. 
+\end{description}
 
+
+\section{Use-Cases}
+This section will describe how the reference architecture can be used with different Use-Cases and why no concrete implementation can be given for any part of the reference architecture.
+
+The whole reference architecture will change, based on how the components are going to be used. The communication interface of the wearable is going to change, depending on the hardware or software capabilities of the wearable. Some wearables are only able to send data via radio frequencies, therefore the communication interface will have specific implementations to send data via radio. This might as well be different for REST, bluetooth or any other technology that might be used. When this changes the WearableCommunicator in the communication layer is also going to change for every implementation of the wearable's CommunicationInterface.
+
+Similar the SystemConnector in the Communication Layer is also going to change for every system that will be deployed in the backend.
+
+What also changes the implementations of almost every components is the data that will be send from the wearable to the backend system. Different methods are used for verifying the user compared to scanning a pallet ID. 
 
 \end{document}
