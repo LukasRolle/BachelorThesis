@@ -24,6 +24,7 @@
 *.synctex.gz
 *00-main.pdf
 
+App.config
 
 # Created by https://www.gitignore.io/api/visualstudio,csharp,visualstudiocode
 
