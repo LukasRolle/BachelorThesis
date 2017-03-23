@@ -35,4 +35,6 @@ The \texttt{system} package here can be something like a \gls{wms} of the compan
 
 
 \section{Problems}
-The main problem that occurred during the creation of the \gls{reference model} was a problem in communication, regarding the names of \gls{reference model} and \gls{reference architecture}. 
+The main problem that occurred during the creation of the \gls{reference model} was a problem in communication, regarding the names of \gls{reference model} and \gls{reference architecture}. The initial task was understood to create a general-purpose \gls{reference architecture}, that would connect a \gls{wearable} to some kind of system. During the process of creating the different diagrams for the reference architecture and trying to validate them using code. The problem became obvious that trying to go deeper than the now given \gls{reference model}, as seen in figure \ref{fig:referenceModel}, was impossible to do for a general-purpose implementation.
+
+This is the case because of the nature of the given problem. Being able to use any wearable with any system, for any task. Given that two wearables might have completely different sets of input- and outputinterfaces those could not be defined. The communication interface could be different, which leads to being unable to define a communication standard, while the possibility of any task gives no single action that will always be the same.
