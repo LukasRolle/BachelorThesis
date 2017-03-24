@@ -24,6 +24,8 @@
 *.synctex.gz
 *00-main.pdf
 
+*.glsdefs
+*.lol
 App.config
 
 # Created by https://www.gitignore.io/api/visualstudio,csharp,visualstudiocode
