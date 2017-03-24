@@ -1,0 +1,76 @@
+\usepackage[english]{babel}  
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc} 
+\usepackage[pdftex,scale={.8,.8}]{geometry}
+\usepackage{layout}
+\usepackage{fancybox}
+\usepackage[pdftex]{graphicx}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage[parfill]{parskip}
+\usepackage{xcolor}
+\usepackage{%
+  array,
+  booktabs,
+  dcolumn,
+  rotating,
+  shortvrb,
+  units,
+  url,
+  lastpage,
+  longtable,
+  lscape,
+  multirow,
+  amssymb,
+  amsmath,
+  float,
+  chngpage,
+  colortbl,times,
+}
+\usepackage{hyperref}
+\usepackage[toc, nonumberlist, acronym, shortcuts]{glossaries}
+\usepackage[toc, page]{appendix}
+
+\usepackage{titlesec}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{wrapfig}
+\titleformat{\chapter}[hang] 
+{\normalfont\huge\bfseries}{\thechapter}{1em}{} 
+\titlespacing*{\chapter}{0pt}{0pt}{20pt}
+\makeglossaries
+
+\pgfplotsset{compat=1.9}
+
+\usepackage{pdfpages}
+\usepackage{fancyhdr}
+\usepackage{xfrac}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{
+	backgroundcolor=\color{white},
+	basicstyle=\footnotesize,
+	breakatwhitespace=false,
+	breaklines=true,
+	captionpos=b,
+	commentstyle=\color{mygreen},
+	frame=single,
+	keepspaces=true,
+	keywordstyle=\color{blue},
+	numbersep=5pt,
+	numberstyle=\tiny\color{mygray},
+	rulecolor=\color{black},
+	stringstyle=\color{mymauve},
+	tabsize=2
+}
+
+\newcommand*\NewPage{\newpage\null\thispagestyle{plain}\newpage}
+
+
+\addto\captionsenglish{
+	\renewcommand{\bibname}{List of References}
+	\renewcommand{\lstlistlistingname}{List of Listings}
+}
