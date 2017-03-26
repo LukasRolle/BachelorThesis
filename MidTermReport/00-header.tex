@@ -9,8 +9,10 @@
 \usepackage{listings}
 \usepackage[parfill]{parskip}
 \usepackage{xcolor}
+
 \usepackage{%
   array,
+  arydshln, %Allow dotted lines in tables
   booktabs,
   dcolumn,
   rotating,
@@ -67,10 +69,15 @@
 	tabsize=2
 }
 
-\newcommand*\NewPage{\newpage\null\thispagestyle{plain}\newpage}
-
-
 \addto\captionsenglish{
 	\renewcommand{\bibname}{List of References}
 	\renewcommand{\lstlistlistingname}{List of Listings}
 }
+
+\makeatletter
+\newcommand{\thickhline}{%
+    \noalign {\ifnum 0=`}\fi \hrule height 1pt
+    \futurelet \reserved@a \@xhline
+}
+\newcolumntype{"}{@{\hskip\tabcolsep\vrule width 1pt\hskip\tabcolsep}}
+\makeatother
