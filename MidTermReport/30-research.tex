@@ -1,5 +1,5 @@
 \chapter{Research}\label{cha:research}
-This chapter includes the general research that has been done for the project. Which includes the research about some given processes and wearables that could be appropriate for the processes. The CASE Tools chosen at the current state of the project will also be discussed and what they are used for.
+This chapter includes the general research that has been done for the project, which includes the research about some given processes and wearables that could be appropriate for the processes. The CASE Tools chosen at the current state of the project will also be discussed and what they are used for.
 
 \section{Processes}\label{sec:processes}
 There were process already modelled and made available in the LOGwear project. The given processes were:
@@ -10,19 +10,65 @@ There were process already modelled and made available in the LOGwear project. T
 	\item Goods Receipt and Put away
 \end{itemize}
 
-Those three processes can also be found in \ref{appendix}.
-
 Order Picking High Rack has been discarded due to the nature of what should be created. A simulation that should model a real environment. Modelling a High Rack and usage of that would be too hard and would take too much time.
 
 Goods Receipt and Put away was another process to be considered, but was discarded. The modelling of it would be problematic due to the time delays in the tasks. Furthermore the process showed less potential for improvements with wearables.
 
-Order Picking W3-5 was the process chosen to improve with wearables as multiple possibilities to improve the process were discovered. Also the processes seemed rather easy to model with a demo facility by setting up one or two racks and placing multiple packages on there.
-
-The process has been decided together with the company supervisor.
+Order Picking W3-5 was the process chosen to improve with wearables as multiple possibilities to improve the process were discovered. Also the processes seemed rather easy to model with a demo facility by setting up one or two racks and placing multiple packages on there. This process was selected together with the company supervisor.
 
 \section{Wearables}\label{sec:wearables}
 Researching wearables was a more problematic task, as the amount of wearables that could be used potentially is a lot higher. Some criteria were set in place for a wearable to be considered in the first place. A wearable has to be either already available, or freely available to order in europe from a trusted source. This leads to well known wearables like the Google Glass to be not even considered as they are not publicly available.
 
+Further criteria are more specific towards the chosen process. The criteria were divided into requirements and quantifiable criteria. The requirements a wearable, or a combination of wearables, must be able to fulfil are:
+\begin{description}
+	\item[Scan ID] \hfill \\
+		The ability to scan an \gls{id}, could be a barcode, \gls{rfid} code, \gls{qr} code or something different.
+	\item[Display Information] \hfill \\
+		The ability to display information to the user, this can be done by audio, visual or \gls{hapticFeedback}. 
+	\item[Send Confirmations] \hfill \\
+		The ability to send confirmations to the \gls{wms}, that part of the process has been completed.
+	\item[Hands-free] \hfill \\
+		The ability to operate the wearable without out the need to take a device and put it back all the time. Operations should not need user hand input while packages are being handled or the hands are otherwise occupied.
+\end{description}
+
+Most of the quantifiable criteria were hard to actually hard to quantify without having hands-on-experience with these devices. The reason behind this is, that most of the devices are either just released to the public or niche products leading to a small amount of information available besides information published by the manufacturers of the devices, which is generally not a good source of unbiased information.
+
+\Gls{smartglasses} seem to be the most promising type of wearable for the task, due to the possibilities it does give its user. The possibility for indoor navigation, scanning, exactly displaying the item location, constant display of information and further possible features that could be implemented using an always-on camera that is implemented in most devices. \cite{phdthesis:pickByVision}
+
+The \gls{smartglasses} most interesting for this topic are:
+
+\begin{itemize}
+	\item Epson-Moverio BT-300
+	\item Microsoft HoloLens
+	\item Vuzix M100
+\end{itemize}
+
+They are the newest publicly available glasses from some of the biggest manufacturers of \gls{smartglasses}, that are currently publicly available.
+
+Another solution including wearables for the order picking process is the combination of a \gls{ringScanner} and a wrist-mounted computer. This type of combination are:
+
+\begin{itemize}
+	\item Zebra WT6000 + RS6000
+	\item Honeywell Dolphin 75e + 8620 Wearable Ring Scanner
+\end{itemize}
+
+This combination could also be using a headset to add further functionality.
+
+The named wearables will be investigated further with hands-on experience before actually choosing a single wearable to implement the demo facility with. The demo facility is further explained in chapter \ref{cha:demoFacility}.
+
+\cleardoublepage
 
 \section{CASE Tools}\label{sec:caseTools}
-The \gls{case} tools chose here are only for the parts already decided on. As a chosen wearable could introduce a lot more \gls{case} tools to the project. 
+The \gls{case} tools chosen here are only for the parts already decided on. As a chosen wearable could introduce a lot more \gls{case} tools to the project. The already chosen \gls{case} tools can be seen in table \ref{tab:case}.
+
+\begin{table}[htbp]
+	\begin{center}
+	\begin{tabular}{|p{0.2\linewidth}|p{0.6\linewidth}|} \hline
+	\textbf{Program} & \textbf{Usage} \\ \hline
+	UMLet & UMLet is a free, open-source \gls{uml} tool. It is used to create \gls{uml} diagrams and is extensible by user created, custom elements. \cite{website:umlet} It was used to create the diagrams that were created during the thesis.  \\ \hline
+	JIRA & JIRA is a tool developed by Atlassian. It is an issue tracking and project management tool. During the thesis it is used as a tool to plan sprints and track bugs and issues, as well as having a backlog of features that should still be implemented. \\ \hline
+	Bitbucket & Bitbucket is a tool developed by Atlassian. It is a \gls{vcs} solution that uses git as an underlying system and is aiming to give companies a secure and private git repository to use for proprietary projects. During the thesis Bitbucket is used as a \gls{vcs} for the different parts of the project. \\ \hline
+	\end{tabular}
+	\end{center}
+	\caption{CASE tools}\label{tab:case}
+\end{table}
