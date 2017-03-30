@@ -26,6 +26,9 @@
 
 *.glsdefs
 *.lol
+*.run.xml
+*.xdy
+*.bcf
 App.config
 
 # Created by https://www.gitignore.io/api/visualstudio,csharp,visualstudiocode
