@@ -7,8 +7,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System.Data.Linq;
-using System.Data.SqlClient;
 namespace DBC
 {
     using System;
@@ -21,7 +19,7 @@ namespace DBC
             : base("name=WMSEntities")
         {
         }
-        
+    
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();

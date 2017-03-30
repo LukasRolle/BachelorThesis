@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="MockWMSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="WMSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Articles">
           <Key>
             <PropertyRef Name="ArticleNumber" />
@@ -135,7 +135,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="MockWMSModelStoreContainer">
+        <EntityContainer Name="WMSModelStoreContainer">
           <EntitySet Name="Articles" EntityType="Self.Articles" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="OrderLines" EntityType="Self.OrderLines" Schema="dbo" store:Type="Tables" />
@@ -172,7 +172,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="MockWMSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="WMSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Article">
           <Key>
             <PropertyRef Name="ArticleNumber" />
@@ -285,7 +285,7 @@
           <End Role="Orders" Type="Self.Order" Multiplicity="*" />
           <End Role="Workers" Type="Self.Worker" Multiplicity="*" />
         </Association>
-        <EntityContainer Name="MockWMSEntities3" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="WMSEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Articles" EntityType="Self.Article" />
           <EntitySet Name="Customers" EntityType="Self.Customer" />
           <EntitySet Name="OrderLines" EntityType="Self.OrderLine" />
@@ -318,9 +318,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="MockWMSModelStoreContainer" CdmEntityContainer="MockWMSEntities3">
+        <EntityContainerMapping StorageEntityContainer="WMSModelStoreContainer" CdmEntityContainer="WMSEntities">
           <EntitySetMapping Name="Articles">
-            <EntityTypeMapping TypeName="MockWMSModel.Article">
+            <EntityTypeMapping TypeName="WMSModel.Article">
               <MappingFragment StoreEntitySet="Articles">
                 <ScalarProperty Name="ArticleNumber" ColumnName="ArticleNumber" />
                 <ScalarProperty Name="ArticleName" ColumnName="ArticleName" />
@@ -328,7 +328,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Customers">
-            <EntityTypeMapping TypeName="MockWMSModel.Customer">
+            <EntityTypeMapping TypeName="WMSModel.Customer">
               <MappingFragment StoreEntitySet="Customers">
                 <ScalarProperty Name="CustomerNumber" ColumnName="CustomerNumber" />
                 <ScalarProperty Name="AdditionalWishes" ColumnName="AdditionalWishes" />
@@ -337,7 +337,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="OrderLines">
-            <EntityTypeMapping TypeName="MockWMSModel.OrderLine">
+            <EntityTypeMapping TypeName="WMSModel.OrderLine">
               <MappingFragment StoreEntitySet="OrderLines">
                 <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
                 <ScalarProperty Name="PalletNumber" ColumnName="PalletNumber" />
@@ -348,7 +348,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Orders">
-            <EntityTypeMapping TypeName="MockWMSModel.Order">
+            <EntityTypeMapping TypeName="WMSModel.Order">
               <MappingFragment StoreEntitySet="Orders">
                 <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
                 <ScalarProperty Name="CustomerNumber" ColumnName="CustomerNumber" />
@@ -357,7 +357,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Pallets">
-            <EntityTypeMapping TypeName="MockWMSModel.Pallet">
+            <EntityTypeMapping TypeName="WMSModel.Pallet">
               <MappingFragment StoreEntitySet="Pallets">
                 <ScalarProperty Name="PalletNumber" ColumnName="PalletNumber" />
                 <ScalarProperty Name="StorageLocation" ColumnName="StorageLocation" />
@@ -367,13 +367,13 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Workers">
-            <EntityTypeMapping TypeName="MockWMSModel.Worker">
+            <EntityTypeMapping TypeName="WMSModel.Worker">
               <MappingFragment StoreEntitySet="Workers">
                 <ScalarProperty Name="WorkerNumber" ColumnName="WorkerNumber" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <AssociationSetMapping Name="OrderWorker" TypeName="MockWMSModel.OrderWorker" StoreEntitySet="OrderWorker">
+          <AssociationSetMapping Name="OrderWorker" TypeName="WMSModel.OrderWorker" StoreEntitySet="OrderWorker">
             <EndProperty Name="Orders">
               <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
             </EndProperty>

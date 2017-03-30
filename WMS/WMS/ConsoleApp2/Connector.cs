@@ -39,21 +39,21 @@ namespace DBC
         public static Order GetOrder(int orderNumber)
         {
             WMSEntities db = new WMSEntities();
-            var query =
+            var orders =
                 from order in db.Orders
                 where order.OrderNumber == orderNumber
                 select order;
-            return query.FirstOrDefault();
+            return orders.FirstOrDefault();
         }
 
         public static void ConfirmOrderLine(int orderNumber, int orderLineNumber)
         {
             WMSEntities db = new WMSEntities();
-            var query =
+            var orders =
                 from o in db.Orders
                 where o.OrderNumber == orderNumber
                 select o;
-            Order order = query.FirstOrDefault();
+            Order order = orders.FirstOrDefault();
             if (order != null)
             {
                 var orderLines = order.OrderLines.Where(p => p.OrderLineNumber == orderLineNumber);
@@ -70,11 +70,11 @@ namespace DBC
         public static void OrderSend(int orderNumber)
         {
             WMSEntities db = new WMSEntities();
-            var query =
+            var orders =
                 from o in db.Orders
                 where o.OrderNumber == orderNumber
                 select o;
-            Order order = query.FirstOrDefault();
+            Order order = orders.FirstOrDefault();
             if (order != null)
             {
                 order.OrderPacked = true;
