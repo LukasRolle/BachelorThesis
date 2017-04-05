@@ -86,7 +86,7 @@ namespace DBC
                     {
                         OrderNumber = 1,
                         OrderLines = orderLines,
-                        
+                        OrderPacked = false
                     }
                 };
 

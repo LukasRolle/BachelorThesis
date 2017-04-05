@@ -15,7 +15,7 @@ namespace RestService
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class Service1 : IService1
     {
-        public string GetData(int value)
+        public string GetOrder(int value)
         {
             var serializer = new JavaScriptSerializer();
             var order = Connector.GetOrder(value);
@@ -33,6 +33,27 @@ namespace RestService
                 composite.StringValue += "Suffix";
             }
             return composite;
+        }
+
+        public void ResetDatabase()
+        {
+            DatabaseSetupHelper.ResetDatabase();
+        }
+
+        public string GetNextOrder(int id)
+        {
+            var serializer = new JavaScriptSerializer();
+            return serializer.Serialize(Connector.GetNextOrder(id));
+        }
+
+        public void ConfirmOrderLine(int orderId, int orderLineId)
+        {
+            Connector.ConfirmOrderLine(orderId, orderLineId);
+        }
+
+        public void ConfirmOrder(int id)
+        {
+            Connector.OrderSend(id);
         }
     }
 }

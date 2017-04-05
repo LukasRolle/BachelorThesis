@@ -15,34 +15,23 @@ namespace RestService
 
         [OperationContract]
         [WebGet(UriTemplate = "Order/?id={id}")]
-        string GetData(int id);
+        string GetOrder(int id);
 
         [OperationContract]
-        CompositeType GetDataUsingDataContract(CompositeType composite);
+        [WebGet(UriTemplate = "NextOrder/?id={id}")]
+        string GetNextOrder(int id);
 
-        // TODO: Add your service operations here
-    }
+        [OperationContract]
+        [WebInvoke(Method = "PATCH", UriTemplate = "ResetDatabase")]
+        void ResetDatabase();
 
+        [OperationContract]
+        [WebInvoke(Method = "PUT", UriTemplate = "ConfirmOrderLine/?orderId={orderId}&orderLineId={orderLineId}")]
+        void ConfirmOrderLine(int orderId, int orderLineId);
 
-    // Use a data contract as illustrated in the sample below to add composite types to service operations.
-    [DataContract]
-    public class CompositeType
-    {
-        bool boolValue = true;
-        string stringValue = "Hello ";
+        [OperationContract]
+        [WebInvoke(Method = "PUT", UriTemplate = "ConfirmOrder/?orderId={id}")]
+        void ConfirmOrder(int id);
 
-        [DataMember]
-        public bool BoolValue
-        {
-            get { return boolValue; }
-            set { boolValue = value; }
-        }
-
-        [DataMember]
-        public string StringValue
-        {
-            get { return stringValue; }
-            set { stringValue = value; }
-        }
     }
 }
