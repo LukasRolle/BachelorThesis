@@ -27,6 +27,6 @@ namespace DBC
     
         public virtual Article Article { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<OrderLine> OrderLines { get; set; }
+        internal virtual ICollection<OrderLine> OrderLines { get; set; }
     }
 }

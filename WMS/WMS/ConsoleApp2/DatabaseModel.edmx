@@ -179,7 +179,7 @@
           </Key>
           <Property Name="ArticleNumber" Type="Int32" Nullable="false" />
           <Property Name="ArticleName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Pallets" Relationship="Self.FK__Pallets__Article__619B8048" FromRole="Articles" ToRole="Pallets" />
+          <NavigationProperty Name="Pallets" Relationship="Self.FK__Pallets__Article__619B8048" FromRole="Articles" ToRole="Pallets" a:GetterAccess="Internal" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" a:SetterAccess="Internal" />
         </EntityType>
         <EntityType Name="Customer">
           <Key>
@@ -188,7 +188,7 @@
           <Property Name="CustomerNumber" Type="Int32" Nullable="false" />
           <Property Name="AdditionalWishes" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="CustomerAddress" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Orders" Relationship="Self.FK__Orders__Customer__5812160E" FromRole="Customers" ToRole="Orders" />
+          <NavigationProperty Name="Orders" Relationship="Self.FK__Orders__Customer__5812160E" FromRole="Customers" ToRole="Orders" a:GetterAccess="Internal" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" a:SetterAccess="Internal" />
         </EntityType>
         <EntityType Name="OrderLine">
           <Key>
@@ -201,7 +201,7 @@
           <Property Name="OrderLineNumber" Type="Int32" Nullable="false" />
           <Property Name="Quantity" Type="Int32" />
           <Property Name="Acknowledgement" Type="Boolean" />
-          <NavigationProperty Name="Order" Relationship="Self.FK__OrderLine__Order__6477ECF3" FromRole="OrderLines" ToRole="Orders" />
+          <NavigationProperty Name="Order" Relationship="Self.FK__OrderLine__Order__6477ECF3" FromRole="OrderLines" ToRole="Orders" a:GetterAccess="Internal" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" a:SetterAccess="Internal" />
           <NavigationProperty Name="Pallet" Relationship="Self.FK__OrderLine__Palle__656C112C" FromRole="OrderLines" ToRole="Pallets" />
         </EntityType>
         <EntityType Name="Order">
@@ -224,14 +224,14 @@
           <Property Name="ArticleNumber" Type="Int32" />
           <Property Name="Quantity" Type="Int32" />
           <NavigationProperty Name="Article" Relationship="Self.FK__Pallets__Article__619B8048" FromRole="Pallets" ToRole="Articles" />
-          <NavigationProperty Name="OrderLines" Relationship="Self.FK__OrderLine__Palle__656C112C" FromRole="Pallets" ToRole="OrderLines" />
+          <NavigationProperty Name="OrderLines" Relationship="Self.FK__OrderLine__Palle__656C112C" FromRole="Pallets" ToRole="OrderLines" a:GetterAccess="Internal" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" a:SetterAccess="Internal" />
         </EntityType>
         <EntityType Name="Worker">
           <Key>
             <PropertyRef Name="WorkerNumber" />
           </Key>
           <Property Name="WorkerNumber" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Orders" Relationship="Self.OrderWorker" FromRole="Workers" ToRole="Orders" />
+          <NavigationProperty Name="Orders" Relationship="Self.OrderWorker" FromRole="Workers" ToRole="Orders" a:GetterAccess="Internal" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration" a:SetterAccess="Internal" />
         </EntityType>
         <Association Name="FK__Pallets__Article__619B8048">
           <End Role="Articles" Type="Self.Article" Multiplicity="0..1" />

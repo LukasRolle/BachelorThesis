@@ -20,7 +20,7 @@ namespace DBC
         public Nullable<int> Quantity { get; set; }
         public Nullable<bool> Acknowledgement { get; set; }
     
-        public virtual Order Order { get; set; }
+        internal virtual Order Order { get; set; }
         public virtual Pallet Pallet { get; set; }
     }
 }

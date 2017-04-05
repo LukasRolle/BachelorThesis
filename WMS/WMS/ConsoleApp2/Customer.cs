@@ -25,6 +25,6 @@ namespace DBC
         public string CustomerAddress { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Order> Orders { get; set; }
+        internal virtual ICollection<Order> Orders { get; set; }
     }
 }

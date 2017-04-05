@@ -11,19 +11,21 @@ namespace DBC
     {
         static public void Main()
         {
-            using (var connection = new QC.SqlConnection(CS.ConfigurationManager.ConnectionStrings["connectionString"].ConnectionString))
-            {
-                connection.Open();
-                Console.WriteLine("Connected successfully.");
+            DatabaseSetupHelper.ResetDatabase();
 
-                Console.WriteLine(GetNextOrder(1).OrderNumber);
-                Console.WriteLine(GetOrder(2));
-                ConfirmOrderLine(1, 1);
-                OrderSend(1);
+            //using (var connection = new QC.SqlConnection(CS.ConfigurationManager.ConnectionStrings["connectionString"].ConnectionString))
+            //{
+            //    connection.Open();
+            //    Console.WriteLine("Connected successfully.");
 
-                Console.WriteLine("Press any key to finish...");
-                Console.ReadKey(true);
-            }
+            //    Console.WriteLine(GetNextOrder(1).OrderNumber);
+            //    Console.WriteLine(GetOrder(2));
+            //    ConfirmOrderLine(1, 1);
+            //    OrderSend(1);
+
+            //    Console.WriteLine("Press any key to finish...");
+            //    Console.ReadKey(true);
+            //}
         }
 
         public static Order GetNextOrder(int workerNumber)
@@ -80,17 +82,6 @@ namespace DBC
                 order.OrderPacked = true;
                 db.SaveChanges();
             }
-        }
-
-        public static void SelectRows(QC.SqlConnection connection)
-        {
-            WMSEntities db = new WMSEntities();
-            var query =
-                from order in db.Orders
-                where order.OrderNumber == 1
-                select order;
-            foreach (var order in query)
-                Console.WriteLine("Order Number: {0}", order.ToString());
         }
     }
 }
