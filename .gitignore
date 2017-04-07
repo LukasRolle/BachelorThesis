@@ -29,6 +29,8 @@
 *.run.xml
 *.xdy
 *.bcf
+*.nav
+*.snm
 App.config
 
 # Created by https://www.gitignore.io/api/visualstudio,csharp,visualstudiocode
