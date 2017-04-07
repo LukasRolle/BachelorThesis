@@ -11,7 +11,8 @@ namespace DBC
     {
         static public void Main()
         {
-            DatabaseSetupHelper.ResetDatabase();
+            var helper = new DatabaseSetupHelper();
+            helper.ResetDatabase();
 
             //using (var connection = new QC.SqlConnection(CS.ConfigurationManager.ConnectionStrings["connectionString"].ConnectionString))
             //{
