@@ -21,23 +21,11 @@ namespace RestService
             var order = Connector.GetOrder(value);
             return serializer.Serialize(order).ToString();
         }
-
-        public CompositeType GetDataUsingDataContract(CompositeType composite)
-        {
-            if (composite == null)
-            {
-                throw new ArgumentNullException("composite");
-            }
-            if (composite.BoolValue)
-            {
-                composite.StringValue += "Suffix";
-            }
-            return composite;
-        }
-
+        
         public void ResetDatabase()
         {
-            DatabaseSetupHelper.ResetDatabase();
+            var helper = new DatabaseSetupHelper();
+            helper.ResetDatabase();
         }
 
         public string GetNextOrder(int id)
