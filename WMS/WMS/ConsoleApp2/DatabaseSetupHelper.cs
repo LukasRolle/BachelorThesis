@@ -12,7 +12,11 @@ namespace DBC
 {
     public class DatabaseSetupHelper
     {
-        public static void ResetDatabase()
+        public DatabaseSetupHelper ()
+        {
+
+        }
+        public void ResetDatabase()
         {
             using (var connection = new QC.SqlConnection(CS.ConfigurationManager.ConnectionStrings["connectionString"].ConnectionString))
             {
@@ -34,89 +38,79 @@ namespace DBC
 
                 Console.WriteLine("Creating New Entities.");
                 Article[] articles = {
-                    new Article
-                    {
-                        ArticleNumber = 1,
-                        ArticleName = "HP L2245w"
-                    },
-                    new Article
-                    {
-                        ArticleNumber = 2,
-                        ArticleName = "LG L194WT"
-                    }
+                    CreateNewArticle(1, "HP L2245w"),
+                    CreateNewArticle(2, "LG L194WT"),
+                    CreateNewArticle(3, "Acer R240HY"),
+                    CreateNewArticle(4, "HP Pavilion 22cwa"),
+                    CreateNewArticle(5, "LG 32MA68HY-P")
                 };
                 
                 Pallet[] pallets =
                 {
-                    new Pallet
-                    {
-                        Article = articles[0],
-                        PalletNumber = 1,
-                        Quantity = 5,
-                        StorageLocation = "1A32"
-                    },
-                    new Pallet
-                    {
-                        Article = articles[1],
-                        PalletNumber = 2,
-                        Quantity = 10,
-                        StorageLocation = "1A31"
-                    }
+                    CreateNewPallet(articles[0], 1, 15, "1A32"),
+                    CreateNewPallet(articles[1], 2, 20, "1A31"),
+                    CreateNewPallet(articles[2], 3, 18, "1B31"),
+                    CreateNewPallet(articles[3], 4, 16, "1B32"),
+                    CreateNewPallet(articles[4], 5, 22, "1A30")
                 };
 
-                OrderLine[] orderLines =
+                OrderLine[] orderLines1 =
                 {
-                    new OrderLine
-                    {
-                        Pallet = pallets[0],
-                        OrderLineNumber = 1,
-                        Quantity = 2
-                    },
-                    new OrderLine
-                    {
-                        Pallet = pallets[1],
-                        OrderLineNumber = 2,
-                        Quantity = 3
-                    }
+                    CreateNewOrderLine(pallets[0], 1, 2),
+                    CreateNewOrderLine(pallets[1], 2, 3),
                 };
-
-                Order[] orders =
+                OrderLine[] orderLines2 =
                 {
-                    new Order
-                    {
-                        OrderNumber = 1,
-                        OrderLines = orderLines,
-                        OrderPacked = false
-                    }
+                    CreateNewOrderLine(pallets[0], 1, 1),
+                    CreateNewOrderLine(pallets[1], 2, 2),
+                    CreateNewOrderLine(pallets[3], 3, 1),
+                    CreateNewOrderLine(pallets[4], 4, 1),
+                };
+                OrderLine[] orderLines3 =
+                {
+
+                    CreateNewOrderLine(pallets[1], 1, 1),
+                    CreateNewOrderLine(pallets[2], 2, 1),
+                    CreateNewOrderLine(pallets[4], 3, 3),
+                };
+                OrderLine[] orderLines4 =
+                {
+
+                    CreateNewOrderLine(pallets[3], 1, 3),
+                };
+                OrderLine[] orderLines5 =
+                {
+
+                    CreateNewOrderLine(pallets[0], 1, 1),
+                    CreateNewOrderLine(pallets[1], 2, 2),
+                    CreateNewOrderLine(pallets[2], 3, 2),
+                    CreateNewOrderLine(pallets[3], 4, 1),
+                    CreateNewOrderLine(pallets[4], 5, 3),
                 };
 
                 Customer[] customers =
                 {
-                    new Customer
-                    {
-                        CustomerNumber = 1,
-                        Orders = orders,
-                        AdditionalWishes = "All the Bubble Wrap.",
-                        CustomerAddress = "Abbey Road 3"
-                    }
+                    CreateNewCustomer(1, "All the Bubble Wrap.", "Abbey Road 3"),
+                    CreateNewCustomer(2, "Package in as small as possible packages.", "Great Ocean Road 13"),
+                    CreateNewCustomer(3, "Put everything on a pallet without further packaging.", "Lombard Street 286"),
                 };
 
-                Worker[] workers =
+                Worker[] workers1 = CreateNewWorkers(1, 2);
+                Worker[] workers2 = CreateNewWorkers(3, 4);
+                Worker[] workers3 =
                 {
-                    new Worker
-                    {
-                        WorkerNumber = 1,
-                        Orders = orders
-                    },
-                    new Worker
-                    {
-                        WorkerNumber = 2,
-                        Orders = orders,
-                    }
+                    workers1[0],
+                    workers2[1]
                 };
 
-                orders[0].Customer = customers[0];
-                orders[0].Workers = workers;
+                Order[] orders =
+                {
+                    CreateNewOrder(1, orderLines1, customers[0], workers1),
+                    CreateNewOrder(2, orderLines2, customers[1], workers2),
+                    CreateNewOrder(3, orderLines3, customers[2], workers3),
+                    CreateNewOrder(4, orderLines4, customers[0], workers1),
+                    CreateNewOrder(5, orderLines5, customers[1], workers2)
+                };
 
 
                 Console.WriteLine("Adding new Entities to database.");
@@ -127,6 +121,80 @@ namespace DBC
                 connection.Close();
                 Console.WriteLine("Done.");
             }
+
+            
+        }
+        private Order CreateNewOrder(int orderNumber, OrderLine[] orderLines, Customer customer, Worker[] workers)
+        {
+            return new Order
+            {
+                OrderNumber = orderNumber,
+                OrderLines = orderLines,
+                Customer = customer,
+                Workers = workers,
+                OrderPacked = false,
+            };
+        }
+
+        private Worker CreateNewWorker(int workerNumber)
+        {
+            return new Worker
+            {
+                WorkerNumber = workerNumber,
+                Orders = new List<Order>(),
+            };
+        }
+
+        private Worker[] CreateNewWorkers(int startingNumber, int endNumber)
+        {
+            var workers = new Worker[endNumber - startingNumber + 1];
+            for (var i = startingNumber; i <= endNumber; i++)
+            {
+                workers[i - startingNumber] = CreateNewWorker(i);
+            }
+            return workers;
+        }
+       
+        private Customer CreateNewCustomer(int customerNumber, string additionalWishes, string address)
+        {
+            return new Customer
+            {
+                CustomerNumber = customerNumber,
+                AdditionalWishes = additionalWishes,
+                CustomerAddress = address,
+                Orders = new List<Order>(),
+            };
+        }
+
+        private OrderLine CreateNewOrderLine(Pallet pallet, int orderLineNumber, int quantity)
+        {
+            return new OrderLine
+            {
+                Pallet = pallet,
+                OrderLineNumber = orderLineNumber,
+                Quantity = quantity,
+                Acknowledgement = false,
+            };
+        }
+
+        private Pallet CreateNewPallet(Article article, int palletNumber, int quantity, string storageLocation)
+        {
+            return new Pallet
+            {
+                Article = article,
+                PalletNumber = palletNumber,
+                Quantity = quantity,
+                StorageLocation = storageLocation
+            };
+        }
+
+        private Article CreateNewArticle(int articleNumber, string articleName)
+        {
+            return new Article
+            {
+                ArticleNumber = articleNumber,
+                ArticleName = articleName
+            };
         }
     }
 }
