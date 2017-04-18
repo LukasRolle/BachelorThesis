@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Web;
+using System.Web.Script.Serialization;
 
 namespace RestClient
 {
-    public class Class1
+    public class RestClient
     {
         private const string URL = "http://localhost:53268/RestService.svc/NextOrder/";
         private const string urlParameters = "?id=1";
@@ -25,8 +27,11 @@ namespace RestClient
             {
                 // Parse the response body. Blocking!
                 Console.WriteLine(response.Content.ReadAsStringAsync().Result);
+                Console.WriteLine("----------");
+                var order = new Order();
+                order = new JavaScriptSerializer().Deserialize<Order>(response.Content.ReadAsStringAsync().Result);
+                Console.WriteLine(order.OrderNumber);
                 Console.ReadLine();
-                //var dataObjects = response.Content.ReadAsAsync<IEnumerable<Order>>().Result;
                 //foreach (var d in dataObjects)
                 //{
                 //    Console.WriteLine("{0}", d.OrderNumber);
