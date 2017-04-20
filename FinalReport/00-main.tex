@@ -1,0 +1,52 @@
+\documentclass[a4paper,twoside,11pt]{report}
+\input{00-header}
+\setlength{\headheight}{14pt} 
+
+\loadglsentries{05-glossary.tex}
+\loadglsentries{06-acronyms.tex}
+\makeglossaries
+
+\begin{document}
+\pagenumbering{roman}
+\fancypagestyle{plain}{%
+  \fancyhead[RO, LE]{\thepage}
+  %\fancyhead[RE]{test}
+  \fancyhead[LO, RE]{\nouppercase{\leftmark}}
+  \fancyfoot{}
+  \renewcommand{\headrulewidth}{0.4pt}% Line at the header invisible
+}
+\input{00-title}
+\input{01-informationPage}
+\input{02-preface}
+\input{03-statementOfAuthenticity}
+\input{04-abstract}
+
+\tableofcontents\thispagestyle{plain}
+\listoffigures\addcontentsline{toc}{chapter}{List of Figures}
+\listoftables\addcontentsline{toc}{chapter}{List of Tables}
+%\lstlistoflistings
+\printglossaries
+\cleardoublepage
+
+\fancypagestyle{plain}{%
+  \fancyhead[RO, LE]{\thepage}
+  %\fancyhead[RE]{test}
+  \fancyhead[LO, RE]{\nouppercase{\leftmark}}%\thechapter.\hspace{5pt}
+  \fancyfoot{}
+  \renewcommand{\headrulewidth}{0.4pt}% Line at the header invisible
+}
+\renewcommand{\chaptermark}[1]{%
+\markboth{\textbf{#1}}{}}
+\pagenumbering{arabic}
+\pagestyle{plain}
+\input{10-introduction}
+\input{20-contextAndScope}
+\input{30-research}
+\input{40-referenceArchitecture}
+\input{50-demoFacility}
+\input{60-conclusion}
+\bibliographystyle{alpha}
+\bibliography{80-references}
+
+%\input{90-appendix}
+\end{document}

@@ -1,0 +1,33 @@
+\chapter{Demo Facility}\label{cha:demoFacility}
+Physical creation of the demo facility that showcases the possibilities of the chosen wearable in the process of order picking in a warehouse. As the demo facility is not yet existing the implementation cannot be discussed and explained here, this chapter will therefore focus on the planned infrastructure, the existing design and what is planned for the demo facility in the future.
+
+\section{Infrastructure}
+The infrastructure of the demo facility is not yet fully existing, but is planned to exist of the following points.
+\begin{description}
+	\item[Mock WMS] \hfill \\
+		A mock \gls{wms} that allows to store different orders and edit them to have a more realistic demo. While not all functionality has to given, the data has to be persistent and easily resettable to allow showcasing a demo case multiple times. The mock \gls{wms} is living on an azure server and is a \gls{mssql} database.
+	\item[Rest API] \hfill \\
+		A \gls{rest} \gls{api} that is used to connect to the mock \gls{wms} from an outside perspective, in this case from the communication layer, see subsection \ref{subsec:communication}.
+	\item[Communication Layer] \hfill \\
+		The communication layer will be living on a server with a connection to the \gls{db} \gls{api} and a connection to the wearable.
+	\item[Wearable] \hfill \\
+		The wearable will need to connect to the communication layer and process input and output.
+\end{description}
+
+The mock \gls{wms} and the \gls{rest} \gls{api} are insignificant parts of the implementation, therefore not a lot of thought was put into the decision on choosing these technologies was done out of curiosity for these technologies or being the most comfortable with them respectively.
+\section{Design}
+The general design for the demo facility application will be based on the reference model described in chapter \ref{cha:reference}. 
+\section{Planning}
+In the future for this task, there will be multiple wearables tried out and then decided which wearable will be used for the demo facility, as described in section \ref{sec:wearables}. Afterwards an application will be written for that wearable, to improve the process chosen in \ref{sec:processes}. 
+
+This application will at least include the functionalities to:
+\begin{itemize}
+	\item Divide a given room in multiple sectors, to address a single part of the room with a given location string.
+	\item Reset the case to allow multiple showcases of the demo.
+	\item Allow scanning of \gls{id}s on packages and pallets.
+	\item Send confirmations to the \gls{wms}, that an action has been completed.
+\end{itemize}
+
+For the demo environment, an area will be rented that allows to place a rack in there with packages. The packages will be equipped with an \gls{id} that can be scanned with the chosen wearable.
+
+When the implementation of the demo application is finished a second one could be started to show \gls{sme} the differences between the possibilities different wearables give the user.
