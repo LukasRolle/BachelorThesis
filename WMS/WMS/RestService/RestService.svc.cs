@@ -19,6 +19,7 @@ namespace RestService
             var order = Connector.GetOrder(value);
             HttpContext.Current.Response.ContentType = "text/HTML";
             HttpContext.Current.Response.Write(serializer.Serialize(order));
+
         }
         
         public void ResetDatabase()
