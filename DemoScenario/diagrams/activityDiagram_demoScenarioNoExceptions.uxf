@@ -1,0 +1,1052 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>6</zoom_level>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>390</x>
+      <y>66</y>
+      <w>12</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>type=initial</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>366</x>
+      <y>108</y>
+      <w>60</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Worker starts 
+in the morning</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>390</x>
+      <y>72</y>
+      <w>18</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>306</x>
+      <y>90</y>
+      <w>438</w>
+      <h>810</h>
+    </coordinates>
+    <panel_attributes>Demo Scenario
+valign=top
+halign=left</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>276</x>
+      <y>162</y>
+      <w>60</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Worker Card
+layer=3
+bg=white
+group=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>390</x>
+      <y>126</y>
+      <w>18</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>366</x>
+      <y>162</y>
+      <w>60</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Scan 
+Worker Card</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>330</x>
+      <y>168</y>
+      <w>48</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>60.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>390</x>
+      <y>180</y>
+      <w>18</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>366</x>
+      <y>198</y>
+      <w>60</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Get Next Order</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>390</x>
+      <y>252</y>
+      <w>18</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>366</x>
+      <y>270</y>
+      <w>60</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Show next 
+order line</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>390</x>
+      <y>288</y>
+      <w>18</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>354</x>
+      <y>306</y>
+      <w>84</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Show location of parcel for order line
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>390</x>
+      <y>324</y>
+      <w>18</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>366</x>
+      <y>342</y>
+      <w>60</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Walk to parcel
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>276</x>
+      <y>162</y>
+      <w>60</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Worker Card
+layer=3
+bg=white
+group=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>276</x>
+      <y>162</y>
+      <w>60</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Worker Card
+layer=3
+bg=white
+group=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>276</x>
+      <y>162</y>
+      <w>60</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Worker Card
+layer=3
+bg=white
+group=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>276</x>
+      <y>162</y>
+      <w>60</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Worker Card
+layer=3
+bg=white
+group=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>276</x>
+      <y>162</y>
+      <w>60</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Worker Card
+layer=3
+bg=white
+group=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>276</x>
+      <y>162</y>
+      <w>60</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Worker Card
+layer=3
+bg=white
+group=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>276</x>
+      <y>162</y>
+      <w>60</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Worker Card
+layer=3
+bg=white
+group=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>276</x>
+      <y>162</y>
+      <w>60</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Worker Card
+layer=3
+bg=white
+group=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>276</x>
+      <y>162</y>
+      <w>60</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Worker Card
+layer=3
+bg=white
+group=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>276</x>
+      <y>162</y>
+      <w>60</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Worker Card
+layer=3
+bg=white
+group=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>276</x>
+      <y>162</y>
+      <w>60</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Worker Card
+layer=3
+bg=white
+group=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>276</x>
+      <y>162</y>
+      <w>60</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Worker Card
+layer=3
+bg=white
+group=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>276</x>
+      <y>162</y>
+      <w>60</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Worker Card
+layer=3
+bg=white
+group=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>276</x>
+      <y>162</y>
+      <w>60</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Worker Card
+layer=3
+bg=white
+group=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>276</x>
+      <y>162</y>
+      <w>60</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Worker Card
+layer=3
+bg=white
+group=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>366</x>
+      <y>378</y>
+      <w>60</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Scan parcel
+style=wordwrap
+group=4</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>390</x>
+      <y>360</y>
+      <w>18</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+group=4</panel_attributes>
+    <additional_attributes>10.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>390</x>
+      <y>396</y>
+      <w>18</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=[]&lt;-[]</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>366</x>
+      <y>426</y>
+      <w>60</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>Put parcel on Cart
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>390</x>
+      <y>450</y>
+      <w>18</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>384</x>
+      <y>486</y>
+      <w>24</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>type=decision</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>306</x>
+      <y>432</y>
+      <w>90</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+[not the needed 
+amount of parcels]</panel_attributes>
+    <additional_attributes>100.0;10.0;10.0;10.0;10.0;110.0;130.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>276</x>
+      <y>378</y>
+      <w>60</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Parcel
+layer=3
+bg=white
+group=5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>330</x>
+      <y>384</y>
+      <w>48</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>60.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>390</x>
+      <y>504</y>
+      <w>96</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+[right amount on cart]</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>366</x>
+      <y>534</y>
+      <w>60</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Confirm order line
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>390</x>
+      <y>552</y>
+      <w>18</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>384</x>
+      <y>570</y>
+      <w>24</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>type=decision</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>402</x>
+      <y>276</y>
+      <w>270</w>
+      <h>324</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m2=[not last order line]</panel_attributes>
+    <additional_attributes>40.0;10.0;430.0;10.0;430.0;510.0;10.0;510.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>390</x>
+      <y>588</y>
+      <w>72</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+[last order line]</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>360</x>
+      <y>618</y>
+      <w>72</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Add customer settings
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>360</x>
+      <y>654</y>
+      <w>72</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Check quantities (again)
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>390</x>
+      <y>636</y>
+      <w>18</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>366</x>
+      <y>690</y>
+      <w>60</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Confirm Order
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>390</x>
+      <y>672</y>
+      <w>18</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>390</x>
+      <y>708</y>
+      <w>18</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>366</x>
+      <y>726</y>
+      <w>60</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Move cart to ship location
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>390</x>
+      <y>744</y>
+      <w>18</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>384</x>
+      <y>762</y>
+      <w>24</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>type=decision</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>390</x>
+      <y>780</y>
+      <w>90</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+[end of day / demo]</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>402</x>
+      <y>204</y>
+      <w>282</w>
+      <h>588</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m2=[more orders left]</panel_attributes>
+    <additional_attributes>40.0;10.0;450.0;10.0;450.0;950.0;10.0;950.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>390</x>
+      <y>810</y>
+      <w>12</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>type=final</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>276</x>
+      <y>378</y>
+      <w>60</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Parcel
+layer=3
+bg=white
+group=5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>276</x>
+      <y>378</y>
+      <w>60</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Parcel
+layer=3
+bg=white
+group=5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>276</x>
+      <y>378</y>
+      <w>60</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Parcel
+layer=3
+bg=white
+group=5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>276</x>
+      <y>378</y>
+      <w>60</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Parcel
+layer=3
+bg=white
+group=5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>276</x>
+      <y>378</y>
+      <w>60</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Parcel
+layer=3
+bg=white
+group=5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>276</x>
+      <y>378</y>
+      <w>60</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Parcel
+layer=3
+bg=white
+group=5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>276</x>
+      <y>378</y>
+      <w>60</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Parcel
+layer=3
+bg=white
+group=5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>276</x>
+      <y>378</y>
+      <w>60</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Parcel
+layer=3
+bg=white
+group=5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>276</x>
+      <y>378</y>
+      <w>60</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Parcel
+layer=3
+bg=white
+group=5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>276</x>
+      <y>378</y>
+      <w>60</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Parcel
+layer=3
+bg=white
+group=5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>276</x>
+      <y>378</y>
+      <w>60</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Parcel
+layer=3
+bg=white
+group=5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>276</x>
+      <y>378</y>
+      <w>60</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Parcel
+layer=3
+bg=white
+group=5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>276</x>
+      <y>378</y>
+      <w>60</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Parcel
+layer=3
+bg=white
+group=5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>276</x>
+      <y>378</y>
+      <w>60</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Parcel
+layer=3
+bg=white
+group=5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>276</x>
+      <y>378</y>
+      <w>60</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Parcel
+layer=3
+bg=white
+group=5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>402</x>
+      <y>486</y>
+      <w>120</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+[pallet empty]</panel_attributes>
+    <additional_attributes>180.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>510</x>
+      <y>486</y>
+      <w>72</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Confirm Pallet empty for WMS
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>540</x>
+      <y>504</y>
+      <w>18</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>534</x>
+      <y>534</y>
+      <w>24</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>type=decision</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>534</y>
+      <w>126</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+[Enough boxes for order]</panel_attributes>
+    <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>552</x>
+      <y>408</y>
+      <w>108</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m2=[not enough for order]</panel_attributes>
+    <additional_attributes>100.0;10.0;100.0;230.0;10.0;230.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>558</x>
+      <y>390</y>
+      <w>84</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Coordinator defines following steps
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>534</x>
+      <y>396</y>
+      <w>36</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;40.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>528</x>
+      <y>396</y>
+      <w>12</w>
+      <h>12</h>
+    </coordinates>
+    <panel_attributes>type=final</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>366</x>
+      <y>234</y>
+      <w>60</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Start Next Order</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>390</x>
+      <y>216</y>
+      <w>18</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
