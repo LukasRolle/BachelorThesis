@@ -1,0 +1,51 @@
+\documentclass[a4paper]{report}
+\usepackage{parskip}
+\usepackage{xcolor}
+
+\newcommand{\itemizeOne}[1]{\begin{itemize}\item {#1}\end{itemize}}
+
+\begin{document}
+\begin{description}
+	\item[Environment] \hfill \\
+	Worker Card \\
+	Multiple parcels \\
+	Barcodes for the parcels \\
+	Racks to place parcels on \\
+	Cart to put the order together \\
+	Wearable
+	\item[Scenario]
+\end{description}
+\begin{enumerate}
+	\item Start with logging in into the system with a worker card, QR code, something similar.
+	\item Using some way to get the next order the worker should work on
+	\item Show next order line
+	\item Show the location of the next parcel 
+	\item Scan the next parcel
+	\item Put the needed amount of parcels on a cart 
+	\item Confirm order line 
+	\item Repeat step 3 to 7 until order is finished 
+	\item Move Cart with all parcels to the "truck" 
+	\item Confirm order 
+	\item Repeat step 2 to 10 until day is finished
+\end{enumerate}
+This scenario is general and usage of a wearable might allow more steps that could be integrated here.
+\cleardoublepage
+\begin{description}
+	 \item[Functions / User Stories to implement] \hfill \\
+	 ScanWorkerCard
+	 \itemizeOne{A scannable code should be placed on a card that can then afterwards be scanned by a wearable. This allows the worker a way to log into the system by verifying one's identity with the card. \textcolor{red}{Scanning a worker card could be used as a way to sign out / signal end of work for the day.}}
+	 NextOrder
+	 \itemizeOne{After logging into the system by verifying one's identity the worker is able to get the next order that is planned for them. This can be either displayed on a screen of the wearable or returned by audio feedback. }
+	 InitiateOrder
+	 \itemizeOne{After the order is displayed the worker can choose to actively start working on the order. This initializes the whole order picking process. Following this the next order line is displayed in more detail and the worker is told where he should go for the next step of the process.}
+	 ScanParcel
+	 \itemizeOne{A parcel is scanned. Checks if the scanned parcel is the expected one for the current order line. If the scanned parcel is wrong the worker is prompted to scan the correct item.}
+	 ConfirmOrderLine
+	 \itemizeOne{After the right amount of parcels has been moved on the workers cart, the worker can confirm the current order line. This then starts the process of NextOrderLine.}
+	 NextOrderLine
+	 \itemizeOne{Initiates the process for the next order line. Depending on the wearable just the location string might be displayed to the user. Or an active system that supports the worker in actually finding the path to the next pallet.}
+	 ConfirmOrder
+	 \itemizeOne{Confirm a complete order, once all order lines have been confirmed and the cart is moved to the shipping location the order can be confirmed. Allowing the worker to start working on the next order.}
+\end{description}
+
+\end{document}
