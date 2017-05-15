@@ -1,7 +1,7 @@
 \begin{UseCase}{UC-W3}{Order Control}{Wearable}{1.1}{LUR}
 \Actors{Picking Worker}
 \Description{A picking worker is in the process of picking his order.}
-\Preconditions{The wearable has a vision interface or is in another way able to control what the order picker is doing.}
+\Preconditions{The wearable has a vision interface or is in another way able to control what the order picker is doing. Furthermore the order picker is currently in the process of picking an order and is picking a specific item of that order.}
 \Scenario{
 	\vspace{0.1\baselineskip}
     \begin{enumerate*}
@@ -17,7 +17,7 @@
 \Extensions{
 	\vspace{0.1\baselineskip}
 	\begin{enumerate*}
-		\item[-]
+		\item[6.1] When the order has no next item, the worker tries to confirm the order and the wearable can then proceed to check if the amount of picked parcels was correct.
 	\end{enumerate*}
 }
 \Exceptions{
