@@ -1,4 +1,5 @@
-\usepackage[english]{babel}  
+\usepackage[english]{babel}
+  
 \usepackage[utf8]{inputenc} 
 \usepackage[T1]{fontenc} 
 \usepackage[pdftex,scale={.8,.8}]{geometry}
@@ -9,6 +10,13 @@
 \usepackage{listings}
 \usepackage[parfill]{parskip}
 \usepackage{xcolor}
+
+\usepackage{csquotes}
+\usepackage[style=authoryear, backend=biber, natbib=true]{biblatex}
+\DefineBibliographyStrings{english}{%
+    url = {[online] Available at:}
+}
+\DeclareFieldFormat{url}{\bibstring{url}\space\url{#1}}
 
 \usepackage{%
   array,

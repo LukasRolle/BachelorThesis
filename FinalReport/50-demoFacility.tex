@@ -1,5 +1,7 @@
 \chapter{Demo Facility}\label{cha:demoFacility}
-Physical creation of the demo facility that showcases the possibilities of the chosen wearable in the process of order picking in a warehouse. As the demo facility is not yet existing the implementation cannot be discussed and explained here, this chapter will therefore focus on the planned infrastructure, the existing design and what is planned for the demo facility in the future.
+Physical creation of the demo facility that showcases the possibilities of the chosen wearable in the process of order picking in a warehouse. As the demo facility is not yet existing the implementation cannot be discussed and explained here, this chapter will therefore focus on the planned infrastructure, the existing design and what is planned for the demo facility in the future. 
+
+There is also a major difference between the demo facility task that will be explained in this report and the task given in the logwear website. \citep{website:logwear} The task that will be executed here will be creating a demo facility in a physical \gls{sandbox} environment and the task explained in the work package on the logwear homepage is about implementing the improved process, using a wearable, at a pilot company and observing the results.
 
 \section{Infrastructure}
 The infrastructure of the demo facility is not yet fully existing, but is planned to exist of the following points.
@@ -15,6 +17,18 @@ The infrastructure of the demo facility is not yet fully existing, but is planne
 \end{description}
 
 The mock \gls{wms} and the \gls{rest} \gls{api} are insignificant parts of the implementation, therefore not a lot of thought was put into the decision on choosing these technologies was done out of curiosity for these technologies or being the most comfortable with them respectively.
+
+\section{Demo Scenario}
+The demo scenario explains the process that will be executed during the demo facility. Therefore describing the actions taken in detail, but ignoring how they will be executed, e.g. with or without a wearable. 
+
+\begin{figure}[htbp]
+	\includegraphics[height=\textheight]{images/activityDiagram_demoScenarioNoExceptions}
+	\caption{Activity Diagram Demo Scenario}
+	\label{fig:activityDemoScenario}
+\end{figure}
+
+
+
 \section{Design}
 The general design for the demo facility application will be based on the reference model described in chapter \ref{cha:reference}. 
 \section{Planning}
@@ -24,10 +38,10 @@ This application will at least include the functionalities to:
 \begin{itemize}
 	\item Divide a given room in multiple sectors, to address a single part of the room with a given location string.
 	\item Reset the case to allow multiple showcases of the demo.
-	\item Allow scanning of \gls{id}s on packages and pallets.
+	\item Allow scanning of \gls{id}s on \gls{parcel}s and pallets.
 	\item Send confirmations to the \gls{wms}, that an action has been completed.
 \end{itemize}
 
-For the demo environment, an area will be rented that allows to place a rack in there with packages. The packages will be equipped with an \gls{id} that can be scanned with the chosen wearable.
+For the demo environment, an area will be rented that allows to place a rack in there with \gls{parcel}s. The \gls{parcel}s will be equipped with an \gls{id} that can be scanned with the chosen wearable.
 
 When the implementation of the demo application is finished a second one could be started to show \gls{sme} the differences between the possibilities different wearables give the user.

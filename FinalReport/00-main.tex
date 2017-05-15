@@ -4,6 +4,7 @@
 
 \loadglsentries{05-glossary.tex}
 \loadglsentries{06-acronyms.tex}
+\addbibresource{80-references.bib}
 \makeglossaries
 
 \begin{document}
@@ -32,7 +33,7 @@
   \fancyhead[RO, LE]{\thepage}
   %\fancyhead[RE]{test}
   \fancyhead[LO, RE]{\nouppercase{\leftmark}}%\thechapter.\hspace{5pt}
-  \fancyfoot{}
+  \fancyfoot{} 
   \renewcommand{\headrulewidth}{0.4pt}% Line at the header invisible
 }
 \renewcommand{\chaptermark}[1]{%
@@ -45,8 +46,8 @@
 \input{40-referenceArchitecture}
 \input{50-demoFacility}
 \input{60-conclusion}
-\bibliographystyle{alpha}
-\bibliography{80-references}
 
+
+\printbibliography
 %\input{90-appendix}
 \end{document}
