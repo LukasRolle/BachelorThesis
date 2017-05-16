@@ -13,20 +13,7 @@ namespace DBC
         {
             var helper = new DatabaseSetupHelper();
             helper.ResetDatabase();
-
-            //using (var connection = new QC.SqlConnection(CS.ConfigurationManager.ConnectionStrings["connectionString"].ConnectionString))
-            //{
-            //    connection.Open();
-            //    Console.WriteLine("Connected successfully.");
-
-            //    Console.WriteLine(GetNextOrder(1).OrderNumber);
-            //    Console.WriteLine(GetOrder(2));
-            //    ConfirmOrderLine(1, 1);
-            //    OrderSend(1);
-
-            //    Console.WriteLine("Press any key to finish...");
-            //    Console.ReadKey(true);
-            //}
+            
         }
 
         public static Order GetNextOrder(int workerNumber)
