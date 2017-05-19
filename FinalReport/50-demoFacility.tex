@@ -18,19 +18,36 @@ The infrastructure of the demo facility is divided into two areas, the first are
 
 The mock \gls{wms} and the \gls{rest} \gls{api} are insignificant parts of the implementation, therefore not a lot of thought was put into the decision on choosing these technologies was done out of curiosity for these technologies or being the most comfortable with them respectively.
 
-\section{Demo Scenario}
-The demo scenario explains the process that will be executed during the demo facility. Therefore describing the actions taken in detail, but ignoring how they will be executed, e.g. with or without a wearable. 
+\section{Demo Scenario}\label{sec:demoScenario}
+The demo scenario explains the process that will be executed during the demo facility. Therefore describing the actions taken in detail, but ignoring how they will be executed, e.g. with or without a wearable. The original process can be seen in the appendix, figure \ref{fig:orderPickingProcessDiagram}. For the actual scenario for the demo facility an activity diagram was created, that can be seen in figure \ref{fig:activityDemoScenario}. 
 
 \begin{figure}[htbp]
+	\begin{center}
 	\includegraphics[height=\textheight]{images/activityDiagram_demoScenarioNoExceptions}
+	\end{center}	
 	\caption{Activity Diagram Demo Scenario}
 	\label{fig:activityDemoScenario}
 \end{figure}
+
+\cleardoublepage
+
+This diagram was created for multiple reasons:
+
+\begin{description}
+	\item[Readability] \hfill \\
+	The scale of the original process diagram made it hard to process. One goal was to create a more compact diagram.
+	\item[Purpose] \hfill \\
+	The original diagram had a different purpose, it was supposed to model the process of one of the pilot companies in its entirety. The purpose of the activity diagram is to model a demo case, that does not need to show every single detail of the process in the first place.
+	\item[Focus point] \hfill \\
+	The demo scenario focuses on the general tasks an order picking worker is doing, but is just focussing on the main points for this. The original diagram also includes the connections to the database and also includes tasks outside of the actual order picking.
+\end{description}
 
 
 
 \section{Design}
 The general design for the demo facility application will be based on the reference model described in chapter \ref{cha:reference}. 
+
+\textcolor{red}{add more sophisticated class diagram}
 \section{Planning}
 In the future for this task, there will be multiple wearables tried out and then decided which wearable will be used for the demo facility, as described in section \ref{sec:wearables}. Afterwards an application will be written for that wearable, to improve the process chosen in \ref{sec:processes}. 
 

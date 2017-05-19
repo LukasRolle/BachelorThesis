@@ -2,7 +2,7 @@
 This chapter includes the general research that has been done for the project, which includes the research about some given processes and wearables that could be appropriate for the processes. The CASE Tools chosen at the current state of the project will also be discussed and what they are used for.
 
 \section{Processes}\label{sec:processes}
-There were process already modelled and made available in the LOGwear project. The given processes were:
+There were process already modelled and made available in the LOGwear project. They were created by working students at the \gls{fhtenl} and revised through customer meetings. The naming of the processes was also done by the working students. The processes existing at the time of this report were:
 
 \begin{itemize}
 	\item Order Picking High Rack
@@ -10,28 +10,46 @@ There were process already modelled and made available in the LOGwear project. T
 	\item Goods Receipt and Put away
 \end{itemize}
 
-Order Picking High Rack has been discarded due to the nature of what should be created. A simulation that should model a real environment. Modelling a High Rack and usage of that would be too hard and would take too much time.
+The decision for a single process was quickly made in cooperation with the company supervisor. The processes will just be briefly explained here, as it is not as important to fully understand the processes that were not chosen.
 
-Goods Receipt and Put away was another process to be considered, but was discarded. The modelling of it would be problematic due to the time delays in the tasks. Furthermore the process showed less potential for improvements with wearables.
+Order Picking High Rack has been discarded due to the nature of what should be created. A simulation that should model a real environment. Modelling a High Rack and usage of that would be too hard and would take too much time. \textcolor{red}{add short description of what the process is about not just why it was discarded}
 
-Order Picking W3-5 was the process chosen to improve with wearables as multiple possibilities to improve the process were discovered. Also the processes seemed rather easy to model with a demo facility by setting up one or two racks and placing multiple packages on there. This process was selected together with the company supervisor.
+Goods Receipt and Put away was another process to be considered, but was discarded. The modelling of it would be problematic due to the time delays in the tasks. Furthermore the process showed less potential for improvements with wearables. \textcolor{red}{add short description of what the process is about not just why it was discarded}
+
+Order Picking W3-5 was the process chosen to improve with wearables as multiple possibilities to improve the process were discovered. Also the processes seemed rather easy to model with a demo facility by setting up one or two racks and placing multiple packages on there. This process was selected together with the company supervisor. This process can be seen in the appendix, in figure \ref{fig:orderPickingProcessDiagram} but the demo scenario will also be further explained in section \ref{sec:demoScenario}.
 
 \section{Wearables}\label{sec:wearables}
 Researching wearables was a more problematic task, as the amount of wearables that could be used potentially is a lot higher. Some criteria were set in place for a wearable to be considered in the first place. A wearable has to be either already available, or freely available to order in europe from a trusted source. This leads to well known wearables like the Google Glass to be not even considered as they are not publicly available.
+
+\subsection{Criteria}
 
 Further criteria are more specific towards the chosen process. The criteria were divided into requirements and quantifiable criteria. The requirements a wearable, or a combination of wearables, must be able to fulfil are:
 \begin{description}
 	\item[Scan ID] \hfill \\
 		The ability to scan an \gls{id}, could be a barcode, \gls{rfid} code, \gls{qr} code or something different.
-	\item[Display Information] \hfill \\
-		The ability to display information to the user, this can be done by audio, visual or \gls{hapticFeedback}. 
+	\item[Informing User] \hfill \\
+		The ability to give information to the user, this can be done by audio, visual or \gls{hapticFeedback}. 
 	\item[Send Confirmations] \hfill \\
 		The ability to send confirmations to the \gls{wms}, that part of the process has been completed.
 	\item[Hands-free] \hfill \\
-		The ability to operate the wearable without out the need to take a device and put it back all the time. Operations should not need user hand input while packages are being handled or the hands are otherwise occupied.
+		The ability to operate the wearable without the need to take a device and put it back all the time. Operations should not need user hand input while packages are being handled or the hands are otherwise occupied.
 \end{description}
 
-Most of the quantifiable criteria were hard to actually hard to quantify without having hands-on-experience with these devices. The reason behind this is, that most of the devices are either just released to the public or niche products leading to a small amount of information available besides information published by the manufacturers of the devices, which is generally not a good source of unbiased information.
+On top of these criteria that the quantifiable requirements were:
+
+\begin{description}
+	\item[Performance] \hfill \\
+	The performance of a device is important as some wearables considered are not necessarily intended for the tasks in a warehouse and therefore some tasks like scanning different kinds of barcodes might be more problematic and need a lot of time if the device is not performant.
+	\item[Cost] \hfill \\
+	The cost is a factor to consider when the company possibly needs to order a large amount of these wearables.
+	\item[Battery Life] \hfill \\
+	A wearable should be able to sustain a whole day of working without the need to exchange batteries or swap wearables during a break. Worst case scenario would be to have the need to change the wearable device multiple times each day due to an empty battery.
+	\item[Durability] \hfill \\
+	The warehouse is not an environment where devices can be used that could break if a \gls{parcel} graces or hits it.
+\end{description}
+Most of the quantifiable criteria were hard to actually quantify without having hands-on-experience with these devices. The reason behind this is, that most of the devices are either just released to the public or niche products leading to a small amount of information available besides information published by the manufacturers of the devices, which is generally not a good source of unbiased information.
+
+\subsection{Devices}
 
 \Gls{smartglasses} seem to be the most promising type of wearable for the task, due to the possibilities it does give its user. The possibility for indoor navigation, scanning, exactly displaying the item location, constant display of information and further possible features that could be implemented using an always-on camera that is implemented in most devices. \citep{phdthesis:pickByVision}
 
@@ -53,6 +71,19 @@ Another solution including wearables for the order picking process is the combin
 \end{itemize}
 
 This combination could also be using a headset to add further functionality.
+
+\subsection{Decision}
+
+The wearables that were tested hands-on have been:
+\begin{itemize}
+	\item Microsoft HoloLens
+	\item Vuzix M100
+	\item Honeywell Dolhin 75e + 8620 Wearable Ring Scanner
+\end{itemize}
+
+The other named wearables were also intended to be tested, but were not able to be delivered in a time that was considered acceptable to continue the project. Therefore the final weighted decision will only take these three wearables in consideration. The combination of Honeywell Dolphin 75e and the 8620 Wearable Ring scanner will be counted as a single wearable for this comparison as they are intended to be used together.  
+
+ 
 
 The named wearables will be investigated further with hands-on experience before actually choosing a single wearable to implement the demo facility with. The demo facility is further explained in chapter \ref{cha:demoFacility}.
 
