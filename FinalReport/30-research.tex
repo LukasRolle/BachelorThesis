@@ -63,7 +63,7 @@ The \gls{smartglasses} most interesting for this topic are:
 
 They are the newest publicly available glasses from some of the biggest manufacturers of \gls{smartglasses}, that are currently publicly available.
 
-Another solution including wearables for the order picking process is the combination of a \gls{ringScanner} and a wrist-mounted computer. This type of combination are:
+Another solution including wearables for the order picking process is the combination of a \gls{ringScanner} and a wrist-mounted computer. \Gls{wearable}s for this type of combination are:
 
 \begin{itemize}
 	\item Zebra WT6000 + RS6000
@@ -81,13 +81,30 @@ The wearables that were tested hands-on have been:
 	\item Honeywell Dolhin 75e + 8620 Wearable Ring Scanner
 \end{itemize}
 
-The other named wearables were also intended to be tested, but were not able to be delivered in a time that was considered acceptable to continue the project. Therefore the final weighted decision will only take these three wearables in consideration. The combination of Honeywell Dolphin 75e and the 8620 Wearable Ring scanner will be counted as a single wearable for this comparison as they are intended to be used together.
+The other named wearables were also intended to be tested, but were not able to be delivered in a time that was considered acceptable to continue the project. Therefore the final weighted decision will only take these three wearables in consideration. The combination of Honeywell Dolphin 75e and the 8620 Wearable Ring Scanner will be counted as a single wearable for this comparison as they are intended to be used together. The general weighted decision for these wearables can be found in table \ref{tab:weightedDecision}. 
 
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|lr|rr|rr|rr|} \hline
+             &                            & \multicolumn{2}{c|}{HoloLens}                             & \multicolumn{2}{c|}{Vuzix M100}                           & \multicolumn{2}{c|}{Honeywell}                            \\ \hline
+Criteria     & \multicolumn{1}{l|}{Weight} & \multicolumn{1}{l}{Value} & \multicolumn{1}{l|}{Weighted} & \multicolumn{1}{l}{Value} & \multicolumn{1}{l|}{Weighted} & \multicolumn{1}{l}{Value} & \multicolumn{1}{l|}{Weighted} \\
+Performance  & 4                          & 6                         & 24                           & 2                         & 8                            & 8                         & 32                           \\
+Cost         & 2                          & 2                         & 4                            & 5                         & 10                           & 3                         & 6                            \\
+Battery Life & 2                          & 4                         & 8                            & 5                         & 10                           & 9                         & 18                           \\
+Durability   & 2                          & 3                         & 6                            & 3                         & 6                            & 8                         & 16                           \\ \hline
+             &                            &                           & 42                           &                           & 34                           &                           & 72                           \\ \hline
+\end{tabular}
+\caption{Weighted Decision Wearables}
+\label{tab:weightedDecision}
+\end{table}
 
+The wearables were given a value between one and ten depending on how well they performed in the hands-on test and the information available beforehand.
 
- 
+From the weighted decision we can see that the Honeywell combination comes out on top, which is not as surprising, as it is a device that was specifically designed for this and similar purposes. The performance of the Honeywell combination is rated as highly, because the ring scanner is handling the scanning, which can be a more expensive task for ordinary computing devices. The HoloLens is in front of the Vuzix M100 mainly because of the integrated \gls{hpu} that is handling the mapping of the environment and most of the data that is incoming from the different cameras, therefore allowing the other components of the HoloLens to do different tasks with higher priority. Another factor here is that the HoloLens in general is using newer components that have a higher performance by themselves. The cost or price of the device is just the price of the devices. 
 
-The named wearables will be investigated further with hands-on experience before actually choosing a single wearable to implement the demo facility with. The demo facility is further explained in chapter \ref{cha:demoFacility}.
+The battery life between the HoloLens and the M100 is relatively similar, but the Vuzix solution has an included battery pack to increase usage time, which is also something that could be done with the HoloLens, but since charging and using a device at the same time is not the nicest solution. Therefore the score is pretty low for both. When using a \gls{battery}, both devices might get through a workday, but without both need to be recharged multiple times a day. The Honeywell combination is able to sustain through a day of work, and if needed, the battery here can be \gls{hotswap}ped. The durability of both \gls{smartglasses} is similar in points, as both were not necessarily designed in the warehouse. While the HoloLens might break a bit faster than the Vuzix M100, at least from how rugged both look and feel, the M100 just needs a small push to no longer be in the right position to view the monitor. The Honeywell combination is by far the most rugged and also can not disposition as easily, the biggest problem might be the connection between the \gls{ringScanner} and the wrist-mounted computer. While not likely that could tear or be plugged out.
+
+But that might not be the only things that could lead to a decision, an aspect that is not explored here is possibilities. But the possibilities that a \gls{wearable} has, are not that easily measured and therefore are ignored for the wearable comparison at this point in time. Therefore the Honeywell Dolphin 75e + 8620 Wearable Ring Scanner has been chosen as a wearable to implement the demo scenario explained in section \ref{sec:demoScenario}.
 
 \cleardoublepage
 
@@ -101,6 +118,8 @@ The \gls{case} tools chosen here are only for the parts already decided on. As a
 	UMLet & UMLet is a free, open-source \gls{uml} tool. It is used to create \gls{uml} diagrams and is extensible by user created, custom elements. \citep{website:umlet} It was used to create the diagrams that were created during the thesis.  \\ \hline
 	JIRA & JIRA is a tool developed by Atlassian. It is an issue tracking and project management tool. During the thesis it is used as a tool to plan sprints and track bugs and issues, as well as having a backlog of features that should still be implemented. \\ \hline
 	Bitbucket & Bitbucket is a tool developed by Atlassian. It is a \gls{vcs} solution that uses git as an underlying system and is aiming to give companies a secure and private git repository to use for proprietary projects. During the thesis Bitbucket is used as a \gls{vcs} for the different parts of the project. \\ \hline
+	Visual Studio & \\ \hline
+	Mobility SDK for Android & \\ \hline
 	\end{tabular}
 	\end{center}
 	\caption{CASE tools}\label{tab:case}
