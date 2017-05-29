@@ -4,7 +4,7 @@ Physical creation of the demo facility that showcases the possibilities of the c
 There is also a major difference between the demo facility task that will be explained in this report and the task given in the logwear website. \citep{website:logwear} The task that will be executed here will be creating a demo facility in a physical \gls{sandbox} environment and the task explained in the work package on the logwear homepage is about implementing the improved process, using a wearable, at a pilot company and observing the results.
 
 \section{Infrastructure}
-The infrastructure of the demo facility is divided into two areas, the first area is the 
+The infrastructure of the demo facility is divided into multiple areas:
 \begin{description}
 	\item[Mock WMS] \hfill \\
 		A mock \gls{wms} that allows to store different orders and edit them to have a more realistic demo. While not all functionality has to given, the data has to be persistent and easily resettable to allow showcasing a demo case multiple times. The mock \gls{wms} is living on an azure server and is a \gls{mssql} database.
@@ -42,12 +42,45 @@ This diagram was created for multiple reasons:
 	The demo scenario focuses on the general tasks an order picking worker is doing, but is just focussing on the main points for this. The original diagram also includes the connections to the database and also includes tasks outside of the actual order picking.
 \end{description}
 
-
+\textcolor{red}{add description of model}
 
 \section{Design}
-The general design for the demo facility application will be based on the reference model described in chapter \ref{cha:reference}. 
+The general design for the demo facility application will be based on the reference model described in chapter \ref{cha:reference}. But in the following sections the demo facility specific design will be elaborated further.
+
+
+\subsection{WMS}
+The \acrlong{wms} consists of two parts, the database that is going to contain the data for the demo facility and the database connector. This also defines the interface, with which to connect to the \gls{wms}.
+
+\subsubsection{Database}
+
+Figure \ref{fig:LogicalModelWMS} shows the relations and fields in the database. It can be seen that the database just contains a small amount of information, due to being a demo, an actual \gls{wms} would contain a lot more data. The most important item in the model is the order, as that is the key piece, where most relations lead together. An order has a number that is connecting it to one or multiple workers that are working on them. Furthermore an order consists of multiple \texttt{OrderLine}s. An \texttt{OrderLine} is describing the different lines that would appear on an order, that specify the item and the amount for an order. For a warehouse it is also important to add the pallet where to find the item and if the current line is already acknowledged or not. A pallet has a location in the warehouse and how much of that item are still available in the warehouse. The article corresponds to a name for the article number. Finally an order is ordered by a customer, a customer might have additional wishes for their orders and an address where that customer wants things delivered to.
+
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{images/LogicalModel_MockWMS}
+	\caption{Relational Schema Warehouse Database}
+	\label{fig:LogicalModelWMS}
+\end{figure}
+
+For an actual warehouse the customers attributes would change completely, as companies might have multiple addresses, therefore that might change for every order of that customer, making it easier to add an address field to the order and not the customer.  Also a customer might want to add additional wishes just to a specific order or dependent on what might be ordered, therefore the additional wishes might also be moved to the order, but for a demo case, that is not executed at a pilot company, the model is sufficient.
+
+\subsubsection{Interface}
+The interface, that is exposed by the \gls{wms}, is a \gls{rest} interface, for the demo case this means that the communication layer, explained in subsection \ref{subsec:communication}, can be skipped, as the wearable chosen in section \ref{sec:processes} is able to connect to a \gls{rest} \gls{api} directly. And for a demo case the communication layer is also not needed to further transform or do similar things with the data that is passing through it. The options available through the \gls{rest} interface are the following:
+\begin{description}
+	\item[] \hfill \\
+	\item[] \hfill \\
+	\item[] \hfill \\
+	\item[] \hfill \\
+\end{description}
+
+
+\textcolor{red}{Add information about database design, and rest api interfaces}
+
+
+\subsection{Wearable | Application}
+\textcolor{red}{Add information on how the wearable application works, maybe with web interface or direct implementation}
 
 \textcolor{red}{add more sophisticated class diagram}
+
 \section{Planning}
 In the future for this task, there will be multiple wearables tried out and then decided which wearable will be used for the demo facility, as described in section \ref{sec:wearables}. Afterwards an application will be written for that wearable, to improve the process chosen in \ref{sec:processes}. 
 
