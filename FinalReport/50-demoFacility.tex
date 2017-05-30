@@ -66,15 +66,15 @@ For an actual warehouse the customers attributes would change completely, as com
 \subsubsection{Interface}
 The interface, that is exposed by the \gls{wms}, is a \gls{rest} interface, for the demo case this means that the communication layer, explained in subsection \ref{subsec:communication}, can be skipped, as the wearable chosen in section \ref{sec:processes} is able to connect to a \gls{rest} \gls{api} directly. And for a demo case the communication layer is also not needed to further transform or do similar things with the data that is passing through it. The options available through the \gls{rest} interface are the following:
 \begin{description}
-	\item[] \hfill \\
-	\item[] \hfill \\
-	\item[] \hfill \\
-	\item[] \hfill \\
+	\item[NextOrder] \hfill \\
+	Returns the order with the smallest number for a specific worker.
+	\item[ConfirmOrderLine] \hfill \\
+	Confirms that an order line in an order has been successfully been picked.
+	\item[ConfirmOrder] \hfill \\
+	Confirms that a complete order has been picked.
+	\item[ResetDatabse] \hfill \\
+	A function that exists purely to have an existing and repeatable demo case. This resets the database to a state it was in at the beginning, before the demo was executed.
 \end{description}
-
-
-\textcolor{red}{Add information about database design, and rest api interfaces}
-
 
 \subsection{Wearable | Application}
 \textcolor{red}{Add information on how the wearable application works, maybe with web interface or direct implementation}
