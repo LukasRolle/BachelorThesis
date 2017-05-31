@@ -16,19 +16,29 @@ The aim for a \gls{reference model} is to standardize the way how developers in 
 The reference model is an abstract construct, therefore the functional requirements towards it are taken as example to prove the validity of the model. The functional requirements are listed in the form of use cases The non-functional requirements are towards the model itself and not towards an implementation of it. 
 
 \subsection{Functional Requirements}
+The functional requirements represents example cases that should be possible to implement with the reference model. The cases that will be given do not need to be fulfilled all at once, but all of them should be possible with the reference model. Given in the following list are short descriptions of the use cases, while the full use cases themselves can be seen in the appendix, section \ref{sec:useCasesReferenceModel}. The example cases given here are based on the demo scenario chosen, but more use cases can be defined for different scenarios.
 
-\textcolor{red}{add use cases / functional requirements}
+\begin{description}
+	\item[Get Order] \hfill \\
+		An order document is fetched and in some way displayed to the worker.
+	\item[Order Confirmation] \hfill \\
+		The order the worker is currently working on is being worked on and the parts of the order is being confirmed. When all parts of the order are finished the whole order can be confirmed.
+	\item[Order Control] \hfill \\	
+		When an order is being picked, the wearable is supporting the worker in counting the right number of parcels and picking the correct article in the first place.
+\end{description}
+
 
 \subsection{Non-Functional Requirements}
+The non-functional requirements towards the reference model are the most important details that were taken in consideration when the reference model was designed. They can be seen in the following list:
 
-\begin{itemize}
-	\item Documentation
-	\item Extensibility
-	\item Modifiability
-	
-		 
-\end{itemize}
-
+\begin{description}
+	\item[Documentation] \hfill \\
+		The reference model needs to be properly documented. The advantages and disadvantages of the design need to be properly explained to a person that potentially wants to implement a system based on it.
+	\item[Extensibility] \hfill \\
+		The reference model needs to be extensible since some companies might have some more requirements towards their system than is intended for a general case. Adding functionality to the reference model should be possible.
+	\item[Modifiability] \hfill \\
+		The existing ideas of the reference model should be modifiable. Companies are going to use different wearables and infrastructure, and the reference model should be adjustable to fit a lot of possibilities without the need to create a completely new system architecture.
+\end{description}
 
 \section{Design}
 As can be seen in figure \ref{fig:referenceModel} the \gls{reference model} is divided into three different packages that all fulfil different responsibilities. First it will be described what this \gls{reference model} can help to create. Therefore the general thought behind the whole model will be explained and afterwards the three packages \texttt{system}, \texttt{communication} and \texttt{wearable} will be explained on their own.
@@ -51,6 +61,12 @@ The \texttt{communication} package could potentially be removed, if the wearable
 \subsection{System}
 The \texttt{system} package here can be something like a \gls{wms} of the company. A system that is mostly a black box with an \gls{api} and a database. Most of the time, the \texttt{system} cannot be changed by the developer, therefore the developer needs to use the possible ways to connect to the given \gls{api}.
 
+\section{Variations}
+
+\textcolor{red}{add infromation on how the model could be changed to implement push messages.
+}
+
+\textcolor{red}{Differences in how the business logic could be handled  an what it could do, web app, effectively removing business logic in the wearable}
 
 \section{Problems}
 The main problem that occurred during the creation of the \gls{reference model} was a problem in communication, regarding the names of \gls{reference model} and \gls{reference architecture}. The initial task was understood to create a general-purpose \gls{reference architecture}, that would connect a \gls{wearable} to some kind of system. During the process of creating the different diagrams for the reference architecture and trying to validate them using code. The problem became obvious that trying to go deeper than the now given \gls{reference model}, as seen in figure \ref{fig:referenceModel}, was impossible to do for a general-purpose implementation.

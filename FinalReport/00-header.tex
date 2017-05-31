@@ -59,6 +59,15 @@
 \usepackage{xfrac}
 \usepackage{arydshln} %Allow dotted lines in tables
 
+\usepackage{sebirequirements} %sebi Use-Cases
+
+%Use Cases without File segment
+\RenewDocumentEnvironment{UseCase}{m m m m m}{% if file should not be contained in the use cases
+\begin{reqaspect}{Use Case}{#1}{#2}{#3}{#4}{#5}%
+  }{%
+  \end{reqaspect}%
+}
+
 \definecolor{mygreen}{rgb}{0,0.6,0}
 \definecolor{mygray}{rgb}{0.5,0.5,0.5}
 \definecolor{mymauve}{rgb}{0.58,0,0.82}
