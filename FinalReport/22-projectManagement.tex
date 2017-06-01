@@ -1,8 +1,5 @@
-\section{Project Management}\label{sec:projectManagement}
-This section contains information about the project management details during the project.
-\newpage
-\subsection{Stakeholder}
-Stakeholder Management involves identifying parties that are involved in the project. This ranges from people that are actively part of the development of the project or companies that might be interested in the end result. In the table \ref{tab:stakeholder} the most important stakeholders can be found. The stakeholders will themselves will be further explained in sections \ref{sssec:internalStakeholders}, which will explain the internal stakeholders, and \ref{sssec:externalStakeholders} will explain the external stakeholders involved in the project.
+\section{Stakeholder}\label{sec:stakeholder}
+Stakeholder Management involves identifying parties that are involved in the project. This ranges from people that are actively part of the development of the project or companies that might be interested in the end result. In the table \ref{tab:stakeholder} the most important stakeholders can be found. The stakeholders will themselves will be further explained in sections \ref{ssec:internalStakeholders}, which will explain the internal stakeholders, and \ref{ssec:externalStakeholders} will explain the external stakeholders involved in the project.
 \begin{table}[htbp]
 \centering
 \resizebox{\textwidth}{!}{
@@ -75,7 +72,7 @@ Figure \ref{fig:stakeholder} can be used to visualize the importance of the stak
 	\caption{Stakeholder Graph}
 	\label{fig:stakeholder}
 \end{figure}
-\subsubsection{Internal Stakeholders}\label{sssec:internalStakeholders}
+\subsection{Internal Stakeholders}\label{ssec:internalStakeholders}
 Internal Stakeholders are parties that are a part of the team that is working directly on the project in one way or the other. In this section, the internal stakeholders mentioned in table \ref{tab:stakeholder} will be listed again and explained.
 
 \begin{description}
@@ -99,7 +96,7 @@ Internal Stakeholders are parties that are a part of the team that is working di
 	The project team are the members of the team actively developing the application prototype and are involved in building the demo facility afterwards.
 \end{description}
 
-\subsubsection{External Stakeholders}\label{sssec:externalStakeholders}
+\subsection{External Stakeholders}\label{ssec:externalStakeholders}
 External Stakeholders are parties that are involved in the project, but are not a part of the team actively developing the project. In this section, the external stakeholders mentioned in table \ref{tab:stakeholder} will be listed again and explained.
 
 \begin{description}
@@ -117,8 +114,8 @@ External Stakeholders are parties that are involved in the project, but are not 
 	
 	The supervising lecturer is there to answer questions and support the student from a software engineering standpoint. While not having a lot of influence on the project itself, the supervising lecturer is interested in what the student is doing and especially how he is doing it.
 \end{description}
-\newpage
-\subsection{Risks}
+
+\section{Risks}\label{sec:risks}
 Risk management is about identifying risks and finding solutions to problems before they can occur. The list of risks can be found in table \ref{tab:RiskRegister}. The identified risks will increase as the project moves forward. Especially when a decision is made for the wearable and the process. 
 
 \begin{table}[htbp]
@@ -140,7 +137,7 @@ Risk management is about identifying risks and finding solutions to problems bef
 \label{tab:RiskRegister}
 \end{table}
 
-\begin{wrapfigure}{l}{0pt}
+\begin{figure}[H]
 	\centering
 	\begin{tikzpicture}
 		\begin{axis}[
@@ -183,13 +180,13 @@ Risk management is about identifying risks and finding solutions to problems bef
 	\end{tikzpicture}
 	\caption{Risk Graph}
 	\label{fig:risks}
-\end{wrapfigure}
+\end{figure}
 
 In figure \ref{fig:risks} the risks can be seen in a graph that shows their Probability and Impact again. The color emphasizes the amount of attention a risk should get, in order for the project to continue smoothly. The figure also shows more fine grained the probability and impact of the risks than just low, medium and high.
 
 \cleardoublepage
 
-\subsection{Quality Management}
+\section{Quality Management}\label{sec:qualityManagement}
 
 Metrics used to determine the quality of the project:
 
@@ -203,5 +200,6 @@ Metrics used to determine the quality of the project:
 	\item[Performance Testing] \hfill \\
 		The wearable part of the application might need to be performance tested, as wearables tend to be less powerful than most computing devices normally used. This will be decided when the application is creating problems regarding to performance.
 \end{description}
-\subsection{Definition of Done}
-A part of the software project is done, when it is fully designed, implemented and tested. When that part of the application is passing all of these criteria it is added to a repository where the result is build. When that build is successful that part of the application is done, for the moment. When that part needs to be changed in the future the same procedure will be used again.
+
+\section{Definition of Done}\label{sec:definitionOfDone}
+A part of the software project is done, when it is fully designed, implemented, documented and tested. When that part of the application is passing all of these criteria it is added to a repository where the result is build. When that build is successful that part of the application is done, for the moment. When that part needs to be changed in the future the same procedure will be used again.
