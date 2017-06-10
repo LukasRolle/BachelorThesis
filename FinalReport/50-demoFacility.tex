@@ -24,28 +24,51 @@ The demo scenario explains the process that will be executed during the demo fac
 \begin{figure}[htbp]
 	\begin{center}
 	\includegraphics[height=\textheight]{images/activityDiagram_demoScenarioNoExceptions}
-	\end{center}	
+	\end{center}
 	\caption{Activity Diagram Demo Scenario}
 	\label{fig:activityDemoScenario}
 \end{figure}
 
 \clearpage
 
+The model shows the original process in a simplified form. It also shows a complete work day and not just the process of picking a single parcel  The worker arrives in the morning and scans their worker card, this is done to log in the worker into the system and be able to get the orders that are allocated to that worker. The next thing is to get the order document, this is currently done on paper, but the intent for this is, that in the end this can be displayed on the wearable. The worker can then at first look at the order document and then continues to start working on that order. 
+
+The order is split up into multiple order lines. An order line contains a single article, location, quantity and a number to identify the order line. The worker identifies the location and starts moving to the article location. At the article location the parcel is scanned and afterwards put on the handcart of the worker. This is repeated until the quantity listed in the order line is met. When the quantity of the order line is met, the order line is confirmed, but there are multiple things that might happen during this process:
+
+\begin{description}
+	\item[right amount on cart and pallet not empty] \hfill \\
+	The process is working as explained above and the order line is confirmed without a problem.
+	\item[right amount on cart and pallet empty] \hfill \\
+	The pallet is confirmed empty for the \gls{wms}, but otherwise the process is working as explained above and the order line is confirmed.
+	\item[too little amount of parcels on cart and pallet empty] \hfill \\
+	The pallet is confirmed empty for the \gls{wms}, afterwards a coordinator is contacted to define the following steps, the process as planned is ending at this point and the steps, as defined by the coordinator are executed.
+\end{description}
+
+When the order line is successfully confirmed the next order line can be worked on, if the current order line was not the last one of the order. When the order line was the last order line the customer wishes can be incorporated. The quantities for the order will then be checked again and afterwards the order is confirmed. The handcart is then moved to the shipping location. When the order is delivered to the shipping location the next order can be started. If this is the end of the working day for the worker, the process ends.
+
+
 This diagram was created for multiple reasons:
 
 \begin{description}
 	\item[Readability] \hfill \\
-	The scale of the original process diagram made it hard to process. One goal was to create a more compact diagram.
+	The scale of the original process diagram made it hard to process. One goal was to create a more compact diagram. This was realized by designing it with the \gls{uml} 2.5 notation as specified by the \gls{omg}. \citep{manual:umlnotation}
 	\item[Purpose] \hfill \\
 	The original diagram had a different purpose, it was supposed to model the process of one of the pilot companies in its entirety. The purpose of the activity diagram is to model a demo case, that does not need to show every single detail of the process in the first place.
 	\item[Focus point] \hfill \\
 	The demo scenario focuses on the general tasks an order picking worker is doing, but is just focussing on the main points for this. The original diagram also includes the connections to the database and also includes tasks outside of the actual order picking.
 \end{description}
 
-\textcolor{red}{add description of model}
-
 \section{Design}
-The general design for the demo facility application will be based on the reference model described in chapter \ref{cha:reference}. But in the following sections the demo facility specific design will be elaborated further.
+The general design for the demo facility application is based on the reference model described in chapter \ref{cha:reference}. The more concrete model for the demo facility can be seen in figure \ref{fig:ClassDiagramL1}.
+
+\begin{figure}[t]
+	\includegraphics[width=\textwidth]{images/ClassDiagram_Level1}
+	\caption{Package Diagram Demo Facility}
+	\label{fig:ClassDiagramL1}
+\end{figure}
+The package diagram displayed is a high level view on the demo facility. The biggest difference to the reference model is the wearable, which in this case uses a thin client to connect to a web application that is doing most of the work for the wearable. The web application then in turn connects to the \gls{wms} and is replacing the communication layer that is existing in the reference model.
+
+The following sections will go into detail for each of the displayed packages and the demo facility design will be elaborated further.
 
 
 \subsection{WMS}
@@ -76,10 +99,12 @@ The interface, that is exposed by the \gls{wms}, is a \gls{rest} interface, for 
 	A function that exists purely to have an existing and repeatable demo case. This resets the database to a state it was in at the beginning, before the demo was executed.
 \end{description}
 
-\subsection{Wearable | Application}
+\subsection{Wearable}
 \textcolor{red}{Add information on how the wearable application works, maybe with web interface or direct implementation}
 
 \textcolor{red}{add more sophisticated class diagram}
+
+\subsection{WebApp}
 
 \section{Planning}
 In the future for this task, there will be multiple wearables tried out and then decided which wearable will be used for the demo facility, as described in section \ref{sec:wearables}. Afterwards an application will be written for that wearable, to improve the process chosen in \ref{sec:processes}. 
