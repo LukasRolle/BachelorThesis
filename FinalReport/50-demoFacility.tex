@@ -68,7 +68,7 @@ The general design for the demo facility application is based on the reference m
 \end{figure}
 The package diagram displayed is a high level view on the demo facility. The biggest difference to the reference model is the wearable, which in this case uses a thin client to connect to a web application that is doing most of the work for the wearable. The web application then in turn connects to the \gls{wms} and is replacing the communication layer that is existing in the reference model.
 
-The following sections will go into detail for each of the displayed packages and the demo facility design will be elaborated further.
+The normal lines represent function calls and the dashed lines represents returned information in the diagram. The following sections will go into detail for each of the displayed packages and the demo facility design will be elaborated further.
 
 
 \subsection{WMS}
@@ -87,7 +87,7 @@ Figure \ref{fig:LogicalModelWMS} shows the relations and fields in the database.
 For an actual warehouse the customers attributes would change completely, as companies might have multiple addresses, therefore that might change for every order of that customer, making it easier to add an address field to the order and not the customer.  Also a customer might want to add additional wishes just to a specific order or dependent on what might be ordered, therefore the additional wishes might also be moved to the order, but for a demo case, that is not executed at a pilot company, the model is sufficient.
 
 \subsubsection{Interface}
-The interface, that is exposed by the \gls{wms}, is a \gls{rest} interface, for the demo case this means that the communication layer, explained in subsection \ref{subsec:communication}, can be skipped, as the wearable chosen in section \ref{sec:processes} is able to connect to a \gls{rest} \gls{api} directly. And for a demo case the communication layer is also not needed to further transform or do similar things with the data that is passing through it. The options available through the \gls{rest} interface are the following:
+The interface, that is exposed by the \gls{wms}, is a \gls{rest} interface. The options available through the \gls{rest} interface are the following:
 \begin{description}
 	\item[NextOrder] \hfill \\
 	Returns the order with the smallest number for a specific worker.
@@ -100,11 +100,15 @@ The interface, that is exposed by the \gls{wms}, is a \gls{rest} interface, for 
 \end{description}
 
 \subsection{Wearable}
-\textcolor{red}{Add information on how the wearable application works, maybe with web interface or direct implementation}
+The wearable is implemented with a \gls{thinclient}. This has multiple advantages, especially for such a demo case where potentially multiple wearables are supposed to be tested. One advantage is, because wearables tend to be less powerful devices just due to their size, the \gls{thinclient} allows to ease the load that would normally be computed on the wearable. But the bigger advantage is, that this allows to employ multiple wearables more easily. A \gls{thinclient} is implemented faster and easier than a \gls{fatclient}, therefore multiple demos for multiple wearables are more easily implemented. This allows to deploy multiple demos a lot easier. At the same time this allows a company a smoother upgrade process, meaning if they ever want to replace their existing wearables to another set of wearables, the transition could be realized a lot cheaper and faster.
 
-\textcolor{red}{add more sophisticated class diagram}
+Therefore apart from the usage of the input and output information to get information from the user and return information to the user only a communication interface is used to 
 
-\subsection{WebApp}
+\subsection{Web Application}
+The web application is split into multiple web pages that leads a worker through the day. The first window shown is a page, where the worker is prompted to log in by scanning their worker id. Then the next order for that worker can be started. Then order lines are displayed in more detail and can be confirmed. If every order line is confirmed the order can be confirmed and the next order can be started. The mockups for these web pages can be found in the appendix in section \ref{sec:webappmockups}.
+
+From a technical perspective, the web application will be implemented using Java and the \gls{jsf} framework. 
+
 
 \section{Planning}
 In the future for this task, there will be multiple wearables tried out and then decided which wearable will be used for the demo facility, as described in section \ref{sec:wearables}. Afterwards an application will be written for that wearable, to improve the process chosen in \ref{sec:processes}. 
