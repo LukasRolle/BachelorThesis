@@ -62,12 +62,45 @@ The \texttt{communication} package could potentially be removed, if the wearable
 The \texttt{system} package here can be something like a \gls{wms} of the company. A system that is mostly a black box with an \gls{api} and a database. Most of the time, the \texttt{system} cannot be changed by the developer, therefore the developer needs to use the possible ways to connect to the given \gls{api}.
 
 \section{Variations}
+Multiple variations can be made to the reference model and some of the most likely variations of the reference model will be listed in this section.
 
-\textcolor{red}{add infromation on how the model could be changed to implement push messages.
-}
+\subsection{No Communication Layer}
+As already mentioned in subsection \ref{subsec:communication} about the communication layer, the communication layer might be skipped in situations where the wearable is able to directly connect to the \gls{wms}. How the model changes in such situations can be seen in figure \ref{fig:referenceModel_NoCommunication}. 
 
-\textcolor{red}{Differences in how the business logic could be handled  an what it could do, web app, effectively removing business logic in the wearable}
+\begin{figure}[htbp]
+	\begin{center}	
+	\includegraphics[width=\linewidth]{images/PackageModel_ReferenceArchitecture_NoCommunication}	
+	\end{center}
+	\caption{Reference Model - No Communication Layer}
+	\label{fig:referenceModel_NoCommunication}
+\end{figure}
 
+Apart from the removal of the communication layer the reference model still works exactly the same. This change is rather likely since a lot of newer wearables are able to connect to a rest interface or something similar.
+
+\subsection{Push Messages}
+The possibility to send \gls{pushmessage}s is also a very likely addition to the existing reference model. An example case for the usefulness of this is, an urgent order is coming in and a coordinator wants to see which person might be the most responsible for that order. Afterwards the coordinator can just contact the worker through his wearable and give him the new order directly through a push message. A possible configuration for this can be seen in figure \ref{fig:referenceModel_PushMessages}.
+\clearpage
+
+\begin{figure}[htbp]
+	\includegraphics[width=\linewidth]{images/PackageModel_ReferenceArchitecture_PushMessages}
+	\caption{Reference Model - Push Messages}
+	\label{fig:referenceModel_PushMessages}
+\end{figure}
+
+Like in the normal reference model, the normal arrows show an instruction flow that is originating from the worker. The arrows with the filled arrow head are the instruction flow from the coordinator and therefore the push messages. The AdminPortal is added here as a possibility for a coordinator to check on the state of current orders and what workers are currently most occupied. This helps the coordinator choose a worker that is available and used to the customer that order something and is a higher priority.
+
+\subsection{Web Application}
+Another likely variation of the reference model is a scenario in which a web application is replacing the communication layer. This reduces the load on the wearable and allows a more uniform handling of multiple wearables. This variation of the reference model can be seen in figure \ref{fig:referenceModel_WebApp}.
+
+\begin{figure}[htbp]
+	\includegraphics[width=\linewidth]{images/PackageModel_ReferenceArchitecture_WebApp}
+	\caption{Reference Model - Web Application}
+	\label{fig:referenceModel_WebApp}
+\end{figure}
+
+The \texttt{WebApp} package here is just held as simple here, since the way to implement a web application can vary a lot. If a web application is implemented using the \gls{mvvm} patter, \gls{mvc} pattern, \gls{mvp} pattern or some other pattern to implement web applications, is not relevant for the model and is therefore ignored here. The other parts of the reference model are mostly similar, the business logic is moved from the wearable to the web application. This is done to reduce the load on the wearable, which might be a problem for some wearables.
+
+\clearpage
 \section{Problems}
 The main problem that occurred during the creation of the \gls{reference model} was a problem in communication, regarding the names of \gls{reference model} and \gls{reference architecture}. The initial task was understood to create a general-purpose \gls{reference architecture}, that would connect a \gls{wearable} to some kind of system. During the process of creating the different diagrams for the reference architecture and trying to validate them using code. The problem became obvious that trying to go deeper than the now given \gls{reference model}, as seen in figure \ref{fig:referenceModel}, was impossible to do for a general-purpose implementation.
 

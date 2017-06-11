@@ -12,9 +12,9 @@ There were process already modelled and made available in the LOGwear project. T
 
 The decision for a single process was quickly made in cooperation with the company supervisor. The processes will just be briefly explained here, as it is not as important to fully understand the processes that were not chosen.
 
-Order Picking High Rack has been discarded due to the nature of what should be created. A simulation that should model a real environment. Modelling a High Rack and usage of that would be too hard and would take too much time. \textcolor{red}{add short description of what the process is about not just why it was discarded}
+Order Picking High Rack is a process where either a special vehicle is used to reach especially high racks or the rack itself is mechanized and the items needed for the order picking process is moving to oneself. This process has been discarded due to the nature of what should be created. A simulation that should model a real environment. Modelling a High Rack and usage of that would be too hard and would take too much time.
 
-Goods Receipt and Put away was another process to be considered, but was discarded. The modelling of it would be problematic due to the time delays in the tasks. Furthermore the process showed less potential for improvements with wearables. \textcolor{red}{add short description of what the process is about not just why it was discarded}
+Goods Receipt and Put away was another process to be considered. The process itself is about getting an order from a customer, waiting for it to arrive and then afterwards putting the incoming goods away in a spot that was dedicated for it beforehand. This process was discarded as well. The modelling of it would be problematic due to the time delays in the tasks. Furthermore the process showed less potential for improvements with wearables.
 
 Order Picking W3-5 was the process chosen to improve with wearables as multiple possibilities to improve the process were discovered. Also the processes seemed rather easy to model with a demo facility by setting up one or two racks and placing multiple packages on there. This process was selected together with the company supervisor. This process can be seen in the appendix, in figure \ref{fig:orderPickingProcessDiagram} but the demo scenario will also be further explained in section \ref{sec:demoScenario}.
 
@@ -83,6 +83,8 @@ The wearables that were tested hands-on have been:
 
 The other named wearables were also intended to be tested, but were not able to be delivered in a time that was considered acceptable to continue the project. Therefore the final weighted decision will only take these three wearables in consideration. The combination of Honeywell Dolphin 75e and the 8620 Wearable Ring Scanner will be counted as a single wearable for this comparison as they are intended to be used together. The general weighted decision for these wearables can be found in table \ref{tab:weightedDecision}. 
 
+The weights are distributed to sum together to the value of ten. The value for a wearable is given from a scale from one to ten and the weighted value is the original value multiplied with the weight given for a criteria. For the criteria performance, battery life and durability, the higher the value of a wearable, the higher the performance, battery life and durability of the wearable are. For the cost of a wearable it is reversed, the higher the cost of a wearable the less points the wearable is getting in that criteria.
+
 \begin{table}[htbp]
 \centering
 \begin{tabular}{|lr|rr|rr|rr|} \hline
@@ -92,7 +94,7 @@ Performance  & 4                          & 6                         & 24      
 Cost         & 2                          & 2                         & 4                            & 5                         & 10                           & 3                         & 6                            \\
 Battery Life & 2                          & 4                         & 8                            & 5                         & 10                           & 9                         & 18                           \\
 Durability   & 2                          & 3                         & 6                            & 3                         & 6                            & 8                         & 16                           \\ \hline
-             &                            &                           & 42                           &                           & 34                           &                           & 72                           \\ \hline
+             & 10                         &                           & 42                           &                           & 34                           &                           & 72                           \\ \hline
 \end{tabular}
 \caption{Weighted Decision Wearables}
 \label{tab:weightedDecision}
@@ -106,21 +108,22 @@ The battery life between the HoloLens and the M100 is relatively similar, but th
 
 But that might not be the only things that could lead to a decision, an aspect that is not explored here is possibilities. But the possibilities that a \gls{wearable} has, are not that easily measured and therefore are ignored for the wearable comparison at this point in time. Therefore the Honeywell Dolphin 75e + 8620 Wearable Ring Scanner has been chosen as a wearable to implement the demo scenario explained in section \ref{sec:demoScenario}.
 
-\cleardoublepage
+\clearpage
 
 \section{CASE Tools}\label{sec:caseTools}
-The \gls{case} tools chosen here are only for the parts already decided on. As a chosen wearable could introduce a lot more \gls{case} tools to the project. The already chosen \gls{case} tools can be seen in table \ref{tab:case}. 
+The \gls{case} tools are used to implement parts of the project and have been decided on with the company supervisor. 
 
 \begin{table}[htbp]
 	\begin{center}
 	\begin{tabular}{|p{0.2\linewidth}|p{0.6\linewidth}|} \hline
 	\textbf{Program} & \textbf{Usage} \\ \hline
-	UMLet & UMLet is a free, open-source \gls{uml} tool. It is used to create \gls{uml} diagrams and is extensible by user created, custom elements. \citep{website:umlet} It was used to create the diagrams that were created during the thesis.  \\ \hline
-	JIRA & JIRA is a tool developed by Atlassian. It is an issue tracking and project management tool. During the thesis it is used as a tool to plan sprints and track bugs and issues, as well as having a backlog of features that should still be implemented. \\ \hline
-	Bitbucket & Bitbucket is a tool developed by Atlassian. It is a \gls{vcs} solution that uses git as an underlying system and is aiming to give companies a secure and private git repository to use for proprietary projects. During the thesis Bitbucket is used as a \gls{vcs} for the different parts of the project. \\ \hline
-	Visual Studio & \gls{ide} developed by Microsoft for programming languages managed by them. For this project used to implement the database connection and the \gls{rest} \gls{api}. \\ \hline
-	Mobility SDK for Android & A \gls{sdk} used to develop for the Honeywell Dolphin 75e. This is provided by Honeywell to allow usage of the unique components in their devices.\\ \hline
 	Azure Cloud & A \gls{cloudcomputing} environment by Microsoft. In this project used to deploy the database for the mock \gls{wms}, the database connector and the \gls{rest} interface to connect to it. \\ \hline
+	Bitbucket & Bitbucket is a tool developed by Atlassian. It is a \gls{vcs} solution that uses git as an underlying system and is aiming to give companies a secure and private git repository to use for proprietary projects. During the thesis Bitbucket is used as a \gls{vcs} for the different parts of the project. \\ \hline
+	JIRA & JIRA is a tool developed by Atlassian. It is an issue tracking and project management tool. During the thesis it is used as a tool to plan sprints and track bugs and issues, as well as having a backlog of features that should still be implemented. \\ \hline
+	Mobility \gls{sdk} for Android & A \gls{sdk} used to develop for the Honeywell Dolphin 75e. This is provided by Honeywell to allow usage of the unique components in their devices.\\ \hline
+	Netbeans \gls{ide} & Is an \gls{ide} developed by the oracle corporation for Java development. Netbeans is also extensible by third party developers. In this project it is used to implement a web application using the \gls{jsf} framework.  \\ \hline
+	UMLet & UMLet is a free, open-source \gls{uml} tool. It is used to create \gls{uml} diagrams and is extensible by user created, custom elements. \citep{website:umlet} It was used to create the diagrams that were created during the thesis.  \\ \hline
+	Visual Studio & \gls{ide} developed by Microsoft for programming languages managed by them. For this project used to implement the database connection and the \gls{rest} \gls{api}. \\ \hline
 	\end{tabular}
 	\end{center}
 	\caption{CASE tools}\label{tab:case}

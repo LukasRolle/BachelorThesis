@@ -107,20 +107,6 @@ Therefore apart from the usage of the input and output information to get inform
 \subsection{Web Application}
 The web application is split into multiple web pages that leads a worker through the day. The first window shown is a page, where the worker is prompted to log in by scanning their worker id. Then the next order for that worker can be started. Then order lines are displayed in more detail and can be confirmed. If every order line is confirmed the order can be confirmed and the next order can be started. The mockups for these web pages can be found in the appendix in section \ref{sec:webappmockups}.
 
-From a technical perspective, the web application will be implemented using Java and the \gls{jsf} framework. 
+From a technical perspective, the web application will be implemented using Java and the \gls{jsf} framework. \gls{jsf} is a part of the \gls{jee} platform and is the current standard to implement web applications with Java. Furthermore \gls{jsf} is a framework that is using the \gls{mvc} pattern to deploy web applications. 
 
-
-\section{Planning}
-In the future for this task, there will be multiple wearables tried out and then decided which wearable will be used for the demo facility, as described in section \ref{sec:wearables}. Afterwards an application will be written for that wearable, to improve the process chosen in \ref{sec:processes}. 
-
-This application will at least include the functionalities to:
-\begin{itemize}
-	\item Divide a given room in multiple sectors, to address a single part of the room with a given location string.
-	\item Reset the case to allow multiple showcases of the demo.
-	\item Allow scanning of \gls{id}s on \gls{parcel}s and pallets.
-	\item Send confirmations to the \gls{wms}, that an action has been completed.
-\end{itemize}
-
-For the demo environment, an area will be rented that allows to place a rack in there with \gls{parcel}s. The \gls{parcel}s will be equipped with an \gls{id} that can be scanned with the chosen wearable.
-
-When the implementation of the demo application is finished a second one could be started to show \gls{sme} the differences between the possibilities different wearables give the user.
+This was chosen as the framework to implement the web application due to familiarity with the technology and it being a framework that allows rather easily to implement multiple web pages and connect that to a controller in the back end.
