@@ -65,41 +65,7 @@
 	\caption{Use Case: Get Order(Voice)}
 \end{figure}
 
-\begin{figure}
-	\begin{UseCase}{UC-W2}{Order Confirmation}{Wearable}{1.1}{LUR}
-		\Actors{Picking Worker}
-		\Description{A picking worker equipped with a wearable is using an input interface to confirm an order.}
-		\Preconditions{The order picker has finished picking the order and wants to confirm that everything is correct.}
-		\Scenario{
-			\vspace{0.1\baselineskip}
-		    \begin{enumerate*}
-		    	\item The order picker uses an input interface on the Wearable to confirm the Order.
- 		   	\item The wearable is processing the request.
- 		   	\item The wearable is sending the Confirmation to the WMS.
- 		   	\item The WMS sends, that the confirmation was successfully received.
-		    	\item The wearable displays the user, that the confirmation was received by the WMS.
-		    \end{enumerate*}
-		}
-		\Extensions{
-			\vspace{0.1\baselineskip}
-			\begin{enumerate*}
-				\item[1.1] The Wearable is able to check if the confirmation is allowed to be send. See UC-W3.
-			\end{enumerate*}
-		}
-		\Exceptions{
-			\vspace{0.1\baselineskip}
-			\begin{enumerate*}
-				\item[3.1] The Wearable got an error when processing the request. The order picker is informed about the cause of the error and can try to fix it.
-				\item[4.1] The WMS does not answer. The order picker is informed about that and can try contacting the IT.
-			\end{enumerate*}
-		}
-		\Result{The Order Picker has confirmed his order.}
-	\end{UseCase}
-	\caption{Use Case: Order Confirmation}
-\end{figure}
-
-
-\begin{figure}
+\begin{figure}[H]
 	\begin{UseCase}{UC-W3}{Order Control}{Wearable}{1.1}{LUR}
 		\Actors{Picking Worker}
 		\Description{A picking worker is in the process of picking his order.}
