@@ -13,7 +13,8 @@ and open the template in the editor.
     </head>
     <body>
         <div>
-            <h:outputText value="#{WorkerBean.currentOrder}"/>
+            <h:outputText value="#{WorkerBean.currentOrder.orderNumber}"/>
+            <h:outputText value="#{WorkerBean.currentOrder.orderPacked}"/>
             <h4><h:outputText value="#{WorkerBean.workerID}"/></h4>
             <h:form>
                 <h:commandButton id="backButton" value="Back" action="response"/>

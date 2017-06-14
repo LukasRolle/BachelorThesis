@@ -5,12 +5,15 @@
  */
 package nl.fontys.logwear.demofrontend.Model;
 
+import java.util.List;
+
 /**
  *
  * @author Lukas Rolle(LukasRolleSE@gmail.com)
  */
 public class Worker {
     int workerNumber;
+    List<Order> orders;
 
     public Worker(int workerNumber) {
         this.workerNumber = workerNumber;

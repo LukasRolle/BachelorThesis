@@ -5,6 +5,9 @@
  */
 package nl.fontys.logwear.demofrontend;
 
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationConfig;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -17,6 +20,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
+import nl.fontys.logwear.demofrontend.Model.Order;
 
 /**
  *
@@ -27,7 +31,7 @@ import javax.inject.Named;
 public class WorkerBean implements Serializable {
 
     private int workerID;
-    private String currentOrder;
+    private Order currentOrder;
     private URL baseUrl;
 
     /**
@@ -50,9 +54,10 @@ public class WorkerBean implements Serializable {
         this.workerID = workerID;
     }
 
-    public String getCurrentOrder() {
+    public Order getCurrentOrder() {
         HttpURLConnection connection = null;
         URL restUrl;
+        String orderJson = "";
         try {
             restUrl = new URL(baseUrl.toString() + workerID);
        
@@ -69,7 +74,9 @@ public class WorkerBean implements Serializable {
                 response.append('\r');
             }
             rd.close();
-            return response.toString();
+            orderJson = response.toString();
+            orderJson = "{\"Order\":" + orderJson + "}";
+            System.out.println("Have been here");
         } catch (IOException ex) {
             Logger.getLogger(WorkerBean.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
@@ -77,10 +84,21 @@ public class WorkerBean implements Serializable {
                 connection.disconnect();
             }
         }
+        
+        if (!orderJson.equals("")) {
+            ObjectMapper mapper = new ObjectMapper();
+            mapper.configure(DeserializationFeature.UNWRAP_ROOT_VALUE, true);
+            
+            try {
+                currentOrder = mapper.readValue(orderJson, Order.class);
+            } catch (IOException ex) {
+                Logger.getLogger(WorkerBean.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
         return currentOrder;
     }
-
-    public void setCurrentOrder(String currentOrder) {
+    
+    public void setCurrentOrder(Order currentOrder) {
         this.currentOrder = currentOrder;
     }
 

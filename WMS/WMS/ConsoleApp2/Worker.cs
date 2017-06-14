@@ -21,7 +21,7 @@ namespace DBC
         }
     
         public int WorkerNumber { get; set; }
-    
+   
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         internal virtual ICollection<Order> Orders { get; set; }
     }
