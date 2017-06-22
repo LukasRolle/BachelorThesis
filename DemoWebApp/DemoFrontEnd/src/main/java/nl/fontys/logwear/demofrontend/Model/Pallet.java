@@ -21,6 +21,10 @@ public class Pallet {
         this.quantity = quantity;
         this.palletNumber = palletNumber;
     }
+    
+    public Pallet() {
+        
+    }
 
     public String getLocation() {
         return location;

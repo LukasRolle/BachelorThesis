@@ -14,6 +14,12 @@ public class Customer {
     private String customerAddress;
     private String additionalWishes;
     
+    public Customer(int customerNumber, String customerAddress, String additionalWishes) {
+        this.customerNumber = customerNumber;
+        this.customerAddress = customerAddress;
+        this.additionalWishes = additionalWishes;
+    }
+    
     public Customer() {
         this.customerNumber = 0;
         this.customerAddress = "";

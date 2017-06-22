@@ -6,6 +6,7 @@
 package nl.fontys.logwear.demofrontend;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationConfig;
 import java.io.BufferedReader;
@@ -47,6 +48,7 @@ public class WorkerBean implements Serializable {
     }
     
     public int getWorkerID() {
+        
         return workerID;
     }
 
@@ -75,8 +77,10 @@ public class WorkerBean implements Serializable {
             }
             rd.close();
             orderJson = response.toString();
-            orderJson = "{\"Order\":" + orderJson + "}";
+            //orderJson = "{\"Order\":" + orderJson + "}";
             System.out.println("Have been here");
+        } catch (JsonMappingException ex) {
+            Logger.getLogger(WorkerBean.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
             Logger.getLogger(WorkerBean.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
@@ -91,6 +95,8 @@ public class WorkerBean implements Serializable {
             
             try {
                 currentOrder = mapper.readValue(orderJson, Order.class);
+            } catch (JsonMappingException ex) {
+                Logger.getLogger(WorkerBean.class.getName()).log(Level.SEVERE, null, ex);
             } catch (IOException ex) {
                 Logger.getLogger(WorkerBean.class.getName()).log(Level.SEVERE, null, ex);
             }

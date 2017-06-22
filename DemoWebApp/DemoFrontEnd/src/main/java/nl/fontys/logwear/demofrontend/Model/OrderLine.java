@@ -21,7 +21,11 @@ public class OrderLine {
         this.pallet = pallet;
         this.acknowledgement = acknowledgement;
     }
-
+    
+    public OrderLine() {
+        
+    }
+    
     public int getOrderLineNumber() {
         return orderLineNumber;
     }

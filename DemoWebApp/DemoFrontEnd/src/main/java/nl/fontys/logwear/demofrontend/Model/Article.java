@@ -17,7 +17,11 @@ public class Article {
         this.articleNumber = articleNumber;
         this.articleName = articleName;
     }
-
+    
+    public Article() {
+        
+    }    
+    
     public int getArticleNumber() {
         return articleNumber;
     }

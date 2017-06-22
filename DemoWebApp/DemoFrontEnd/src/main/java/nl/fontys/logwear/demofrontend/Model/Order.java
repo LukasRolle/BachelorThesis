@@ -12,13 +12,13 @@ import java.util.List;
  * @author Lukas Rolle(LukasRolleSE@gmail.com)
  */
 public class Order {
-    private Customer customer;
     private List<OrderLine> orderLines;
     private List<Worker> workers;
-    private int orderNumber;
     private boolean orderPacked;
+    private int orderNumber;
+    private Customer customer;
 
-    public Order(Customer customer, List<OrderLine> orderLines, List<Worker> workers, int orderNumber, boolean orderPacked) {
+    public Order(List<OrderLine> orderLines, List<Worker> workers, boolean orderPacked, int orderNumber, Customer customer) {
         this.customer = customer;
         this.orderLines = orderLines;
         this.workers = workers;
@@ -26,6 +26,10 @@ public class Order {
         this.orderPacked = orderPacked;
     }
 
+    public Order() {
+        
+    }
+    
     public Customer getCustomer() {
         return customer;
     }
@@ -66,5 +70,48 @@ public class Order {
         this.orderPacked = orderPacked;
     }
     
+    static class Customer {
+    private int customerNumber;
+    private String customerAddress;
+    private String additionalWishes;
     
+    public Customer(int customerNumber, String customerAddress, String additionalWishes) {
+        this.customerNumber = customerNumber;
+        this.customerAddress = customerAddress;
+        this.additionalWishes = additionalWishes;
+    }
+    
+    public Customer() {
+        this.customerNumber = 0;
+        this.customerAddress = "";
+        this.additionalWishes = "";
+    }
+
+    public int getCustomerNumber() {
+        return customerNumber;
+    }
+
+    public void setCustomerNumber(int customerNumber) {
+        this.customerNumber = customerNumber;
+    }
+
+    public String getCustomerAddress() {
+        return customerAddress;
+    }
+
+    public void setCustomerAddress(String customerAddress) {
+        this.customerAddress = customerAddress;
+    }
+
+    public String getAdditionalWishes() {
+        return additionalWishes;
+    }
+
+    public void setAdditionalWishes(String additionalWishes) {
+        this.additionalWishes = additionalWishes;
+    }
+    
+    
+}
+
 }

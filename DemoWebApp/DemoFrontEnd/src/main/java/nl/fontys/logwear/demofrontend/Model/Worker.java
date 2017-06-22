@@ -18,7 +18,11 @@ public class Worker {
     public Worker(int workerNumber) {
         this.workerNumber = workerNumber;
     }
-
+    
+    public Worker() {
+        
+    }
+    
     public int getWorkerNumber() {
         return workerNumber;
     }
