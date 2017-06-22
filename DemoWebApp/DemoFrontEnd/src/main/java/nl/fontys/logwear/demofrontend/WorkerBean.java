@@ -8,8 +8,6 @@ package nl.fontys.logwear.demofrontend;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationConfig;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -23,7 +21,6 @@ import java.util.logging.Logger;
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
 import nl.fontys.logwear.demofrontend.Model.Order;
-import org.apache.commons.lang3.text.WordUtils;
 
 /**
  *
