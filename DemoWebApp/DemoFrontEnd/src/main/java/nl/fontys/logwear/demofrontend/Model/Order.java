@@ -122,10 +122,9 @@ public class Order {
         public void setAdditionalWishes(String additionalWishes) {
             this.additionalWishes = additionalWishes;
         }
-
     }
-
-    static class OrderLine {
+    
+    public static class OrderLine {
 
         private int orderLineNumber;
         private int quantity;
@@ -196,7 +195,7 @@ public class Order {
             this.acknowledgement = acknowledgement;
         }
 
-        static class Pallet {
+        public static class Pallet {
 
             private String storageLocation;
             private int articleNumber;
@@ -257,7 +256,7 @@ public class Order {
                 this.palletNumber = palletNumber;
             }
 
-            static class Article {
+            public static class Article {
 
                 private int articleNumber;
                 private String articleName;

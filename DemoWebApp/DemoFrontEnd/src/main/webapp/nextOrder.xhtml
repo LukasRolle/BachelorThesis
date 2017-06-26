@@ -12,12 +12,18 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
     <body>
-        <div>
-            <h:outputText value="#{WorkerBean.currentOrder.orderNumber}"/>
-            <h:outputText value="#{WorkerBean.currentOrder.orderPacked}"/>
-            <h4><h:outputText value="#{WorkerBean.workerID}"/></h4>
+        <div id="OCNumbers">
+            <h:outputText value="Order Number: #{WorkerBean.currentOrder.orderNumber}"/>
+            <h:outputText value="Customer: #{WorkerBean.currentOrder.customerNumber}"/>
+        </div>
+        <div id="OrderLines">
+            <h:outputText value="Order Lines"/>
+            <h:outputText value="#{WorkerBean.currentOrderLines}"/>
+        </div>
+        <div id="Buttons">
             <h:form>
                 <h:commandButton id="backButton" value="Back" action="response"/>
+                <h:commandButton id="startOrderButton" value="Start Order" action="startOrder"/>
             </h:form>
         </div>
     </body>

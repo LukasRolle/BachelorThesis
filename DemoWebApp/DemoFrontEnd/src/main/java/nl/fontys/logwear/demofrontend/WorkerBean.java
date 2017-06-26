@@ -16,6 +16,7 @@ import java.io.Serializable;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Iterator;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.enterprise.context.SessionScoped;
@@ -106,6 +107,18 @@ public class WorkerBean implements Serializable {
 
     public void setCurrentOrder(Order currentOrder) {
         this.currentOrder = currentOrder;
+    }
+    
+    public String getCurrentOrderLines() {
+        String orderLines = "";
+        for (Order.OrderLine orderLine : currentOrder.getOrderLines()) {
+            orderLines += "Article: " + orderLine.getPallet().getArticle().getArticleName();
+            orderLines += "Quantitiy: " + orderLine.getQuantity();
+            orderLines += "Location: " + orderLine.getPallet().getStorageLocation();
+            orderLines += " <input type=\"checkbox\" name=\"the_checkbox\" value=\""+
+                    (orderLine.isAcknowledgement() ? "1" : "0") +"\" /> Acknowledgement \n";
+        }
+        return orderLines;
     }
 
     public String jsonToCamelCase(String input) {
