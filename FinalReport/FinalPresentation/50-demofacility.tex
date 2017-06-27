@@ -11,29 +11,40 @@
 	\end{itemize}
 \end{frame}
 \begin{frame}\frametitle{Infrastructure}
-\begin{itemize}
-	\item Mock WMS
-	\begin{itemize}
-		\item Database
-		\item Database Connector
-		\item Rest API
-	\end{itemize}
-	\item Communication Layer
-	\item Wearable	
-\end{itemize}
+\begin{figure}
+	\includegraphics[width=\textwidth]{images/ClassDiagram_Level1}
+\end{figure}
 \end{frame}
-\begin{frame}\frametitle{Design}
+\begin{frame}\frametitle{API}
 	\begin{itemize}
-		\item Wearable GUI
-		\item Application Logic
-		\item Demo Case
-		\item Physical Demo Environment
+		\item GET
+		\begin{itemize}
+			\item Order
+			\item NextOrder
+		\end{itemize}
+		\item POST
+		\begin{itemize}
+			\item ConfirmOrderLine
+			\item ConfirmOrder
+		\end{itemize}
+		\item PUT
+		\begin{itemize}
+			\item ResetDatabase
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+\begin{frame}\frametitle{Web Application}
+	\begin{itemize}
+		\item Worker Login
+		\item Display Order Details
+		\item Start Order
+		\item Confirm Order
 	\end{itemize}
 \end{frame}
 \begin{frame}\frametitle{Wearable Application}
 	\begin{itemize}
-		\item Improve picking process
-		\item Showcase
-		\item Reproducible Demo
+		\item Thin Client
+		\item Run Web Application
+		\item Incorporate Wearable possibilities
 	\end{itemize}
 \end{frame}
