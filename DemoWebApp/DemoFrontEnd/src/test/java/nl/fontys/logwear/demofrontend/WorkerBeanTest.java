@@ -7,6 +7,8 @@ package nl.fontys.logwear.demofrontend;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import nl.fontys.logwear.demofrontend.Model.Order;
 import org.junit.After;
 import org.junit.Before;
@@ -42,6 +44,11 @@ public class WorkerBeanTest {
     public void setUp() {
         workerBean = new WorkerBean();
         workerBean.resetDataBase();
+        try {
+            Thread.sleep(30000);
+        } catch (InterruptedException ex) {
+            Logger.getLogger(WorkerBeanTest.class.getName()).log(Level.SEVERE, null, ex);
+        }
         workerBean.setWorkerID(1);
         
         order1 = new Order();
@@ -191,7 +198,7 @@ public class WorkerBeanTest {
         assertNotEquals(order, nextOrder);
         
         assertEquals(1, order.getOrderNumber());
-        assertEquals(2, nextOrder.getOrderNumber());
+        assertEquals(3, nextOrder.getOrderNumber());
     }
 
     /**
@@ -200,12 +207,15 @@ public class WorkerBeanTest {
     @Test
     public void testConfirmOrderLine() {
         workerBean.setCurrentOrder(order1);
+        workerBean.resetDataBase();
+        
         workerBean.ConfirmOrderLine();
         String result = workerBean.getNextOrderLine();
         assertEquals(workerBean.getOrderLineString(orderLine2), result);
         
+        
         workerBean.getCurrentOrder();
         assertEquals(2, workerBean.getNextOrderLineNumber());
     }
-
+    
 }

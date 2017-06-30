@@ -150,7 +150,6 @@ public class WorkerBean implements Serializable {
             connection.setDoOutput(true);
             OutputStreamWriter out = new OutputStreamWriter(
                     connection.getOutputStream());
-            out.write("Resource content");
             out.close();
             connection.getInputStream();
         } catch (MalformedURLException ex) {
@@ -176,7 +175,6 @@ public class WorkerBean implements Serializable {
             connection.setDoOutput(true);
             OutputStreamWriter out = new OutputStreamWriter(
                     connection.getOutputStream());
-            out.write("Resource content");
             out.close();
             connection.getInputStream();
         } catch (MalformedURLException ex) {
