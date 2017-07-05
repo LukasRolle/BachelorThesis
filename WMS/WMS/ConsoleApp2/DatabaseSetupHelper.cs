@@ -16,6 +16,10 @@ namespace DBC
         {
 
         }
+        /// <summary>
+        /// This methods resets the database to a state that is was before the demo was run and the state 
+        /// of the orders and order lines has been changed.
+        /// </summary>
         public void ResetDatabase()
         {
             using (var connection = new QC.SqlConnection(CS.ConfigurationManager.ConnectionStrings["connectionString"].ConnectionString))
@@ -124,6 +128,15 @@ namespace DBC
 
             
         }
+
+        /// <summary>
+        /// Helper method to create new orders more simply.
+        /// </summary>
+        /// <param name="orderNumber">A number that this order is supposed to have.</param>
+        /// <param name="orderLines">The order lines that will be a part of this order.</param>
+        /// <param name="customer">The customer that has initiated the order.</param>
+        /// <param name="workers">The workers that are allocated for this order.</param>
+        /// <returns>Return the newly created order.</returns>
         private Order CreateNewOrder(int orderNumber, OrderLine[] orderLines, Customer customer, Worker[] workers)
         {
             return new Order
@@ -136,6 +149,11 @@ namespace DBC
             };
         }
 
+        /// <summary>
+        /// Helper method to create a new worker.
+        /// </summary>
+        /// <param name="workerNumber">The id of the worker being created.</param>
+        /// <returns>Return the newly created worker.</returns>
         private Worker CreateNewWorker(int workerNumber)
         {
             return new Worker
@@ -145,6 +163,13 @@ namespace DBC
             };
         }
 
+        /// <summary>
+        /// Helper method to create a multitude of workers more easily.
+        /// Workers are created using numbers and creates all workers between two number.
+        /// </summary>
+        /// <param name="startingNumber">The starting id of a worker to be created.</param>
+        /// <param name="endNumber">The last worker that will be created with specified id.</param>
+        /// <returns>Returns multiple workers.</returns>
         private Worker[] CreateNewWorkers(int startingNumber, int endNumber)
         {
             var workers = new Worker[endNumber - startingNumber + 1];
@@ -155,6 +180,13 @@ namespace DBC
             return workers;
         }
        
+        /// <summary>
+        /// Helper method to create a new customer.
+        /// </summary>
+        /// <param name="customerNumber">An id that is used to address this customer.</param>
+        /// <param name="additionalWishes">Additional wishes that can be entered for a customer.</param>
+        /// <param name="address">Adds an address for a customer.</param>
+        /// <returns>Returns a newly created customer.</returns>
         private Customer CreateNewCustomer(int customerNumber, string additionalWishes, string address)
         {
             return new Customer
@@ -166,6 +198,13 @@ namespace DBC
             };
         }
 
+        /// <summary>
+        /// Helper method to create a new order line.
+        /// </summary>
+        /// <param name="pallet">A pallet where the article can be found that is needed for this order line.</param>
+        /// <param name="orderLineNumber">The order line number for this order line.</param>
+        /// <param name="quantity">The quantity needed of the article for this order line.</param>
+        /// <returns>Returns a newly created order line.</returns>
         private OrderLine CreateNewOrderLine(Pallet pallet, int orderLineNumber, int quantity)
         {
             return new OrderLine
@@ -177,6 +216,14 @@ namespace DBC
             };
         }
 
+        /// <summary>
+        /// Helper method to create a new pallet.
+        /// </summary>
+        /// <param name="article">The article that is stored on this pallet.</param>
+        /// <param name="palletNumber">The unique identifier for this pallet.</param>
+        /// <param name="quantity">The quantity that is still stored on this pallet.</param>
+        /// <param name="storageLocation">The location where the pallet is placed in the warehouse.</param>
+        /// <returns>Returns a newly created pallet.</returns>
         private Pallet CreateNewPallet(Article article, int palletNumber, int quantity, string storageLocation)
         {
             return new Pallet
@@ -188,6 +235,12 @@ namespace DBC
             };
         }
 
+        /// <summary>
+        /// Helper method to create a new article.
+        /// </summary>
+        /// <param name="articleNumber">The id for this article.</param>
+        /// <param name="articleName">The name of this article.</param>
+        /// <returns>Returns a newly created article.</returns>
         private Article CreateNewArticle(int articleNumber, string articleName)
         {
             return new Article
