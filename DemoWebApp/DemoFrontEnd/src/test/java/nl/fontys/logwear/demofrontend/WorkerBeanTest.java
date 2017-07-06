@@ -35,28 +35,27 @@ public class WorkerBeanTest {
     Order.OrderLine.Pallet.Article article3;
     List<Order.OrderLine> orderLines1 = new ArrayList<>();
     List<Order.OrderLine> orderLines2 = new ArrayList<>();
-    
-    
+
     public WorkerBeanTest() {
     }
 
     @Before
     public void setUp() {
         workerBean = new WorkerBean();
-        workerBean.resetDataBase();
-        try {
-            Thread.sleep(30000);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(WorkerBeanTest.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        //workerBean.resetDataBase();
+        //try {
+        //    Thread.sleep(30000);
+        //} catch (InterruptedException ex) {
+        //    Logger.getLogger(WorkerBeanTest.class.getName()).log(Level.SEVERE, null, ex);
+        //}
         workerBean.setWorkerID(1);
-        
+
         order1 = new Order();
         order1.setOrderNumber(1);
-        
+
         order2 = new Order();
         order2.setOrderNumber(1);
-        
+
         article1 = new Order.OrderLine.Pallet.Article(1, "article1");
         article2 = new Order.OrderLine.Pallet.Article(2, "article2");
         article3 = new Order.OrderLine.Pallet.Article(3, "article3");
@@ -66,12 +65,12 @@ public class WorkerBeanTest {
         orderLine1 = new Order.OrderLine(1, 2, pallet1, false, 1, 1);
         orderLine2 = new Order.OrderLine(2, 3, pallet2, false, 1, 2);
         orderLine3 = new Order.OrderLine(3, 2, pallet3, false, 1, 3);
-        
+
         orderLines1.add(orderLine1);
         orderLines1.add(orderLine2);
         orderLines2.add(orderLine2);
         orderLines2.add(orderLine3);
-        
+
         order1.setOrderLines(orderLines1);
         order2.setOrderLines(orderLines2);
     }
@@ -138,10 +137,10 @@ public class WorkerBeanTest {
     @Test
     public void testGetCurrentOrderLines() {
         workerBean.setCurrentOrder(order1);
-        
+
         String orderLineString = workerBean.getOrderLineString(orderLine1);
         orderLineString += workerBean.getOrderLineString(orderLine2);
-                
+
         String result = workerBean.getCurrentOrderLines();
         assertEquals(orderLineString, result);
     }
@@ -155,7 +154,7 @@ public class WorkerBeanTest {
         String orderLineString = workerBean.getOrderLineString(orderLine1);
         String result = workerBean.getNextOrderLine();
         assertEquals(orderLineString, result);
-        
+
         orderLineString = workerBean.getOrderLineString(orderLine2);
         workerBean.ConfirmOrderLine();
         result = workerBean.getNextOrderLine();
@@ -190,13 +189,12 @@ public class WorkerBeanTest {
     /**
      * Test of ConfirmOrder method, of class WorkerBean.
      */
-    @Test
     public void testConfirmOrder() {
         Order order = workerBean.getCurrentOrder();
         workerBean.ConfirmOrder();
         Order nextOrder = workerBean.getCurrentOrder();
         assertNotEquals(order, nextOrder);
-        
+
         assertEquals(1, order.getOrderNumber());
         assertEquals(3, nextOrder.getOrderNumber());
     }
@@ -204,18 +202,15 @@ public class WorkerBeanTest {
     /**
      * Test of ConfirmOrderLine method, of class WorkerBean.
      */
-    @Test
     public void testConfirmOrderLine() {
         workerBean.setCurrentOrder(order1);
-        workerBean.resetDataBase();
-        
+
         workerBean.ConfirmOrderLine();
         String result = workerBean.getNextOrderLine();
         assertEquals(workerBean.getOrderLineString(orderLine2), result);
-        
-        
+
         workerBean.getCurrentOrder();
         assertEquals(2, workerBean.getNextOrderLineNumber());
     }
-    
+
 }

@@ -48,15 +48,27 @@ public class WorkerBean implements Serializable {
         }
     }
 
+    /**
+     * Returns the worker id of the current worker.
+     * @return workerID
+     */
     public int getWorkerID() {
 
         return workerID;
     }
 
+    /**
+     * Sets the workerID to a specified id.
+     * @param workerID
+     */
     public void setWorkerID(int workerID) {
         this.workerID = workerID;
     }
 
+    /**
+     * 
+     * @return
+     */
     public Order getCurrentOrder() {
         HttpURLConnection connection = null;
         URL restUrl;
