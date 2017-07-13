@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>120</x>
+      <y>100</y>
+      <w>660</w>
+      <h>530</h>
+    </coordinates>
+    <panel_attributes>Order
+--
+- orderNumber : int
+- customer : Customer
+- orderLines : List&lt;OrderLine&gt;
+- workers : List&lt;Worker&gt;
+- orderPacked : bool
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>580</x>
+      <y>230</y>
+      <w>180</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Customer
+--
+- customerNumber : int
+- customerAddress : string
+- additionalWishes : string
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>140</x>
+      <y>230</y>
+      <w>220</w>
+      <h>380</h>
+    </coordinates>
+    <panel_attributes>OrderLine
+--
+- orderLineNumber : int
+- quantity : int
+- pallet : Pallet
+- acknowledgement : bool
+- pallet : Pallet
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>150</x>
+      <y>350</y>
+      <w>200</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>Pallet
+--
+- palletNumber : int
+- storageLocation : string
+- article : Article
+- quantity : int
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>160</x>
+      <y>450</y>
+      <w>180</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Article
+--
+- articleNumber : int
+- articleName : string
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>380</x>
+      <y>230</y>
+      <w>180</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Worker
+--
+- workerNumber : int
+- order : List&lt;Order&gt;
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

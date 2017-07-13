@@ -58,7 +58,7 @@ This diagram was created for multiple reasons:
 	The demo scenario focuses on the general tasks an order picking worker is doing, but is just focussing on the main points for this. The original diagram also includes the connections to the database and also includes tasks outside of the actual order picking.
 \end{description}
 
-\section{Design}
+\section{Design}\label{sec:design}
 The general design for the demo facility application is based on the reference model described in chapter \ref{cha:reference}. The more concrete model for the demo facility can be seen in figure \ref{fig:ClassDiagramL1}.
 
 \begin{figure}[t]
@@ -89,14 +89,25 @@ For an actual warehouse the customers attributes would change completely, as com
 \subsubsection{Interface}
 The interface, that is exposed by the \gls{wms}, is a \gls{rest} interface. The options available through the \gls{rest} interface are the following:
 \begin{description}
-	\item[NextOrder] \hfill \\
-	Returns the order with the smallest number for a specific worker.
-	\item[ConfirmOrderLine] \hfill \\
-	Confirms that an order line in an order has successfully been picked.
-	\item[ConfirmOrder] \hfill \\
-	Confirms that a complete order has been picked.
-	\item[ResetDatabse] \hfill \\
-	A function that exists purely to have an existing and repeatable demo case. This resets the database to a state it was in at the beginning, before the demo was executed.
+	\item[GET] 
+	\begin{description}
+		\item[Order] \hfill \\
+	Returns the order with the id that is given as an argument. Takes an ID as an argument.
+		\item[NextOrder] \hfill \\
+	Returns the order with the smallest number for a specific worker. Takes an ID as an argument.
+	\end{description}
+	\item[POST]
+	\begin{description}
+		\item[ConfirmOrderLine] \hfill \\
+	Confirms that an order line in an order has successfully been picked. Takes an order ID and an orderline ID as arguments.
+		\item[ConfirmOrder] \hfill \\
+	Confirms that a complete order has been picked. Takes an ID as an Argument.
+	\end{description}
+	\item[PUT]
+	\begin{description}
+			\item[ResetDatabse] \hfill \\
+	A function that exists purely to have an existing and repeatable demo case. This resets the database to a state it was in at the beginning, before the demo was executed. Takes no arguments.
+	\end{description}
 \end{description}
 
 \subsection{Wearable}
@@ -112,9 +123,88 @@ From a technical perspective, the web application will be implemented using Java
 This was chosen as the framework to implement the web application due to familiarity with the technology and it being a framework that allows rather easily to implement multiple web pages and connect that to a controller in the back end.
 
 \section{Implementation}
-\begin{itemize}
-	\item quality management items
-	\item some interesting code bits
-	\item implementation details json serialization from c\# to java
-	
-\end{itemize}
+This section will not discuss everything that is a part of the implementation, but will focus on points of the implementation that did not necessarily went as expected or are additions on top of the initial design due to problems that occurred later on. Also further information on the quality management will be discussed in later parts of this section.
+
+\subsection{Implementation Details}
+Most of the implementation is working as planned and is allowing the worker to go through his workday. The most interesting parts here are currently the connection between the web application and the database connection in the backend. As the database connector and the rest service there are implemented in C\# and the web application is implemented using Java. When order information is to be send to the web application, the database backend is first creating an order model object. This model has been created using the \gls{ef} provided by microsoft that is automatically creating the classes for the model from the given database information. This is creating the classes according to the official microsoft C\# language specifications. \citep{manual:csSpecification} 
+
+The classes are afterwards serialized using the \texttt{JavaScriptSerializer} to \gls{serialize} an order object into the \gls{json} format. The \gls{json} message is then send to the client that asked for the order information. The simple implementation for this can be found in listing \ref{lst:objectSerialization}.
+
+\clearpage
+
+\lstset{language=[Sharp]C}
+\begin{lstlisting}[frame=single, caption=C\# Object Serialization, label=lst:objectSerialization]
+var serializer = new JavaScriptSerializer();
+var order = Connector.GetOrder(value);
+HttpContext.Current.Response.ContentType = "text/HTML";
+HttpContext.Current.Response.Write(serializer.Serialize(order));
+\end{lstlisting}
+
+The client is then implemented in Java in the web application and trying to \gls{deserialize} the \gls{json} received from the backend. In Java the jackson library has been used to create the state of the order object from the received message. \citep{website:jackson} The first problem here is that the \gls{json} that is expected from jackson is different, than the \texttt{JavaScriptSerializer} is creating, therefore some transforming needs to be done to the \gls{json}, otherwise the objects state can not be reproduced. The class and variable names that jackson expects need to be in camel case, otherwise it does not accepts them, therefore a method needs to be created that is automatically transforming those to camel case. The received \gls{json} format can be seen in listing \ref{lst:jsonReceived} and the expected format can be seen in listing \ref{lst:jsonExpected}. The message display in these listings have been simplified and are just there to show the different formats.
+
+\begin{lstlisting}[frame=single, caption=Received JSON format, label=lst:jsonReceived]
+{
+	"Customer" : {
+		"CustomerNumber" : 1	
+	}
+}
+\end{lstlisting}
+
+\begin{lstlisting}[frame=single, caption=Expected JSON format, label=lst:jsonExpected]
+{
+	"customer" : {
+		"customerNumber" : 1	
+	}
+}
+\end{lstlisting}
+
+The method used to transform the \gls{json} message is quite simple and could be improved in the future to increase performance, but for the testing purposes it is enough. The code can be seen in listing \ref{lst:jsonCamelCase}. For further information about what the method does the included javadoc can be read.
+
+\lstset{language=Java}
+\begin{lstlisting}[frame=single, caption=Java Code to Transform JSON, label=lst:jsonCamelCase]
+    /**
+     * This method is taking the input string and is converting the beginning of
+     * every string inside of the json into a lower case letter. This 
+     * effectively is transforming every attribute and object into camel case.
+     * What this also does is making every string attribute, that is representing
+     * the state of an object, start with a lower case letter, which might not
+     * be wanted by the user.
+     * @param input The initial json string that should be transformed.
+     * @return Returns the input json with every attribute in camel case.
+     */
+    public String jsonToCamelCase(String input) {
+        StringBuilder stringBuilder = new StringBuilder(input);
+        for (int i = 0; i < (input.length() - 1); i++) {
+            char c = input.charAt(i);
+            if (c == '"') {
+                char nextChar = input.charAt(i + 1);
+                if (nextChar >= 65 && nextChar <= 90) {
+                    stringBuilder.setCharAt(i + 1, (char) (nextChar + 32));
+                }
+            }
+        }
+        return stringBuilder.toString();
+    }
+\end{lstlisting}
+
+A few further things need to be changed in the json format, but that can be seen in listing \ref{lst:receiveOrder}. The code here could also be improved a lot especially in regards to modifiability, but it is sufficient for a simple test case that should be created here.
+
+For other cases it is just executing the commands exposed by the rest interface, that is detailed in section \ref{sec:design}. The other implementation details needed are mostly simple web pages and \gls{setter}s and \gls{getter}s which do not need further explanation. The most interesting other design choice that was made for the model in the web application part was to implement a huge class \texttt{order} that is containing multiple inner classes for each of the components. This can be seen in figure \ref{fig:modelInnerClasses}. This has been done since the jackson library is only available to deserialize an object if all of the nested classes are inner classes of the wrapping class. 
+
+\begin{figure}[htbp]
+	\includegraphics[width=\linewidth]{images/WebAppModel}
+	\caption{Class Diagram Web App Model Package}
+	\label{fig:modelInnerClasses}
+\end{figure}
+
+\subsection{Quality Management}
+The quality management aspects have been described in section \ref{sec:qualityManagement} and following this it will be explained how the different aspects have been looked at during the implementation.
+
+\subsubsection{Code Coverage}
+The code coverage percentage that has been aimed for during the project has been around 80\% to 90\%. The problem with code coverage is, that for java the coverage plugin is creating an error that could not be resolved during the time of the project. But every method is being called multiple times during the tests and therefore the coverage should be relatively high. 
+\subsubsection{Language Conventions}
+The language conventions have been checked at their respective sources, in this case Microsoft for C\# \citep{manual:csSpecification}, and Oracle for Java \citep{manual:javaSpecification}. Furthermore they have been followed in all parts of the application.
+\subsubsection{Documentation}
+The documentation for methods can already be seen in the listings \ref{lst:jsonCamelCase} and \ref{lst:receiveOrder}, furthermore the documentation has been created in similar fashion for all methods. 
+\subsubsection{Performance Testing}
+Since the web application has already been created to reduce the load on the wearable there will most likely not be any problems of the performance of the wearables. Therefore this aspect of the quality management has not been conducted, as already explained in the description in section \ref{sec:qualityManagement}. Performance testing would have only been done if an issue would be likely or there would be some problems existing in regards to performance, but none of that has revealed itself during the implementation phase.

@@ -66,8 +66,9 @@ public class WorkerBean implements Serializable {
     }
 
     /**
-     * 
-     * @return
+     * Is creating a connection to the rest service and is getting the next 
+     * order that the current worker should work on.
+     * @return The next order for the current worker.
      */
     public Order getCurrentOrder() {
         HttpURLConnection connection = null;
@@ -234,6 +235,16 @@ public class WorkerBean implements Serializable {
         return 0;
     }
 
+    /**
+     * This method is taking the input string and is converting the beginning of
+     * every string inside of the json into a lower case letter. This 
+     * effectively is transforming every attribute and object into camel case.
+     * What this also does is making every string attribute, that is representing
+     * the state of an object, start with a lower case letter, which might not
+     * be wanted by the user.
+     * @param input The initial json string that should be transformed.
+     * @return Returns the input json with every attribute in camel case.
+     */
     public String jsonToCamelCase(String input) {
         StringBuilder stringBuilder = new StringBuilder(input);
         for (int i = 0; i < (input.length() - 1); i++) {
