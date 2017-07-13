@@ -1,17 +1,41 @@
 \chapter{Initial Analysis}\label{cha:initialAnalysis}
-The first questions asked in this project were, what logistics processes are existing and which wearables can be used for them. At the beginning of the project not a lot of information was available to use. The only information that was ready in the beginning was the logistics processes that were already researched beforehand. The processes themselves will be discussed in section \ref{sec:processes}. Further on this chapter will discuss the initial list of wearables that could be considered and which requirements will be had for these wearables and why these requirements. Also some requirements towards the reference model and how those came to be will be discussed here.
+The first questions asked in this project were, what logistics processes are existing and which wearables can be used for them. At the beginning of the project not a lot of information was available. The only information that was available from the start, were the logistics processes that have already been researched beforehand. The processes themselves will be discussed in section \ref{sec:processes}. This chapter will discuss the initial list of wearables that could be considered and which requirements are existing for these wearables and why these requirements.
+
+\section{Requirements towards Wearables}\label{sec:reqTowardsWearables}
+Before talking about wearables themselves, the base requirements needed to be set to start looking for wearables. One of the processes can be seen in the appendix, figure \ref{fig:orderPickingProcessDiagram}. With the aid of this process the requirements a wearable needed to be able to fulfil can be set. Following will be short descriptions of requirements and how they are existing in the process. For further information the whole process itself can be looked at, but the parts that are interesting for the wearables will be listed here. First the functionality the wearable needs to have will be named, then the proof from the process why it needs to have that functionality and furthermore what this means for the wearable concretely.
+
+The wearables needs to be able to:
+\begin{itemize}
+	\item scan some kind of barcodes. This functionality is needed due to the multitude of areas that involve scanning in the given processes. Since the new wearable should replace the hand scanner that is currently used, it needs to be able to scan barcodes. For a wearable this means there needs to be some kind of visual input, this could mean just a simple camera included or a dedicated barcode scanner included in the wearable.
+	\item provide the user with information. This functionality is needed to support the database connections displayed in the processes that should show some kind of data to the user afterwards. What this means for a wearable is, that it should have some kind of way to provide the user with information. This could be a screen, a speaker, haptic feedback or some other method of providing someone with information.
+	\item send confirmations to the \gls{wms}. This is often done in the processes and every worker needs to do it multiple times during each process. The wearable should therefore have the functionality to connect to an outside computer system with a wireless connection.
+\end{itemize} 
+
+These requirements were talked about with the company supervisor and accepted as main requirements towards wearables that absolutely need to be fulfilled. One more requirement was added at this point after the agreement on the already mentioned requirements. The ability to use the wearable hands-free for most of the time, meaning that hands should not be needed for operating the device at most times. For example the scanning process itself should leave the worker without the need to occupy his hands. But when just walking through the warehouse the wearable could be operated using the hands and it would not be something that immediately disqualifies a wearable.
 
 \section{Wearables}
-The initial search for wearables started with wearables that have already been used in projects similar to this. One of the projects that was looked at for this was the pick-by-vision project conducted by Schwerdtfeger. \citep{phdthesis:pickByVision} That is focusing on the application of smart glasses for the order picking process. A case study by DHL shows the usage of the Vuzix M100 and the Google Glasses and is resulting in improved times per task in the picking process. \citep{caseStudy:dhlWearables} 
+The initial search for wearables started with wearables that have already been used in projects similar to this. One of the projects that was looked at for this was the pick-by-vision project conducted by Schwerdtfeger \citep{phdthesis:pickByVision}. That is focusing on the application of smart glasses for the order picking process. A case study by DHL shows the usage of the Vuzix M100 and the Google Glasses and is resulting in improved times per task in the picking process  \citep{caseStudy:dhlWearables}. 
 
-The results of these previous researches led to the inclusion of a lot of general purpose smartglasses. 
-
-\section{Reference Model}
-
+The results of these previous researches led to the inclusion of a lot of general purpose smartglasses. A lot of the smartglasses mentioned were just part of a short internet research, checking the general functionality of the devices and if it would be able to fit the things needed for the processes given in section \ref{sec:reqTowardsWearables}. The initial list of smartglasses will be listed below:
 
 \begin{itemize}
-	\item how were initial wearables been searched
-	\item why these requirements towards wearables
-	\item process details
-	\item how did it get to the reference model?
+	\item Vuzix M100
+	\item Vuzix M300
+	\item Vuzix Blade 3000
+	\item Daqri Smart Glasses
+	\item Epson Moverio BT-300
+	\item Epson Moverio BT-200
+	\item Microsoft HoloLens
+	\item ODG R7 AR
+	\item Sony SmartEyeGlass
+	\item Google Glass
 \end{itemize}
+
+Apart from smartglasses one other type of wearables has been mainly searched and that being a combination of a \gls{ringScanner} and a wrist-mounted computer. This complies to the hands-free requirements mentioned earlier by only needing interaction with the wrist-mounted computer, after a part of the process has successfully been executed and therefore leaving the worker with empty hands anyway. But if that is still not enough, since some processes might need more interactions than the ones planned for here, a headset can be added to the combination, allowing for voice commands when needed. Wearables in this category are:
+
+\begin{itemize}
+	\item Zebra WT6000 + RS6000
+	\item Honeywell Dolphin 75e + 8620 Wearable Ring Scanner
+\end{itemize}
+
+Furthermore there are not a lot more wearables that do fit the given requirements. Wearables like smartwatches or various fitness trackers are existing, but do not fit the given requirements at all. A smartwatch could be used to replace the wrist-mounted computer, but for the given ringscanners above, the connection to the wrist-mounted computer is proprietary and therefore can not be used with any current smartwatches.

@@ -126,11 +126,9 @@ This was chosen as the framework to implement the web application due to familia
 This section will not discuss everything that is a part of the implementation, but will focus on points of the implementation that did not necessarily went as expected or are additions on top of the initial design due to problems that occurred later on. Also further information on the quality management will be discussed in later parts of this section.
 
 \subsection{Implementation Details}
-Most of the implementation is working as planned and is allowing the worker to go through his workday. The most interesting parts here are currently the connection between the web application and the database connection in the backend. As the database connector and the rest service there are implemented in C\# and the web application is implemented using Java. When order information is to be send to the web application, the database backend is first creating an order model object. This model has been created using the \gls{ef} provided by microsoft that is automatically creating the classes for the model from the given database information. This is creating the classes according to the official microsoft C\# language specifications. \citep{manual:csSpecification} 
+Most of the implementation is working as planned and is allowing the worker to go through his workday. The most interesting parts here are currently the connection between the web application and the database in the backend. As the database connector and the rest service there are implemented in C\# and the web application is implemented using Java. When order information is to be send to the web application, the database backend is first creating an order model object. This model has been created using the \gls{ef} provided by microsoft that is automatically creating the classes for the model from the given database information. This is creating the classes according to the official microsoft C\# language specifications. \citep{manual:csSpecification} 
 
 The classes are afterwards serialized using the \texttt{JavaScriptSerializer} to \gls{serialize} an order object into the \gls{json} format. The \gls{json} message is then send to the client that asked for the order information. The simple implementation for this can be found in listing \ref{lst:objectSerialization}.
-
-\clearpage
 
 \lstset{language=[Sharp]C}
 \begin{lstlisting}[frame=single, caption=C\# Object Serialization, label=lst:objectSerialization]
@@ -140,7 +138,7 @@ HttpContext.Current.Response.ContentType = "text/HTML";
 HttpContext.Current.Response.Write(serializer.Serialize(order));
 \end{lstlisting}
 
-The client is then implemented in Java in the web application and trying to \gls{deserialize} the \gls{json} received from the backend. In Java the jackson library has been used to create the state of the order object from the received message. \citep{website:jackson} The first problem here is that the \gls{json} that is expected from jackson is different, than the \texttt{JavaScriptSerializer} is creating, therefore some transforming needs to be done to the \gls{json}, otherwise the objects state can not be reproduced. The class and variable names that jackson expects need to be in camel case, otherwise it does not accepts them, therefore a method needs to be created that is automatically transforming those to camel case. The received \gls{json} format can be seen in listing \ref{lst:jsonReceived} and the expected format can be seen in listing \ref{lst:jsonExpected}. The message display in these listings have been simplified and are just there to show the different formats.
+The client is then implemented in Java in the web application and trying to \gls{deserialize} the \gls{json} received from the backend. In Java the jackson library has been used to create the state of the order object from the received message \citep{website:jackson}. The first problem here is that the \gls{json} that is expected from jackson is different, than the \texttt{JavaScriptSerializer} is creating. Therefore some transforming needs to be done to the \gls{json}, otherwise the objects state can not be reproduced. Class and variable names that jackson expects need to be in camel case, otherwise it does not accept them, a method needs to be created that is automatically transforming those to camel case. When receiving a \gls{json} message it is in the format displayed in listing \ref{lst:jsonReceived} and the expected format can be seen in listing \ref{lst:jsonExpected}. The message displayed in these listings has been simplified and is just there to show the different formats.
 
 \begin{lstlisting}[frame=single, caption=Received JSON format, label=lst:jsonReceived]
 {
@@ -158,7 +156,7 @@ The client is then implemented in Java in the web application and trying to \gls
 }
 \end{lstlisting}
 
-The method used to transform the \gls{json} message is quite simple and could be improved in the future to increase performance, but for the testing purposes it is enough. The code can be seen in listing \ref{lst:jsonCamelCase}. For further information about what the method does the included javadoc can be read.
+The method used to transform the \gls{json} message is quite simple and could be improved in the future to increase performance, but for the testing purposes it is enough. Code for this can be seen in listing \ref{lst:jsonCamelCase}. For further information about what the method does the included javadoc can be read.
 
 \lstset{language=Java}
 \begin{lstlisting}[frame=single, caption=Java Code to Transform JSON, label=lst:jsonCamelCase]
@@ -187,9 +185,9 @@ The method used to transform the \gls{json} message is quite simple and could be
     }
 \end{lstlisting}
 
-A few further things need to be changed in the json format, but that can be seen in listing \ref{lst:receiveOrder}. The code here could also be improved a lot especially in regards to modifiability, but it is sufficient for a simple test case that should be created here.
+A few further things need to be changed in the json format, but that can be seen in listing \ref{lst:receiveOrder}. That cod could also be improved a lot especially in regards to modifiability, but it is sufficient for a simple test case that should be created here.
 
-For other cases it is just executing the commands exposed by the rest interface, that is detailed in section \ref{sec:design}. The other implementation details needed are mostly simple web pages and \gls{setter}s and \gls{getter}s which do not need further explanation. The most interesting other design choice that was made for the model in the web application part was to implement a huge class \texttt{order} that is containing multiple inner classes for each of the components. This can be seen in figure \ref{fig:modelInnerClasses}. This has been done since the jackson library is only available to deserialize an object if all of the nested classes are inner classes of the wrapping class. 
+For other cases it is just executing the commands exposed by the rest interface, that is detailed in section \ref{sec:design}. The other implementation details needed are mostly simple web pages and \gls{setter}s and \gls{getter}s which should not need further explanation. The most interesting other design choice that was made for the model in the web application part was to implement a huge class \texttt{Order} that is containing multiple inner classes for each of the components. This can be seen in figure \ref{fig:modelInnerClasses}. This has been done since the jackson library is only available to deserialize an object if all of the nested classes are inner classes of the wrapping class. 
 
 \begin{figure}[htbp]
 	\includegraphics[width=\linewidth]{images/WebAppModel}

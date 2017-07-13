@@ -19,7 +19,7 @@ Goods Receipt and Put away was another process to be considered. The process its
 Order Picking W3-5 was the process chosen to improve with wearables as multiple possibilities to improve the process were discovered. Also the processes seemed rather easy to model with a demo facility by setting up one or two racks and placing multiple \gls{parcel}s on there. This process was selected together with the company supervisor. This process can be seen in the appendix, in figure \ref{fig:orderPickingProcessDiagram} but the demo scenario will also be further explained in section \ref{sec:demoScenario}.
 
 \section{Wearables}\label{sec:wearables}
-Researching wearables was a more problematic task, as the amount of wearables that could be used potentially is a lot higher than the amount of given processes. Some criteria were set in place for a wearable to be considered in the first place. A wearable has to be either already available, or freely available to order in europe from a trusted source. This leads to well known wearables like the Google Glass to be not even considered as they are not publicly available.
+Researching wearables was a more problematic task, as the amount of wearables that could be used potentially is a lot higher than the amount of given processes. Some criteria were set in place for a wearable to be considered in the first place.
 
 \subsection{Criteria}
 
@@ -51,7 +51,7 @@ Most of the quantifiable criteria were hard to actually quantify without having 
 
 \subsection{Devices}
 
-\Gls{smartglasses} seem to be the most promising type of wearable for the task, due to the possibilities it does give its user. The possibility for indoor navigation, scanning, exactly displaying the item location, constant display of information and further possible features that could be implemented using an always-on camera that is implemented in most devices. \citep{phdthesis:pickByVision}
+\Gls{smartglasses} seem to be the most promising type of wearable for the task, due to the possibilities it does give its user. The possibility for indoor navigation, scanning, exactly displaying the item location, constant display of information and further possible features that could be implemented using an always-on camera that is implemented in most devices \citep{phdthesis:pickByVision}. 
 
 The \gls{smartglasses} most interesting for this topic are:
 
@@ -61,16 +61,14 @@ The \gls{smartglasses} most interesting for this topic are:
 	\item Vuzix M100
 \end{itemize}
 
-They are the newest publicly available glasses from some of the biggest manufacturers of \gls{smartglasses}, that are currently publicly available.
+They are the newest publicly available glasses from some of the biggest manufacturers of \gls{smartglasses}, that are currently publicly available. This list has been created by using the initial list of smartglasses given in chapter \ref{cha:initialAnalysis} and then removing the ones that were either no longer available to the public, or were not released to the public at the start of the project.
 
-Another solution including wearables for the order picking process is the combination of a \gls{ringScanner} and a wrist-mounted computer. \Gls{wearable}s for this type of combination are:
+The combination of a wrist mounted-computer and a \gls{ringScanner} does fulfil the requirements and both items listed in chapter \ref{cha:initialAnalysis} are also available at the time this project was executed. Therefore the list here is the same as given already, being the following wearables:
 
 \begin{itemize}
 	\item Zebra WT6000 + RS6000
 	\item Honeywell Dolphin 75e + 8620 Wearable Ring Scanner
 \end{itemize}
-
-This combination could also be using a headset to add further functionality.
 
 \subsection{Decision}
 
@@ -102,9 +100,9 @@ Durability   & 2                          & 3                         & 6       
 
 The wearables were given a value between one and ten depending on how well they performed in the hands-on test and the information available beforehand.
 
-From the weighted decision we can see that the Honeywell combination comes out on top, which is not as surprising, as it is a device that was specifically designed for this and similar purposes. The performance of the Honeywell combination is rated as highly, because the ring scanner is handling the scanning, which can be a more expensive task for ordinary computing devices. The HoloLens is in front of the Vuzix M100 mainly because of the integrated \gls{hpu} that is handling the mapping of the environment and most of the data that is incoming from the different cameras, therefore allowing the other components of the HoloLens to do different tasks with higher priority. Another factor here is that the HoloLens in general is using newer components that have a higher performance by themselves. The cost or price of the device is just the price of the devices. 
+From the weighted decision we can see that the Honeywell combination comes out on top, which is not as surprising, as it is a device that was specifically designed for this and similar purposes. The performance of the Honeywell combination is rated as highly, because the ring scanner is handling the scanning, which can be a more expensive task for ordinary computing devices. The HoloLens is in front of the Vuzix M100 mainly because of the integrated \gls{hpu} that is handling the mapping of the environment and most of the data that is incoming from the different cameras. This allows the other components of the HoloLens to do different tasks with higher priority. Another factor here is that the HoloLens in general is using newer components that have a higher performance by themselves. The cost or price of the device is just the price of the devices. 
 
-The battery life between the HoloLens and the M100 is relatively similar, but the Vuzix solution has an included battery pack to increase usage time, which is also something that could be done with the HoloLens, but since charging and using a device at the same time is not the nicest solution. Therefore the score is pretty low for both. When using a \gls{battery}, both devices might get through a workday, but without both need to be recharged multiple times a day. The Honeywell combination is able to sustain through a day of work, and if needed, the battery here can be \gls{hotswap}ped. The durability of both \gls{smartglasses} is similar in points, as both were not necessarily designed in the warehouse. While the HoloLens might break a bit faster than the Vuzix M100, at least from how rugged both look and feel, the M100 just needs a small push to no longer be in the right position to view the monitor. The Honeywell combination is by far the most rugged and also can not disposition as easily, the biggest problem might be the connection between the \gls{ringScanner} and the wrist-mounted computer. While not likely that could tear or be plugged out.
+The battery life between the HoloLens and the M100 is relatively similar, but the Vuzix solution has an included battery pack to increase usage time, which is also something that could be done with the HoloLens, but charging and using a device at the same time is not the nicest solution. Therefore the score is pretty low for both. When using a \gls{battery}, both devices might get through a workday, but without both need to be recharged multiple times a day. The Honeywell combination is able to sustain through a day of work, and if needed, the battery here can be \gls{hotswap}ped. The durability of both \gls{smartglasses} is similar in points, as both were not necessarily designed in the warehouse. While the HoloLens might break a bit faster than the Vuzix M100, at least from how rugged both look and feel, the M100 just needs a small push to no longer be in the right position to view the monitor. The Honeywell combination is by far the most rugged and also can not disposition as easily, the biggest problem might be the connection between the \gls{ringScanner} and the wrist-mounted computer. While not likely that could tear or be plugged out.
 
 But that might not be the only things that could lead to a decision, an aspect that is not explored here is possibilities. But the possibilities that a \gls{wearable} has, are not that easily measured and therefore are ignored for the wearable comparison at this point in time. Therefore the Honeywell Dolphin 75e + 8620 Wearable Ring Scanner has been chosen as a wearable to implement the demo scenario explained in section \ref{sec:demoScenario}.
 
